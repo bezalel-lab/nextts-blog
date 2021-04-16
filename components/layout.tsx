@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Tommy Marshall'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Next.js & TypeScript Portfolio Blog'
 
 export default function Layout({
     children,
@@ -50,7 +50,7 @@ export default function Layout({
                 <a>
                   <Image
                     priority
-                    src="/images/profile.jpg"
+                    src="/images/profile.png"
                     className={utilStyles.borderCircle}
                     height={108}
                     width={108}

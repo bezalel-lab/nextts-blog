@@ -21,11 +21,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hello, I'm Tomoki. I'm a Jehovah's witness and a software engineer. My congregation is Fukuokashi Ohashi congregation.</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>こんにちは、トミーです。ウェブ系エンジニアを目指しています。Next.js、TypeScript、Jest、コンピュータ・サイエンスその他を、1000時間ほどかけて独学しました。ほとんどは公式ドキュメントを読んで学びました。FireBaseやKubernetesなどの技術も気になっています。</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
