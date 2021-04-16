@@ -20,9 +20,9 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-        <section className={utilStyles.headingMd}>
+      <section className={utilStyles.headingMd}>
         <p>こんにちは、トミーです。ウェブ系エンジニアを目指しています。Next.js、TypeScript、Jest、コンピュータ・サイエンスその他を、1000時間ほどかけて独学しました。ほとんどは公式ドキュメントを読んで学びました。FireBaseやKubernetesなどの技術も気になっています。</p>
-        </section>
+      </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
