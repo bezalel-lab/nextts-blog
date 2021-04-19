@@ -21,7 +21,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>こんにちは、トミーです。ウェブ系エンジニアを目指しています。Next.js、TypeScript、Jest、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学びました。FireBaseやKubernetesなどの技術も気になっています。</p>
+        <p>こんにちは、トミーです。ウェブ系エンジニアを目指しています。Next.js、TypeScript、Jest、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学習しました。FireBaseやKubernetesなどの技術も気になっています。</p>
       </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
