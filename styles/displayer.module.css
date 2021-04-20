@@ -1,0 +1,32 @@
+.tmp {
+    height: 1200px;
+    background: darkgreen;
+    color: silver;
+}
+
+.border {
+    box-sizing: border-box;
+    border: 1px solid;    
+}
+
+.displayer {
+    box-sizing: border-box;
+    border: 1px solid;
+    width: 768px; /* ⭕️幅はもう少し余裕を持たせて、一番左に開放弦の度数を表示する必要がある。この数値を幾らか小さくしなければならないということ。 */
+}
+
+.string {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.fingerBoard {
+    background: brown;
+}
+
+.fret {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid;
+    width: 50px;
+}
