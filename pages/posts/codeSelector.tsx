@@ -1,16 +1,18 @@
-import CodeTone from "./codeTone";
-import checker from "../styles/checker.module.css";
+import CodeTone from "../../components/codeTone";
+import FingerBoard from "../../components/fingerBoard";
+import checker from "../../styles/checker.module.css";
 
 type Props = {
     tmpCodeName: string
+    className?: string
 }
 
 export const CodeSelector: React.FC<Props> = (props) => {
-    const tmpCodeName = props.tmpCodeName
+    const tmpCodeName = "構成音：C, E, G"
     return (
-        <div className={checker.checker}>
+        <div className={`${checker.checker} ${checker.codeSelector}`}>
             コード：
-            <select id="simple" name="simple" title="code-selector">
+            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checker.codeSelector}>
                 <option>C</option>
                 <option>C#</option>
                 <option>D</option>
@@ -25,6 +27,9 @@ export const CodeSelector: React.FC<Props> = (props) => {
                 <option>B</option>
             </select>
             <CodeTone tmpCodeName={tmpCodeName}/>
+            <FingerBoard />
         </div>
     )
 }
+
+export default CodeSelector
