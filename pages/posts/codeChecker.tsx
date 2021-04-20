@@ -4,8 +4,6 @@ import checker from "../../styles/checker.module.css";
 import React, { useState } from "react";
 import {codeSelector} from "../api/codeHandler";
 
-codeSelector();
-
 type Props = {
     tmpCodeName: string
     className?: string
@@ -16,7 +14,7 @@ export const CodeChecker: React.FC<Props> = (props) => {
     return (
         <div className={`${checker.checker} ${checker.codeSelector} ${checker.tmp}`}>
             コード：
-            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checker.codeSelector} onChange={() =>  alert("click")}>
+            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checker.codeSelector} onChange={e =>  setCodeName(e.target.value)}>
                 <option>C</option>
                 <option>C#</option>
                 <option>D</option>
