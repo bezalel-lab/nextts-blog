@@ -6,5 +6,4 @@ export default function codeTone(props) {
             {props.tmpCodeName}
         </div>
     )
-
 }

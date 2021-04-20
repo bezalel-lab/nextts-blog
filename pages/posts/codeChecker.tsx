@@ -1,18 +1,22 @@
 import CodeTone from "../../components/codeTone";
 import FingerBoard from "../../components/fingerBoard";
 import checker from "../../styles/checker.module.css";
+import React, { useState } from "react";
+import {codeSelector} from "../api/codeHandler";
+
+codeSelector();
 
 type Props = {
     tmpCodeName: string
     className?: string
 }
 
-export const CodeSelector: React.FC<Props> = (props) => {
-    const tmpCodeName = "構成音：C, E, G"
+export const CodeChecker: React.FC<Props> = (props) => {
+    const [codeName, setCodeName] = useState("C");
     return (
-        <div className={`${checker.checker} ${checker.codeSelector}`}>
+        <div className={`${checker.checker} ${checker.codeSelector} ${checker.tmp}`}>
             コード：
-            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checker.codeSelector}>
+            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checker.codeSelector} onChange={() =>  alert("click")}>
                 <option>C</option>
                 <option>C#</option>
                 <option>D</option>
@@ -26,10 +30,11 @@ export const CodeSelector: React.FC<Props> = (props) => {
                 <option>A#</option>
                 <option>B</option>
             </select>
-            <CodeTone tmpCodeName={tmpCodeName}/>
+            <CodeTone tmpCodeName={codeName}/>
             <FingerBoard />
+            （開発中は目に優しい色を使用）
         </div>
     )
 }
 
-export default CodeSelector
+export default CodeChecker

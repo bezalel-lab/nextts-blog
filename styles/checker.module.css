@@ -1,6 +1,6 @@
 .tmp {
     height: 1200px;
-    width: 900px;
+    width: 100%;
     background: darkgreen;
     color: silver;
 }
@@ -14,7 +14,7 @@
     box-sizing: border-box;
     /* overflow: auto; */
     border: 1px solid;
-    width: 768px; /* ⭕️幅はもう少し余裕を持たせて、一番左に開放弦の度数を表示する必要がある。この数値を幾らか小さくしなければならないということ。 */
+    /* width: 768px; ⭕️幅はもう少し余裕を持たせて、一番左に開放弦の度数を表示する必要がある。この数値を幾らか小さくしなければならないということ。 */
 }
 
 .codeSelector {
