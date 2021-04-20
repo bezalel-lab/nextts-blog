@@ -8,6 +8,7 @@ export default function Displayer() {
                 Displayer
                 <FingerBoard />
             </div>
+            （開発中は目に優しい色を使用）
         </div>
     )
 }
