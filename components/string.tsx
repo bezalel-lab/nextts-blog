@@ -1,24 +1,24 @@
 import Fret from "../components/fret";
-import displayer from "../styles/displayer.module.css";
+import checker from "../styles/checker.module.css";
 
-export default function String() {
+export default function String(props) {
     return (
-        <div className={displayer.border}>
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
-            <Fret />
+        <div className={checker.border}>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
+            <Fret degree={props.degree}/>
         </div>
     )
 }

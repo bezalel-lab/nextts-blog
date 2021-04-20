@@ -1,9 +1,9 @@
-import displayer from "../styles/displayer.module.css";
+import checker from "../styles/checker.module.css";
 
-export default function Fret() {
+export default function Fret(props) {
     return (
-        <div className={displayer.fret}>
-            P5
+        <div className={checker.fret}>
+            {props.degree}
         </div>
     )
 }
