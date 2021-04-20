@@ -6,8 +6,7 @@ export default function Displayer() {
         <div className={displayer.tmp}>
             <div className={displayer.displayer}>
                 Displayer
-                <FingerBoard>
-                </FingerBoard>
+                <FingerBoard />
             </div>
         </div>
     )
