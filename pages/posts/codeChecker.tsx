@@ -41,7 +41,6 @@ export const CodeChecker: React.FC<Props> = (props) => {
 
 export default CodeChecker
 
-
 export const codeNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 const handleChange = (code: string): string => {
