@@ -42,11 +42,9 @@ export const CodeChecker: React.FC<Props> = (props) => {
 export default CodeChecker
 
 
-
-
 export const codeNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
-const handleChange = (code) => {
+const handleChange = (code: string): string => {
     const inputValue = code;
     const codeTone = [];
     let subscript: number;
