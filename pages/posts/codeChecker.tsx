@@ -4,10 +4,6 @@ import checker from "../../styles/checker.module.css";
 import React, { useState } from "react";
 // import codeHandler from "../api/codeHandler";
 
-
-
-
-
 type Props = {
     tmpCodeName: string
     className?: string
@@ -45,7 +41,7 @@ export const codeNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", 
 
 const handleChange = (code: string): string => {
     const inputValue = code;
-    const codeTone = [];
+    let codeToneArray: string[] = [];
     let subscript: number;
 
     const subscriptAdjustment = () => {
@@ -57,12 +53,12 @@ const handleChange = (code: string): string => {
     codeNames.forEach( ( value, index, array ) => {
         subscript = index;
         if (inputValue === array[index]) {
-            codeTone.push(array[subscript]);
+            codeToneArray.push(array[subscript]);
         }
         subscript += 4;
         subscriptAdjustment();
         if (inputValue === array[index]) {
-            codeTone.push(", " + array[subscript]);
+            codeToneArray.push(", " + array[subscript]);
         }
         subscript += 3;
         subscriptAdjustment();
@@ -70,10 +66,11 @@ const handleChange = (code: string): string => {
             subscript -= 12;
         }
         if (inputValue === array[index]) {
-            codeTone.push(", " + array[subscript]);
+            codeToneArray.push(", " + array[subscript]);
         }    
     });
-    return codeTone;
+    const codeTone = codeToneArray[0] + codeToneArray[1] + codeToneArray[2];
+    return codeTone
 }
 
 
