@@ -34,302 +34,302 @@ export const CodeChecker: React.FC<Props> = (props) => {
             <FingerBoard>
                 <String>
                     <Fret>
-                        <div>{firstStringDegrees[0]}</div>
+                        <div>{stringsDegrees[0][0]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[1]}</div>
+                        <div>{stringsDegrees[0][1]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[2]}</div>
+                        <div>{stringsDegrees[0][2]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[3]}</div>
+                        <div>{stringsDegrees[0][3]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[4]}</div>
+                        <div>{stringsDegrees[0][4]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[5]}</div>
+                        <div>{stringsDegrees[0][5]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[6]}</div>
+                        <div>{stringsDegrees[0][6]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[7]}</div>
+                        <div>{stringsDegrees[0][7]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[8]}</div>
+                        <div>{stringsDegrees[0][8]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[9]}</div>
+                        <div>{stringsDegrees[0][9]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[10]}</div>
+                        <div>{stringsDegrees[0][10]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[11]}</div>
+                        <div>{stringsDegrees[0][11]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[12]}</div>
+                        <div>{stringsDegrees[0][12]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[13]}</div>
+                        <div>{stringsDegrees[0][13]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[14]}</div>
+                        <div>{stringsDegrees[0][14]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{firstStringDegrees[0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[15]}</div>
+                        <div>{stringsDegrees[0][15]}</div>
                     </Fret>
                 </String>
                 <String>
                     <Fret>
-                        <div>{firstStringDegrees[0]}</div>
+                        <div>{stringsDegrees[1][0]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[1]}</div>
+                        <div>{stringsDegrees[1][1]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[2]}</div>
+                        <div>{stringsDegrees[1][2]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[3]}</div>
+                        <div>{stringsDegrees[1][3]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[4]}</div>
+                        <div>{stringsDegrees[1][4]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[5]}</div>
+                        <div>{stringsDegrees[1][5]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[6]}</div>
+                        <div>{stringsDegrees[1][6]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[7]}</div>
+                        <div>{stringsDegrees[1][7]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[8]}</div>
+                        <div>{stringsDegrees[1][8]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[9]}</div>
+                        <div>{stringsDegrees[1][9]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[10]}</div>
+                        <div>{stringsDegrees[1][10]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[11]}</div>
+                        <div>{stringsDegrees[1][11]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[12]}</div>
+                        <div>{stringsDegrees[1][12]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[13]}</div>
+                        <div>{stringsDegrees[1][13]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[14]}</div>
+                        <div>{stringsDegrees[1][14]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{firstStringDegrees[0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{firstStringDegrees[15]}</div>
+                        <div>{stringsDegrees[1][15]}</div>
                     </Fret>
                 </String>
                 <String>
                     <Fret>
-                        <div>{firstStringDegrees[0]}</div>
+                        <div>{stringsDegrees[2][0]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[1]}</div>
+                        <div>{stringsDegrees[2][1]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[2]}</div>
+                        <div>{stringsDegrees[2][2]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[3]}</div>
+                        <div>{stringsDegrees[2][3]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[4]}</div>
+                        <div>{stringsDegrees[2][4]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[5]}</div>
+                        <div>{stringsDegrees[2][5]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[6]}</div>
+                        <div>{stringsDegrees[2][6]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[7]}</div>
+                        <div>{stringsDegrees[2][7]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[8]}</div>
+                        <div>{stringsDegrees[2][8]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[9]}</div>
+                        <div>{stringsDegrees[2][9]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[10]}</div>
+                        <div>{stringsDegrees[2][10]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[11]}</div>
+                        <div>{stringsDegrees[2][11]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[12]}</div>
+                        <div>{stringsDegrees[2][12]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[13]}</div>
+                        <div>{stringsDegrees[2][13]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[14]}</div>
+                        <div>{stringsDegrees[2][14]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[15]}</div>
+                        <div>{stringsDegrees[2][15]}</div>
                     </Fret>
                 </String>
                 <String>
                     <Fret>
-                        <div>{firstStringDegrees[0]}</div>
+                        <div>{stringsDegrees[3][0]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[1]}</div>
+                        <div>{stringsDegrees[3][1]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[2]}</div>
+                        <div>{stringsDegrees[3][2]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[3]}</div>
+                        <div>{stringsDegrees[3][3]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[4]}</div>
+                        <div>{stringsDegrees[3][4]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[5]}</div>
+                        <div>{stringsDegrees[3][5]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[6]}</div>
+                        <div>{stringsDegrees[3][6]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[7]}</div>
+                        <div>{stringsDegrees[3][7]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[8]}</div>
+                        <div>{stringsDegrees[3][8]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[9]}</div>
+                        <div>{stringsDegrees[3][9]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[10]}</div>
+                        <div>{stringsDegrees[3][10]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[11]}</div>
+                        <div>{stringsDegrees[3][11]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[12]}</div>
+                        <div>{stringsDegrees[3][12]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[13]}</div>
+                        <div>{stringsDegrees[3][13]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[14]}</div>
+                        <div>{stringsDegrees[3][14]}</div>
                     </Fret>
                     <Fret>
-                        <div>{firstStringDegrees[15]}</div>
+                        <div>{stringsDegrees[3][15]}</div>
+                    </Fret>
+                </String>
+                <String>
+                    <Fret>
+                        <div>{stringsDegrees[4][0]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][1]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][2]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][3]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][4]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][5]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][6]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][7]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][8]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][9]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][10]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][11]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][12]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][13]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][14]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[4][15]}</div>
+                    </Fret>
+                </String>
+                <String>
+                    <Fret>
+                        <div>{stringsDegrees[5][0]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][1]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][2]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][3]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][4]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][5]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][6]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][7]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][8]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][9]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][10]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][11]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][12]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][13]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][14]}</div>
+                    </Fret>
+                    <Fret>
+                        <div>{stringsDegrees[5][15]}</div>
                     </Fret>
                 </String>
             </FingerBoard>
@@ -340,6 +340,9 @@ export const CodeChecker: React.FC<Props> = (props) => {
 
 export default CodeChecker
 
+
+
+
 let codeTones = "C, E, G";
 
 let firstStringDegrees = [];
@@ -348,11 +351,16 @@ let thirdStringDegrees = [];
 let fourthStringDegrees = [];
 let fifthStringDegrees = [];
 let sixthStringDegrees = [];
+let stringsDegrees = [
+    firstStringDegrees,
+    secondStringDegrees,
+    thirdStringDegrees,
+    fourthStringDegrees,
+    fifthStringDegrees,
+    sixthStringDegrees
+];
 
-
-
-
-
+console.log(stringsDegrees[0]);
 
 const codeNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 let codeDegree = 0;
@@ -413,52 +421,83 @@ const handleChange = (codeName: string): string => {
 
 
 
+// let firstStringDegrees = [];
+// let secondStringDegrees = [];
+// let thirdStringDegrees = [];
+// let fourthStringDegrees = [];
+// let fifthStringDegrees = [];
+// let sixthStringDegrees = [];
+
+
+
+
 const degrees = ["R", "m2", "M2", "m3", "M3", "P4", "aug4", "P5", "m6", "M6", "m7", "M7"]
     
-let tmpDegreeNumber = 0;
-let firstOpenDegree;
 let subscript;
 console.log("I'm codeDegree → " +codeDegree);
 
 const firstStringSubscripts = [4];
-const secondStringOpenSubscript = [11];
-const thirdStringOpenSubscript = [7];
-const fourthStringOpenSubscript = [2];
-const fifthStringOpenSubscript = [9];
-const sixthStringOpenSubscript = [4];
+const secondStringSubscripts = [11];
+const thirdStringSubscripts = [7];
+const fourthStringSubscripts = [2];
+const fifthStringSubscripts = [9];
+const sixthStringSubscripts = [4];
+let stringsSubscripts = [
+    firstStringSubscripts,
+    secondStringSubscripts,
+    thirdStringSubscripts,
+    fourthStringSubscripts,
+    fifthStringSubscripts,
+    sixthStringSubscripts
+];
+console.log(stringsSubscripts[0]);
+
+
+// let firstStringDegrees = [];
+// let secondStringDegrees = [];
+// let thirdStringDegrees = [];
+// let fourthStringDegrees = [];
+// let fifthStringDegrees = [];
+// let sixthStringDegrees = [];
+// let stringsDegrees = [firstStringDegrees, secondStringDegrees, thirdStringDegrees, fourthStringDegrees, fifthStringDegrees, sixthStringDegrees];
+// let stringDegrees = [];
+
+
+
 
 const inputDegrees = () => {
-    firstStringDegrees = [];
-    console.log(codeDegree < firstStringSubscripts[0]);
-    
+    for ( let i = 0; i < 6; i++) {
+
+    stringsDegrees[i] = [];
     const populateDegrees = () => {
-        for (let i = 0; i < 16; i++) {
-            subscript = subscript % 12;
-            console.log(codeDegree + "+" + i + "   添字: " + subscript);
-            firstStringDegrees.push(degrees[subscript]);
-            subscript += 1;
+        for (let j = 0; j < 16; j++) {
+                subscript = subscript % 12;
+                stringsDegrees[i].push(degrees[subscript]); //!NOTE degree
+                subscript += 1;
+            }
         }
+        
+        if ( codeDegree === stringsDegrees[i][0] ) {
+            //!NOTE subscripts
+            populateDegrees();
+            // console.log("It's the Root.");
+        } else if ( codeDegree < stringsDegrees[i][0] ) {
+            subscript = stringsSubscripts[i][0] - codeDegree;
+            populateDegrees();
+            // console.log("I'm the second code.");
+        } else {
+            subscript = stringsSubscripts[i][0] + 12 - codeDegree;
+            populateDegrees();
+            // console.log("I'm the third running.");
+        }
+        
+        console.log( i + 1 + " degrees: " + stringsDegrees[i]);
+        console.log( i + 1 + " subscripts: " + stringsSubscripts[i]);
     }
-    
-    if ( codeDegree === firstStringSubscripts[0] ) {
-        populateDegrees();
-        // console.log("It's the Root.");
-    } else if ( codeDegree < firstStringSubscripts[0] ) {
-        subscript = firstStringSubscripts[0] - codeDegree;
-        populateDegrees();
-        // console.log("I'm the second code.");
-    } else {
-        subscript = firstStringSubscripts[0] + 12 - codeDegree;
-        populateDegrees();
-        // console.log("I'm the third running.");
-    }
-    
-    function A() {
-        console.log("Check this degree number!");
-        console.log(firstStringDegrees);
-    }
-    A();
 }
 
 inputDegrees();
+
+
+
 
