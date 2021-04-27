@@ -30,7 +30,7 @@ export const CodeChecker: React.FC<Props> = (props) => {
                 <option>A#</option>
                 <option>B</option>
             </select>
-            <CodeTone tmpCodeName={codeName}/>
+            <CodeTone codeTones={codeTones}/>
             <FingerBoard>
                 <String>
                     <Fret>
@@ -340,6 +340,20 @@ export const CodeChecker: React.FC<Props> = (props) => {
 
 export default CodeChecker
 
+let codeTones = "C, E, G";
+
+let firstStringDegrees = [];
+let secondStringDegrees = [];
+let thirdStringDegrees = [];
+let fourthStringDegrees = [];
+let fifthStringDegrees = [];
+let sixthStringDegrees = [];
+
+
+
+
+
+
 const codeNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 let codeDegree = 0;
 
@@ -349,7 +363,7 @@ const handleChange = (codeName: string): string => {
     codeNames.forEach((value, index) => {
         codeDegree = value === codeName ? index : codeDegree;
         if ( value === codeName ) {
-            console.log("Can you see me? " + index);
+            console.log("Can you see me? " + index + "← index   codeDegree →" + codeDegree);
         }
     })
         
@@ -381,30 +395,26 @@ const handleChange = (codeName: string): string => {
             codeToneArray.push(", " + array[subscript]);
         }    
     });
-    const codeTone = codeToneArray[0] + codeToneArray[1] + codeToneArray[2];
-
+    codeTones = codeToneArray[0] + codeToneArray[1] + codeToneArray[2];
 
 
 
 
     
+    inputDegrees();
+
     
     
     
-    
-    return codeTone
+    return codeTones
 }
 
 
 
 
 
-
-
-
-
 const degrees = ["R", "m2", "M2", "m3", "M3", "P4", "aug4", "P5", "m6", "M6", "m7", "M7"]
-
+    
 let tmpDegreeNumber = 0;
 let firstOpenDegree;
 let subscript;
@@ -417,39 +427,38 @@ const fourthStringOpenSubscript = [2];
 const fifthStringOpenSubscript = [9];
 const sixthStringOpenSubscript = [4];
 
-let firstStringDegrees = [];
-let secondStringDegrees = [];
-let thirdStringDegrees = [];
-let fourthStringDegrees = [];
-let fifthStringDegrees = [];
-let sixthStringDegrees = [];
-
-console.log(codeDegree < firstStringSubscripts[0]);
-
-const populateDegrees = () => {
-    for (let i = 0; i < 16; i++) {
-        subscript = subscript % 12;
-        console.log(codeDegree + "+" + i + "   添字: " + subscript);
-        firstStringDegrees.push(degrees[subscript]);
-        subscript += 1;
+const inputDegrees = () => {
+    firstStringDegrees = [];
+    console.log(codeDegree < firstStringSubscripts[0]);
+    
+    const populateDegrees = () => {
+        for (let i = 0; i < 16; i++) {
+            subscript = subscript % 12;
+            console.log(codeDegree + "+" + i + "   添字: " + subscript);
+            firstStringDegrees.push(degrees[subscript]);
+            subscript += 1;
+        }
     }
+    
+    if ( codeDegree === firstStringSubscripts[0] ) {
+        populateDegrees();
+        // console.log("It's the Root.");
+    } else if ( codeDegree < firstStringSubscripts[0] ) {
+        subscript = firstStringSubscripts[0] - codeDegree;
+        populateDegrees();
+        // console.log("I'm the second code.");
+    } else {
+        subscript = firstStringSubscripts[0] + 12 - codeDegree;
+        populateDegrees();
+        // console.log("I'm the third running.");
+    }
+    
+    function A() {
+        console.log("Check this degree number!");
+        console.log(firstStringDegrees);
+    }
+    A();
 }
 
-if ( codeDegree === firstStringSubscripts[0] ) {
-    populateDegrees();
-    console.log("It's the Root.");
-} else if ( codeDegree < firstStringSubscripts[0] ) {
-    subscript = firstStringSubscripts[0] - codeDegree;
-    populateDegrees();
-    console.log("I'm the second code.");
-} else {
-    subscript = firstStringSubscripts[0] + 12 - codeDegree;
-    populateDegrees();
-    console.log("I'm the third running.");
-}
+inputDegrees();
 
-function A() {
-    console.log("Check this degree number!");
-    console.log(firstStringDegrees);
-}
-A();
