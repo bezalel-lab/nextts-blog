@@ -5,7 +5,6 @@ import checker from "../styles/checker.module.css";
 export default function FingerBoard(props) {
     return (
         <div className={checker.fingerBoard}>
-            FingerBoard
             {props.children}
         </div>
     )

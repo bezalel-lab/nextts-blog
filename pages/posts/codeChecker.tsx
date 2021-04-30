@@ -12,11 +12,11 @@ type Props = {
 }
 
 export const CodeChecker: React.FC<Props> = (props) => {
-    const [codeName, setCodeName] = useState("C");
+    const [codeTone, setCodeTone] = useState("C");
     return (
         <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
             コード：
-            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checkerStyles.codeSelector} onChange={e =>  setCodeName(handleChange(e.target.value))}>
+            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checkerStyles.codeSelector} onChange={e =>  setCodeTone(handleChange(e.target.value))}>
                 <option>C</option>
                 <option>C#</option>
                 <option>D</option>
@@ -32,313 +32,38 @@ export const CodeChecker: React.FC<Props> = (props) => {
             </select>
             <CodeTone codeTones={codeTones}/>
             <FingerBoard>
-                <String>
-                    <Fret>
-                        <div>{stringsDegrees[0][0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[0][15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{stringsDegrees[1][0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[1][15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{stringsDegrees[2][0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[2][15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{stringsDegrees[3][0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[3][15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{stringsDegrees[4][0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[4][15]}</div>
-                    </Fret>
-                </String>
-                <String>
-                    <Fret>
-                        <div>{stringsDegrees[5][0]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][1]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][2]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][3]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][4]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][5]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][6]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][7]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][8]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][9]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][10]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][11]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][12]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][13]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][14]}</div>
-                    </Fret>
-                    <Fret>
-                        <div>{stringsDegrees[5][15]}</div>
-                    </Fret>
-                </String>
+                {stringsSubscripts.map((string) => {
+                    return <String>{degreesSubscripts.map((degree) => {
+                        if ( stringsDegrees[string][degree] === "R" ) {
+                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}>{stringsDegrees[string][degree]}</Fret>
+                        } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
+                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}>{stringsDegrees[string][degree]}</Fret>
+                        }
+                        return <Fret className={`${checkerStyles.fret}`}>{stringsDegrees[string][degree]}</Fret>
+                    })}</String>
+                })}
             </FingerBoard>
-            （開発中は目に優しい色を使用）
         </div>
     )
 }
 
 export default CodeChecker
+
+
+
+const stringsSubscripts = [0, 1, 2, 3, 4, 5];
+const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -363,9 +88,14 @@ let stringsDegrees = [
 console.log(stringsDegrees[0]);
 
 const codeNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+let code = "C"; //⭕️多分削除する
 let codeDegree = 0;
 
 const handleChange = (codeName: string): string => {
+
+    code = codeName;
+    console.log(codeName); //! 削除する
+
     // 後に使用するため、ユーザ入力のコード名に対応する添字を取得する。
     // 取得した添字の数値は別の箇所で、開放弦の度数を表示する際、degrees配列から対応する度数を取り出すために使用する。
     codeNames.forEach((value, index) => {
@@ -374,7 +104,7 @@ const handleChange = (codeName: string): string => {
             console.log("Can you see me? " + index + "← index   codeDegree →" + codeDegree);
         }
     })
-        
+    
     let codeToneArray: string[] = [];
     let subscript: number;
 
@@ -405,15 +135,8 @@ const handleChange = (codeName: string): string => {
     });
     codeTones = codeToneArray[0] + codeToneArray[1] + codeToneArray[2];
 
-
-
-
-    
     inputDegrees();
 
-    
-    
-    
     return codeTones
 }
 
@@ -431,10 +154,10 @@ const handleChange = (codeName: string): string => {
 
 
 
-const degrees = ["R", "m2", "M2", "m3", "M3", "P4", "aug4", "P5", "m6", "M6", "m7", "M7"]
+const degrees = ["R", "m2", "M2", "m3", "M3", "P4", "+4", "P5", "m6", "M6", "m7", "M7"]
     
 let subscript;
-console.log("I'm codeDegree → " +codeDegree);
+console.log("codeDegree → " +codeDegree);
 
 const firstStringSubscripts = [4];
 const secondStringSubscripts = [11];
@@ -442,7 +165,7 @@ const thirdStringSubscripts = [7];
 const fourthStringSubscripts = [2];
 const fifthStringSubscripts = [9];
 const sixthStringSubscripts = [4];
-let stringsSubscripts = [
+let strings = [
     firstStringSubscripts,
     secondStringSubscripts,
     thirdStringSubscripts,
@@ -450,7 +173,7 @@ let stringsSubscripts = [
     fifthStringSubscripts,
     sixthStringSubscripts
 ];
-console.log(stringsSubscripts[0]);
+console.log(strings[0]);
 
 
 // let firstStringDegrees = [];
@@ -472,27 +195,26 @@ const inputDegrees = () => {
     const populateDegrees = () => {
         for (let j = 0; j < 16; j++) {
                 subscript = subscript % 12;
-                stringsDegrees[i].push(degrees[subscript]); //!NOTE degree
+                stringsDegrees[i].push(degrees[subscript]);
                 subscript += 1;
             }
         }
         
         if ( codeDegree === stringsDegrees[i][0] ) {
-            //!NOTE subscripts
             populateDegrees();
             // console.log("It's the Root.");
         } else if ( codeDegree < stringsDegrees[i][0] ) {
-            subscript = stringsSubscripts[i][0] - codeDegree;
+            subscript = strings[i][0] - codeDegree;
             populateDegrees();
             // console.log("I'm the second code.");
         } else {
-            subscript = stringsSubscripts[i][0] + 12 - codeDegree;
+            subscript = strings[i][0] + 12 - codeDegree;
             populateDegrees();
             // console.log("I'm the third running.");
         }
         
         console.log( i + 1 + " degrees: " + stringsDegrees[i]);
-        console.log( i + 1 + " subscripts: " + stringsSubscripts[i]);
+        console.log( i + 1 + " subscripts: " + strings[i]);
     }
 }
 
