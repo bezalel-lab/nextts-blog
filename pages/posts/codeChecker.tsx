@@ -16,7 +16,7 @@ export const CodeChecker: React.FC<Props> = (props) => {
     return (
         <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
             コード：
-            <select id="codeSelector" name="codeSelector" title="codeSelector" className={checkerStyles.codeSelector} onChange={e =>  setCodeTone(handleChange(e.target.value))}>
+            <select id="codeSelector" name="codeSelector" title="codeSelector" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
                 <option>C</option>
                 <option>C#</option>
                 <option>D</option>
@@ -68,7 +68,7 @@ const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 
 
-let codeTones = "C, E, G";
+let codeTones = "構成音：C, E, G";
 
 let firstStringDegrees = [];
 let secondStringDegrees = [];
@@ -133,7 +133,7 @@ const handleChange = (codeName: string): string => {
             codeToneArray.push(", " + array[subscript]);
         }    
     });
-    codeTones = codeToneArray[0] + codeToneArray[1] + codeToneArray[2];
+    codeTones = "構成音：" + codeToneArray[0] + codeToneArray[1] + codeToneArray[2];
 
     inputDegrees();
 
