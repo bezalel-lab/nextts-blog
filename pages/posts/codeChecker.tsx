@@ -35,11 +35,11 @@ export const CodeChecker: React.FC<Props> = (props) => {
                 {stringsSubscripts.map((string) => {
                     return <String>{degreesSubscripts.map((degree) => {
                         if ( stringsDegrees[string][degree] === "R" ) {
-                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}>{stringsDegrees[string][degree]}</Fret>
+                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}</div></Fret>
                         } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
-                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}>{stringsDegrees[string][degree]}</Fret>
+                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
                         }
-                        return <Fret className={`${checkerStyles.fret}`}>{stringsDegrees[string][degree]}</Fret>
+                        return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
                     })}</String>
                 })}
             </FingerBoard>

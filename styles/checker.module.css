@@ -1,6 +1,4 @@
 .tmp {
-    height: 1200px;
-    width: 100%;
     background: #000;
     color: silver;
 }
@@ -17,10 +15,10 @@
 
 .border {
     box-sizing: border-box;
-    border: 1px solid;    
 }
 
 .checker {
+    margin-left: 50px;
     box-sizing: border-box;
     /* overflow: auto; */
     /* border: 1px solid; */
@@ -42,12 +40,26 @@
 }
 
 .fingerBoard {
+    height: 240px;
+    width: 768px;
     background: #892F1B;
+    border: 1px solid;    
 }
 
 .fret {
     display: inline-block;
     box-sizing: border-box;
-    border: 1px solid;
-    width: 50px;
+    position: relative;
+    top: 18px;
+    border-right: 3px solid #000;
+    /* height: 35px; */
+    width: 45px;
 }
+
+.degrees {
+    position: relative;
+    right: 47px;
+    text-align: right;
+    height: 1px;
+}
+
