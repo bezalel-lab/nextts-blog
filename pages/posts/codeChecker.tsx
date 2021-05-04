@@ -14,7 +14,7 @@ type Props = {
 export const CodeChecker: React.FC<Props> = (props) => {
     const [codeTone, setCodeTone] = useState("C");
     return (
-        <div id="next" className={checkerStyles.background}>
+        <div className={checkerStyles.background}>
             <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
                 <span className={checkerStyles.heading}>Code Analyzer</span>
                 <br/>
@@ -34,18 +34,20 @@ export const CodeChecker: React.FC<Props> = (props) => {
                     <option>B</option>
                 </select>
                 <CodeTone codeTones={codeTones}/></div>
-                <FingerBoard>
-                    {stringsSubscripts.map((string) => {
-                        return <String>{degreesSubscripts.map((degree) => {
-                            if ( stringsDegrees[string][degree] === "R" ) {
-                                return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}</div></Fret>
-                            } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
-                                return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
-                            }
-                            return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
-                        })}</String>
-                    })}
-                </FingerBoard>
+                <div className={checkerStyles.scroll}>
+                    <FingerBoard>
+                        {stringsSubscripts.map((string) => {
+                            return <String>{degreesSubscripts.map((degree) => {
+                                if ( stringsDegrees[string][degree] === "R" ) {
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}</div></Fret>
+                                } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
+                                }
+                                return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
+                            })}</String>
+                        })}
+                    </FingerBoard>
+                </div>
             </div>
         </div>
     )

@@ -56,6 +56,11 @@
     margin-left: 30px;
 }
 
+.scroll {
+    max-width: 768px;
+    overflow: auto;
+}
+
 .string {
     display: flex;
     /* flex-direction: row; */
