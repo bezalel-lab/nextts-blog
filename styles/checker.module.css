@@ -43,10 +43,6 @@
     font-size: 1.8rem;
 }
 
-.codeNames {
-    margin-bottom: 8px;
-}
-
 .codeToneDisplay {
     display: inline;
     margin-left: 30px;
@@ -55,11 +51,13 @@
 .scroll {
     box-sizing: content-box;
     max-width: 768px;
+    margin-top: 8px;
     height: 224px;
     overflow-x: auto;
     overflow-y: hidden;
     border: 1px solid #888;
     border-right: 1px solid #444;
+    border-left: 1px solid #444;
 }
 
 .string {
@@ -75,6 +73,7 @@
     background: #892F1B;
 }
 
+
 .fret {
     display: inline-block;
     box-sizing: border-box;
@@ -86,11 +85,26 @@
     width: 44px;
 }
 
+.outside {
+    /* position: relative;
+    left: 10px; */
+    width: 38px;
+    background-color: black;
+    border: none;
+}
+
+.open {
+    /* box-sizing: content-box; */
+    width: 32px;
+    background-color: black;
+    border-right: 5px solid white;
+}
+
 .degrees {
     box-sizing: border-box;
     position: relative;
     /* border-bottom: 3px solid #AAA; */
-    top: 11px;
+    top: 14px;
     /* left: px; */
     /* position: relative; */
     /* right: 47px; */

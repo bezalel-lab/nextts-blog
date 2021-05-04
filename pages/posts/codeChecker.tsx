@@ -36,14 +36,23 @@ export const CodeChecker: React.FC<Props> = (props) => {
                 <CodeTone codeTones={codeTones}/></div>
                 <div className={checkerStyles.scroll}>
                     <FingerBoard>
-                        {stringsSubscripts.map((string) => {
+                        {stringsSubscripts.map((string, index) => {
                             return <String>{degreesSubscripts.map((degree) => {
-                                if ( stringsDegrees[string][degree] === "R" ) {
-                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}</div></Fret>
-                                } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
-                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
+                                if ( degree === 0 ) {
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.outside}`}><div className={checkerStyles.degrees}>{index + 1 + "弦:"}</div></Fret>
+                                } else if ( degree === 1 ) {
+                                    if ( stringsDegrees[string][degree-1] === "R" ) { //⭕️⭕️⭕️ここは、左の開放弦のあたりを表現するために重複が生じているから、コンポーネントに抽出すると良さそう。propsを与えてclassNameを別にするかも。DisplayDegreeコンポーネントか何か
+                                        return <Fret className={`${checkerStyles.fret} ${checkerStyles.root} ${checkerStyles.open}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
+                                    } else if ( stringsDegrees[string][degree-1] === "M3" || stringsDegrees[string][degree-1] === "P5" ) {
+                                        return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone} ${checkerStyles.open}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
+                                    }
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.open}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
+                                } else if ( stringsDegrees[string][degree-1] === "R" ) {
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
+                                } else if ( stringsDegrees[string][degree-1] === "M3" || stringsDegrees[string][degree-1] === "P5" ) {
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
                                 }
-                                return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
+                                return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
                             })}</String>
                         })}
                     </FingerBoard>
@@ -59,7 +68,6 @@ export default CodeChecker
 
 const stringsSubscripts = [0, 1, 2, 3, 4, 5, 6];
 const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-
 
 
 

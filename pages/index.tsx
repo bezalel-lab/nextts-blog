@@ -21,7 +21,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>こんにちは、トミーです。ウェブ系エンジニアを目指しています。Next.js、TypeScript、Jest、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学習しました。FireBaseやKubernetesなどの技術も気になっています。</p>
+        <p>こんにちは、Tommyです。ウェブ系エンジニアを目指しています。Next.js、TypeScript、Jest、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学習しました。FireBaseやKubernetesなどの技術も気になっています。</p>
         <Link href="/posts/codeChecker">
             <a>
                 <p className={utilStyles.lightText}>（作成中ポートフォリオのモバイル端末での表示確認用リンク）</p>
