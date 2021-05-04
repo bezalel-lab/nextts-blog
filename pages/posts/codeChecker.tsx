@@ -57,8 +57,8 @@ export default CodeChecker
 
 
 
-const stringsSubscripts = [0, 1, 2, 3, 4, 5];
-const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+const stringsSubscripts = [0, 1, 2, 3, 4, 5, 6];
+const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 
 
@@ -82,13 +82,15 @@ let thirdStringDegrees = [];
 let fourthStringDegrees = [];
 let fifthStringDegrees = [];
 let sixthStringDegrees = [];
+let styleStringDegrees = []; //⭕️指板のスタイル用に追加した箇所
 let stringsDegrees = [
     firstStringDegrees,
     secondStringDegrees,
     thirdStringDegrees,
     fourthStringDegrees,
     fifthStringDegrees,
-    sixthStringDegrees
+    sixthStringDegrees,
+    styleStringDegrees //⭕️指板のスタイル用に追加した箇所
 ];
 
 console.log(stringsDegrees[0]);

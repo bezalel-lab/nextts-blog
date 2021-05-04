@@ -3,7 +3,7 @@ import checker from "../styles/checker.module.css";
 
 export default function String(props) {
     return (
-        <div className={checker.border}>
+        <div className={checker.string}>
             {props.children}
         </div>
     )

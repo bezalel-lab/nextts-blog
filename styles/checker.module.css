@@ -15,10 +15,6 @@
     font-weight: bold;
 }
 
-.border {
-    box-sizing: border-box;
-}
-
 .background {
     /* display: inline-block; */
     background-image: url(../public/images/背景.png);
@@ -28,7 +24,7 @@
 
 .checker {
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.65); /*⭕️a は0.75が良いかも */
+    background: rgba(0, 0, 0, 0.75);
     background-size: cover;
     /* overflow: auto; */
     /* border: 1px solid; */
@@ -38,7 +34,7 @@
 
 .codeSelector {
     font-size: 1.13rem;
-    padding-left: 35px;
+    padding-left: 20px;
 }
 
 .heading {
@@ -57,36 +53,49 @@
 }
 
 .scroll {
+    box-sizing: content-box;
     max-width: 768px;
-    overflow: auto;
+    height: 224px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #888;
+    border-right: 1px solid #444;
 }
 
 .string {
-    display: flex;
+    display: block;
+    position: relative;
+    bottom: 3px;
     /* flex-direction: row; */
+    border-bottom: 2px solid #BBB;
 }
 
 .fingerBoard {
-    height: 240px;
     width: 768px;
     background: #892F1B;
-    border: 1px solid;    
 }
 
 .fret {
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    top: 18px;
+    /* border-bottom: 3px solid #AAA; */
+    /* top: 18px; */
     border-right: 3px solid white;
     /* height: 35px; */
-    width: 45px;
+    width: 44px;
 }
 
 .degrees {
+    box-sizing: border-box;
+    position: relative;
+    /* border-bottom: 3px solid #AAA; */
+    top: 11px;
+    /* left: px; */
     /* position: relative; */
     /* right: 47px; */
     text-align: right;
+    font-size: 15px;
     height: 1px;
 }
 
