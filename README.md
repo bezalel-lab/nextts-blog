@@ -1,1 +1,1 @@
-ポートフォリオとして作成した、Next.jsとTypeScriptを使用したブログです。
+ポートフォリオとして作成した、Next.jsとTypeScriptを使用したブログアプリです。
