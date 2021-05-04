@@ -32,39 +32,32 @@ img {
   display: block;
 }
 
-.string1 {
+.string {
     display: block;
     position: relative;
     bottom: 3px;
+}
+
+.string1 {
     border-bottom: 1.75px solid #BBB;
 }
+
 .string2 {
-    display: block;
-    position: relative;
-    bottom: 3px;
     border-bottom: 2px solid #BBB;
 }
+
 .string3 {
-    display: block;
-    position: relative;
-    bottom: 3px;
     border-bottom: 2.5px solid #BBB;
 }
+
 .string4 {
-    display: block;
-    position: relative;
-    bottom: 3px;
     border-bottom: 3px solid #BBB;
 }
+
 .string5 {
-    display: block;
-    position: relative;
-    bottom: 3px;
     border-bottom: 3.5px solid #BBB;
 }
+
 .string6 {
-    display: block;
-    position: relative;
-    bottom: 3px;
     border-bottom: 3.75px solid #BBB;
 }
