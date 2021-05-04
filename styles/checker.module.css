@@ -1,7 +1,7 @@
 .tmp {
-    height: 1000px;
-    width: 100%;
-    background: #000;
+    /* height: 100%;
+    width: 100%; */
+    /* background: #000; */
     color: white;
 }
 
@@ -20,17 +20,20 @@
 }
 
 .background {
+    /* display: inline-block; */
     background-image: url(../public/images/背景.png);
     background-size: cover;
+    height: 100%;
 }
 
 .checker {
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.65); /*⭕️a は0.75が良いかも */
     background-size: cover;
     /* overflow: auto; */
     /* border: 1px solid; */
     /* width: 768px; ⭕️幅はもう少し余裕を持たせて、一番左に開放弦の度数を表示する必要がある。この数値を幾らか小さくしなければならないということ。 */
+    height: 100%;
 }
 
 .codeSelector {

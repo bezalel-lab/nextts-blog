@@ -14,11 +14,11 @@ type Props = {
 export const CodeChecker: React.FC<Props> = (props) => {
     const [codeTone, setCodeTone] = useState("C");
     return (
-        <div className={checkerStyles.background}>
+        <div id="next" className={checkerStyles.background}>
             <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
                 <span className={checkerStyles.heading}>Code Analyzer</span>
                 <br/>
-                <div className={checkerStyles.codeNames}>コード：
+                <div className={checkerStyles.co}>コード：
                 <select id="codeSelector" name="コードを選択" title="codeSelector" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
                     <option>C</option>
                     <option>C#</option>
