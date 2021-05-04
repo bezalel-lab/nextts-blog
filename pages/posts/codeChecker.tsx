@@ -14,35 +14,39 @@ type Props = {
 export const CodeChecker: React.FC<Props> = (props) => {
     const [codeTone, setCodeTone] = useState("C");
     return (
-        <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
-            コード：
-            <select id="codeSelector" name="codeSelector" title="codeSelector" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
-                <option>C</option>
-                <option>C#</option>
-                <option>D</option>
-                <option>D#</option>
-                <option>E</option>
-                <option>F</option>
-                <option>F#</option>
-                <option>G</option>
-                <option>G#</option>
-                <option>A</option>
-                <option>A#</option>
-                <option>B</option>
-            </select>
-            <CodeTone codeTones={codeTones}/>
-            <FingerBoard>
-                {stringsSubscripts.map((string) => {
-                    return <String>{degreesSubscripts.map((degree) => {
-                        if ( stringsDegrees[string][degree] === "R" ) {
-                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}</div></Fret>
-                        } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
-                            return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
-                        }
-                        return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
-                    })}</String>
-                })}
-            </FingerBoard>
+        <div className={checkerStyles.background}>
+            <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
+                <span className={checkerStyles.heading}>Code Analyzer</span>
+                <br/>
+                <div className={checkerStyles.codeNames}>コード：
+                <select id="codeSelector" name="コードを選択" title="codeSelector" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
+                    <option>C</option>
+                    <option>C#</option>
+                    <option>D</option>
+                    <option>D#</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>F#</option>
+                    <option>G</option>
+                    <option>G#</option>
+                    <option>A</option>
+                    <option>A#</option>
+                    <option>B</option>
+                </select>
+                <CodeTone codeTones={codeTones}/></div>
+                <FingerBoard>
+                    {stringsSubscripts.map((string) => {
+                        return <String>{degreesSubscripts.map((degree) => {
+                            if ( stringsDegrees[string][degree] === "R" ) {
+                                return <Fret className={`${checkerStyles.fret} ${checkerStyles.root}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}</div></Fret>
+                            } else if ( stringsDegrees[string][degree] === "M3" || stringsDegrees[string][degree] === "P5" ) {
+                                return <Fret className={`${checkerStyles.fret} ${checkerStyles.codeTone}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
+                            }
+                            return <Fret className={`${checkerStyles.fret}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree]}<div></div></div></Fret>
+                        })}</String>
+                    })}
+                </FingerBoard>
+            </div>
         </div>
     )
 }
