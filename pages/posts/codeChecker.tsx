@@ -1,3 +1,5 @@
+//✅✅残りの作業：・コメントを書く    （・ある程度DRYに。とりあえずもう十分か）
+
 import CodeTone from "../../components/codeTone";
 import FingerBoard from "../../components/fingerBoard";
 import String from "../../components/string";
@@ -18,8 +20,8 @@ export const CodeChecker: React.FC<Props> = (props) => {
             <div className={`${checkerStyles.checker} ${checkerStyles.codeSelector} ${checkerStyles.tmp}`}>
                 <span className={checkerStyles.heading}>Code Analyzer</span>
                 <br/>
-                <div className={checkerStyles.co}>コード：
-                <select id="codeSelector" name="コードを選択" title="codeSelector" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
+                <div className={checkerStyles.codeSelector}>コード：
+                <select id="codeSelector" name="codeSelector" title="コードを選択" className="select" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
                     <option>C</option>
                     <option>C#</option>
                     <option>D</option>
@@ -34,13 +36,13 @@ export const CodeChecker: React.FC<Props> = (props) => {
                     <option>B</option>
                 </select>
                 <CodeTone codeTones={codeTones}/></div>
-                <div className={checkerStyles.scroll}>
+                <div className={checkerStyles.fingerBoardScroll}>
                     <FingerBoard>
                         {stringsSubscripts.map((string, index) => {
                             const eachClassName = "string" + (index + 1);
                             return <String className={`${eachClassName} ${"string"}`}>{degreesSubscripts.map((degree) => {
                                 if ( degree === 0 ) {
-                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.outside}`}><div className={checkerStyles.degrees}>{index + 1 + openTones[index] + ":"}</div></Fret>
+                                    return <Fret className={`${checkerStyles.fret} ${checkerStyles.outside}`}><div className={checkerStyles.degrees}>{openTones[index]? index + 1 + openTones[index] + ":": ""}</div></Fret> //⭕️ここの参考演算子はいらなくなったかも？
                                 } else if ( degree === 1 ) {
                                     if ( stringsDegrees[string][degree-1] === "R" ) { //⭕️⭕️⭕️ここは、左の開放弦のあたりを表現するために重複が生じているから、コンポーネントに抽出すると良さそう。propsを与えてclassNameを別にするかも。DisplayDegreeコンポーネントか何か
                                         return <Fret className={`${checkerStyles.fret} ${checkerStyles.root} ${checkerStyles.open}`}><div className={checkerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
@@ -58,8 +60,19 @@ export const CodeChecker: React.FC<Props> = (props) => {
                         })}
                     </FingerBoard>
                 </div>
+                <div className={checkerStyles.fretNumberScroll}>
+                    <div className={checkerStyles.fretNumber}>
+                    {degreesSubscripts.map((value, index) => {
+                        return <Fret className={`${checkerStyles.fret} ${checkerStyles.borderless}`}><div className={`${checkerStyles.degrees}`}>{fretNumbers[index]}</div></Fret>
+                    })}
+                    </div>
+                </div>
             </div>
         </div>
+
+                        
+
+
     )
 }
 
@@ -80,9 +93,6 @@ const openTones = ["E", "B", "G", "D", "A", "E"];
 
 
 
-
-
-
 let codeTones = "構成音：C, E, G";
 
 let firstStringDegrees = [];
@@ -91,7 +101,7 @@ let thirdStringDegrees = [];
 let fourthStringDegrees = [];
 let fifthStringDegrees = [];
 let sixthStringDegrees = [];
-let styleStringDegrees = []; //⭕️指板のスタイル用に追加した箇所
+let fretNumbers = ["0", "1f", "2f", "⚫︎3f", "4f", "⚫︎5f", "6f", "⚫︎7f", "8f", "⚫︎9f", "10f", "11f", "⚫︎12f", "13f", "14f", "15f"]; //⭕️指板のスタイル用に追加した箇所 → フレット表示に用いた。
 let stringsDegrees = [
     firstStringDegrees,
     secondStringDegrees,
@@ -99,7 +109,7 @@ let stringsDegrees = [
     fourthStringDegrees,
     fifthStringDegrees,
     sixthStringDegrees,
-    styleStringDegrees //⭕️指板のスタイル用に追加した箇所
+    fretNumbers, //⭕️指板のスタイル用に追加した箇所 → フレット表示に用いた。
 ];
 
 console.log(stringsDegrees[0]);
@@ -210,7 +220,7 @@ const inputDegrees = () => {
 
     stringsDegrees[i] = [];
     const populateDegrees = () => {
-        for (let j = 0; j < 16; j++) {
+        for ( let j = 0; j < 16; j++ ) {
                 subscript = subscript % 12;
                 stringsDegrees[i].push(degrees[subscript]);
                 subscript += 1;

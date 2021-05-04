@@ -1,10 +1,10 @@
 import String from "./string";
 import Fret from "./fret";
-import checker from "../styles/checker.module.css";
+import checkerStyles from "../styles/checker.module.css";
 
 export default function FingerBoard(props) {
     return (
-        <div className={checker.fingerBoard}>
+        <div className={`${checkerStyles.fingerBoard} fingerBoardGlobal`}>
             {props.children}
         </div>
     )
