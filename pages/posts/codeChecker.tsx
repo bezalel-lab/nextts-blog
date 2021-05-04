@@ -37,7 +37,8 @@ export const CodeChecker: React.FC<Props> = (props) => {
                 <div className={checkerStyles.scroll}>
                     <FingerBoard>
                         {stringsSubscripts.map((string, index) => {
-                            return <String>{degreesSubscripts.map((degree) => {
+                            const stringClassName = "string" + (index + 1);
+                            return <String className={stringClassName}>{degreesSubscripts.map((degree) => {
                                 if ( degree === 0 ) {
                                     return <Fret className={`${checkerStyles.fret} ${checkerStyles.outside}`}><div className={checkerStyles.degrees}>{index + 1 + "弦:"}</div></Fret>
                                 } else if ( degree === 1 ) {

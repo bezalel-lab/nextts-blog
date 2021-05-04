@@ -60,12 +60,10 @@
     border-left: 1px solid #444;
 }
 
-.string {
-    display: block;
-    position: relative;
-    bottom: 3px;
-    /* flex-direction: row; */
+.string1 {
+    border: 10px solid #BBB;
     border-bottom: 2px solid #BBB;
+    font-size: 50px;
 }
 
 .fingerBoard {
