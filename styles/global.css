@@ -36,6 +36,7 @@ img {
     display: block;
     position: relative;
     bottom: 5px;
+    white-space: nowrap;
     /* width: 780px; */
 }
 

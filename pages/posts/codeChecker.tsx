@@ -60,7 +60,7 @@ export const CodeChecker: React.FC<Props> = (props) => {
                             })}</String>
                         })}
                     </FingerBoard>
-                    <div className={checkerStyles.fretNumberWrapper}>
+                    <div className={`${checkerStyles.fretNumbersWrapper}`}>
                     {degreesSubscripts.map((value, degree) => {
                         return <Fret className={`${checkerStyles.fret} ${checkerStyles.borderless}`}><div className={`${checkerStyles.fretNumber}`}>{fretNumbers[degree]}</div></Fret>
                     })}
@@ -80,7 +80,7 @@ export default CodeChecker
 
 
 const stringsSubscripts = [0, 1, 2, 3, 4, 5, 6];
-const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17];
 const openTones = ["E", "B", "G", "D", "A", "E"];
 
 
@@ -261,4 +261,3 @@ inputDegrees();
 //   Array.from(document.getElementsByClassName('data')).forEach(function(element, index, array) {
 //     element.addEventListener('scroll', handleScroll, false);
 //     });
-    
