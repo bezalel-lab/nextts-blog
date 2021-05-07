@@ -87,9 +87,6 @@ const handleChange = (codeName: string): string => {
     return codeTones
 }
 
-
-
-
 // この配列はcodeNames 配列と対応させて、コード名・音名に応じて度数を割り出せるようにしてある。
 // また、実際に度数を表示する際にも使用し、リテラルの記述を無駄に繰り返さないようにした。
 const degrees = ["R", "m2", "M2", "m3", "M3", "P4", "+4", "P5", "m6", "M6", "m7", "M7"]

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=New+Tegomin&family=Newsreader:ital,wght@1,300&display=swap');
 
 .root {
     color: red;
@@ -23,6 +23,7 @@
     background-size: cover;
     height: 100%;
     color: white;
+    font-family: 'El Messiri', sans-serif;
 }
 
 .codeSelector {
@@ -35,17 +36,20 @@
     bottom: 1px;
     font-size: 0.95rem;
     opacity: 1;
+    font-family: serif;
 }
 
 .heading {
     display: inline-block;
     margin: 10px 0;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    font-family: 'Newsreader', serif;
 }
 
 .codeToneDisplay {
     display: inline;
     margin-left: 30px;
+    font-family: serif;
 }
 
 .scroll {
