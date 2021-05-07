@@ -32,8 +32,9 @@
 
 .select {
     position: relative;
-    bottom: 2px;
+    bottom: 1px;
     font-size: 0.95rem;
+    opacity: 1;
 }
 
 .heading {
