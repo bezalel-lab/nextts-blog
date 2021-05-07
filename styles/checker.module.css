@@ -48,34 +48,64 @@
     margin-left: 30px;
 }
 
-.fingerBoardScroll {
+.scroll {
+    position: relative;
     box-sizing: content-box;
-    max-width: 768px;
+    max-width: 750px; /* 767px */
     margin-top: 8px;
-    height: 224px; /* ⭕️6弦のみだった時は、224px にしていた。 → 261pxへ */
-    overflow-x: auto;
-    overflow-y: hidden;
+    height: 290px; /* ⭕️6弦のみだった時は、224px にしていた。 → 261pxへ */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* overflow-y: auto; */
     border: 1px solid #555;
     border-right: 1px solid #333;
     border-left: 1px solid #333;
 }
 
 .fingerBoard {
-    width: 768px;
+    width: 750px;
     height: 224px;
+    overflow: hidden;
     background: #892F1B;
 }
 
+/* .fretNumberScroll {
+    box-sizing: content-box;
+    max-width: 768px;
+    overflow-x: auto;
+} */
 
 .fret {
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    /* border-bottom: 3px solid #AAA; */
+    border-bottom: 3px solid #AAA;
     /* top: 18px; */
     border-right: 3.5px solid white;
     /* height: 35px; */
-    width: 44.5px;
+    width: 44px;
+}
+
+.fretNumbersWrapper {
+    position: relative;
+    height: 10px;
+    overflow: hidden;
+}
+
+.borderless {
+    border: none;   
+}
+
+.fretNumber {
+    box-sizing: border-box;
+    position: relative;
+    top: 2px;
+    height: 1px;
+    left: 20px;
+    width: 41px;
+    text-align: right;
+    font-size: 14px;
+    color: #BBB;
 }
 
 .outside {
@@ -96,31 +126,10 @@
 .degrees {
     box-sizing: border-box;
     position: relative;
-    /* border-bottom: 3px solid #AAA; */
     top: 14px;
-    /* left: px; */
-    /* position: relative; */
-    /* right: 47px; */
     text-align: right;
     font-size: 15px;
     height: 1px;
 }
 
-.fretNumberScroll {
-    box-sizing: content-box;
-    max-width: 768px;
-    overflow-x: auto;
-}
 
-.borderless {
-    position: relative;
-    left: 15px;
-    bottom: 5px;
-    border: none;
-    width: 45px;
-    
-}
-
-.fretNumber {
-    width: 768px;
-}

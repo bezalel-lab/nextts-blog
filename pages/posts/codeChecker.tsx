@@ -21,26 +21,27 @@ export const CodeChecker: React.FC<Props> = (props) => {
                 <span className={checkerStyles.heading}>Code Analyzer</span>
                 <br/>
                 <div className={checkerStyles.codeSelector}>コード：
-                <select id="codeSelector" name="codeSelector" title="コードを選択" className="select" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
-                    <option>C</option>
-                    <option>C#</option>
-                    <option>D</option>
-                    <option>D#</option>
-                    <option>E</option>
-                    <option>F</option>
-                    <option>F#</option>
-                    <option>G</option>
-                    <option>G#</option>
-                    <option>A</option>
-                    <option>A#</option>
-                    <option>B</option>
-                </select>
-                <CodeTone codeTones={codeTones}/></div>
-                <div className={checkerStyles.fingerBoardScroll}>
+                    <select id="codeSelector" name="codeSelector" title="コードを選択" className="select" onChange={e =>  setCodeTone(handleChange(e.target.value))}>
+                        <option>C</option>
+                        <option>C#</option>
+                        <option>D</option>
+                        <option>D#</option>
+                        <option>E</option>
+                        <option>F</option>
+                        <option>F#</option>
+                        <option>G</option>
+                        <option>G#</option>
+                        <option>A</option>
+                        <option>A#</option>
+                        <option>B</option>
+                    </select>
+                    <CodeTone codeTones={codeTones}/>
+                </div>
+                <div className={`${checkerStyles.scroll}`}>
                     <FingerBoard>
                         {stringsSubscripts.map((string, index) => {
                             const eachClassName = "string" + (index + 1);
-                            return <String className={`${eachClassName} ${"string"}`}>{degreesSubscripts.map((degree) => {
+                            return <String className={` ${"string"}`}>{degreesSubscripts.map((degree) => {
                                 if ( degree === 0 ) {
                                     return <Fret className={`${checkerStyles.fret} ${checkerStyles.outside}`}><div className={checkerStyles.degrees}>{openTones[index]? index + 1 + openTones[index] + ":": ""}</div></Fret> //⭕️ここの参考演算子はいらなくなったかも？
                                 } else if ( degree === 1 ) {
@@ -59,11 +60,9 @@ export const CodeChecker: React.FC<Props> = (props) => {
                             })}</String>
                         })}
                     </FingerBoard>
-                </div>
-                <div className={checkerStyles.fretNumberScroll}>
-                    <div className={checkerStyles.fretNumber}>
-                    {degreesSubscripts.map((value, index) => {
-                        return <Fret className={`${checkerStyles.fret} ${checkerStyles.borderless}`}><div className={`${checkerStyles.degrees}`}>{fretNumbers[index]}</div></Fret>
+                    <div className={checkerStyles.fretNumberWrapper}>
+                    {degreesSubscripts.map((value, degree) => {
+                        return <Fret className={`${checkerStyles.fret} ${checkerStyles.borderless}`}><div className={`${checkerStyles.fretNumber}`}>{fretNumbers[degree]}</div></Fret>
                     })}
                     </div>
                 </div>
@@ -101,7 +100,7 @@ let thirdStringDegrees = [];
 let fourthStringDegrees = [];
 let fifthStringDegrees = [];
 let sixthStringDegrees = [];
-let fretNumbers = ["0", "1f", "2f", "⚫︎3f", "4f", "⚫︎5f", "6f", "⚫︎7f", "8f", "⚫︎9f", "10f", "11f", "⚫︎12f", "13f", "14f", "15f"]; //⭕️指板のスタイル用に追加した箇所 → フレット表示に用いた。
+let fretNumbers = ["0", "1f", "2f", "⚫︎3f", "4f", "⚫︎5f", "6f", "⚫︎7f", "8f", "⚫︎9f", "10f", "11f", "◉12f", "13f", "14f", "15f"]; //⭕️指板のスタイル用に追加した箇所 → フレット表示に用いた。
 let stringsDegrees = [
     firstStringDegrees,
     secondStringDegrees,
@@ -250,3 +249,16 @@ inputDegrees();
 
 
 
+
+
+// function handleScroll(event) {
+//     let target = event.target;
+//     target.parentElement.querySelector('.scrollH').scrollLeft = target.scrollLeft;
+//     target.parentElement.querySelector('.scrollV').scrollTop = target.scrollTop;
+//   }
+  
+
+//   Array.from(document.getElementsByClassName('data')).forEach(function(element, index, array) {
+//     element.addEventListener('scroll', handleScroll, false);
+//     });
+    
