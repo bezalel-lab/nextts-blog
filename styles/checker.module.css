@@ -1,7 +1,4 @@
 .tmp {
-    /* height: 100%;
-    width: 100%; */
-    /* background: #000; */
     color: white;
 }
 
@@ -16,7 +13,6 @@
 }
 
 .background {
-    /* display: inline-block; */
     background-image: url(../public/images/背景.png);
     background-size: cover;
     height: 100%;
@@ -26,15 +22,12 @@
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.75);
     background-size: cover;
-    /* overflow: auto; */
-    /* border: 1px solid; */
-    /* width: 768px; ⭕️幅はもう少し余裕を持たせて、一番左に開放弦の度数を表示する必要がある。この数値を幾らか小さくしなければならないということ。 */
     height: 100%;
 }
 
 .codeSelector {
     font-size: 1.13rem;
-    padding-left: 15px;
+    padding-left: 15px;    
 }
 
 .heading {
@@ -52,8 +45,7 @@
     box-sizing: content-box;
     max-width: 750px;
     margin-top: 8px;
-    height: 262px; /* ⭕️6弦のみだった時は、224px にしていた。 → 261pxへ */
-    /* overflow-y: auto; */
+    height: 262px;
     overflow-x: auto;
 }
 
@@ -67,26 +59,17 @@
     border-left: 1px solid #333;
 }
 
-/* .fretNumberScroll {
-    box-sizing: content-box;
-    max-width: 768px;
-    overflow-x: auto;
-} */
-
 .fret {
     display: inline-block;
     box-sizing: border-box;
     position: relative;
     border-bottom: 3px solid #AAA;
-    /* top: 18px; */
     border-right: 3.5px solid white;
-    /* height: 35px; */
     width: 44px;
 }
 
 .fretNumbersWrapper {
     white-space: nowrap;
-    /* max-height: 10px; */
 }
 
 .borderless {
@@ -100,7 +83,6 @@
     height: 0;
     left: 20px;
     width: 41px;
-    /* overflow-y: hidden; */
     text-align: right;
     font-size: 14px;
     color: #BBB;
@@ -115,7 +97,6 @@
 }
 
 .open {
-    /* box-sizing: content-box; */
     width: 34px;
     text-align: left;
     background-color: black;
