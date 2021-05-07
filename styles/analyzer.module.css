@@ -81,6 +81,8 @@
 }
 
 .fretNumbersWrapper {
+    position: relative;
+    top: 2.5px;
     white-space: nowrap;
     font-family: 'El Messiri', sans-serif;
 }
