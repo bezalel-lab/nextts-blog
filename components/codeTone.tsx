@@ -1,4 +1,4 @@
-import checkerStyles from "../styles/checker.module.css";
+import checkerStyles from "../styles/analyzer.module.css";
 import tones from "../pages/posts/codeChecker";
 
 export default function codeTone(props) {
