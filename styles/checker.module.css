@@ -30,6 +30,12 @@
     padding-left: 15px;    
 }
 
+.select {
+    position: relative;
+    bottom: 2px;
+    font-size: 0.95rem;
+}
+
 .heading {
     display: inline-block;
     margin: 10px 0;
