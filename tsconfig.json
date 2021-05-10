@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "test/App.tsx", "test/app.test.tsx"  ],
   "exclude": [
     "node_modules"
   ]

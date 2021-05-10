@@ -35,9 +35,8 @@ img {
 .string {
     display: block;
     position: relative;
-    bottom: 5px;
+    bottom: 6px;
     white-space: nowrap;
-    /* width: 780px; */
 }
 
 .string1 {
