@@ -22,7 +22,8 @@ date: '2021-05-10'
             <Fret>
                 <div>{stringsDegrees[0][15]}</div>
             </Fret>
-             // ✍️15フレットまで繰り返したが、下記の通りそれを後5セット繰り返さなければならない。
+             // ✍️15フレットまで繰り返したが、下記の通り
+             // それを後5セット繰り返さなければならない。
         </String>
         <String>
             <Fret>
@@ -51,7 +52,7 @@ date: '2021-05-10'
             <Fret>
                 <div>{stringsDegrees[5][15]}</div>
             </Fret>
-             // ✍️ようやく6弦の15フレットまで終わった。
+             // ✍️ようやく6弦の15フレットまで終了。
         </String>
 <br>
 <br>
@@ -101,4 +102,4 @@ iPadの幅である768pxまでは、横スクロールなしで指板全体を�
 
     - JestとReact-Testing-Libraryの基本は学んでいたので試みましたが、Next.jsだからかTypeScriptだからか、なかなか思うようにいかず......時間も限られていたためひとまず手を引きました。
 
-- ソースコードにコメントをつける（​​​​​​​​​​​​​​​[GitHubでソースコードを見る](https://github.com/BBC-Radiance/nextts-blog/blob/main/pages/posts/codeChecker.tsx)）
+- ソースコードにコメントをつける（​​​​​​​​​​​​​​​[GitHubでソースコードを見る](https://github.com/BBC-Radiance/nextts-blog/blob/main/pages/posts/cordAnalyzer.tsx)）
