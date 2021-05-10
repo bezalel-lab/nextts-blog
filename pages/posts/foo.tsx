@@ -1,4 +1,4 @@
-import foo from '../../test/App';
+import foo from '../../test/testSample';
 
 console.log(foo(3,3));
 
