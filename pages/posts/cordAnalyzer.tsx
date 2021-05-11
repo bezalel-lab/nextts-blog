@@ -8,7 +8,7 @@ import Link from "next/link";
 import styles from "../../components/layout.module.css";
 
 // cordTonesをCordAnalyzer コンポーネントでも使用できるようにするため、ここでグローバル変数として初期化している。
-// 最初からこれらの値を入れておくことで、一番初めに読み込んだ時に、初期値のコードCに対応する構成音が表示される。
+// 最初にこれらの値を入れておくことで、一番初めに読み込んだ時に、初期値のコードCに対応する構成音が表示される。
 export let cordTones = "構成音：C, E, G";
 
 let firstStringDegrees = [];

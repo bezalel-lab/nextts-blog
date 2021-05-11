@@ -57,6 +57,14 @@
     color: #666;
 }
 
+.width {
+    width: 100px;
+}
+
+.section {
+    margin: 1rem 0;
+}
+
 .center {
     text-align: center;
     margin: 0 auto;
@@ -71,10 +79,14 @@
     margin: 0 auto;
 }
 
-.learnList {
-    display: inline-block;
-    width: 400px;
+.mdnDescription {
+    max-width: 400px;
+    margin: 0 auto;
     font-size: 1rem;
+}
+
+.headingM {
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px) { /*ウィンドウ幅が最大600pxまでの場合に適用*/

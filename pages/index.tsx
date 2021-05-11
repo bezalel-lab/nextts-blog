@@ -33,11 +33,11 @@ export default function Home({
                 <p>仕事を行う上で、</p>
                 <ol>
                     <li>必要なことを見極める</li>
-                    <li>成功する方法を探る</li>
+                    <li>成功する方法を選ぶ</li>
                     <li>勤勉さや意欲を示す</li>
                     <li>他の人と協調する</li>
                 </ol>
-                <p>ことを得意としています。<br />これらを生かして、プロジェクトの成功に貢献できるものと思います。</p>
+                <p>ことができます。<br />これらを生かして、プロジェクトの成功に貢献できるものと思います。</p>
         <Learn />
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
