@@ -37,12 +37,15 @@ export default function Home({
                     <li>他の人と協調する</li>
                 </ol>
                 <p>ことを得意としています。<br />これらを生かして、プロジェクトの成功に貢献できるものと思います。</p>
+        <section>
+        <h2 className={utilStyles.headingLg}>学んだ技術</h2>
+        </section>
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+              <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
@@ -53,7 +56,7 @@ export default function Home({
             </li>
           ))}
         </ul>
-      </section>
+          </section>
     </Layout>
   )
 }
