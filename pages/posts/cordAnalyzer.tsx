@@ -4,6 +4,8 @@ import String from "../../components/string";
 import Fret from "../../components/fret";
 import analyzerStyles from "../../styles/analyzer.module.css";
 import { useState } from "react";
+import Link from "next/link";
+import styles from "../../components/layout.module.css";
 
 // cordTonesをCordAnalyzer コンポーネントでも使用できるようにするため、ここでグローバル変数として初期化している。
 // 最初からこれらの値を入れておくことで、一番初めに読み込んだ時に、初期値のコードCに対応する構成音が表示される。
@@ -145,79 +147,93 @@ export const CordAnalyzer = (props) => {
     return (
         <div className={analyzerStyles.background}>
             <div className={`${analyzerStyles.analyzer} ${analyzerStyles.cordSelector}`}>
-                <span className={analyzerStyles.heading}>Cord Analyzer</span>
-                <br/>
-                <div className={analyzerStyles.cordSelector}>コード：
-                {/* コードを変更するごとにonChangeでコードトーン3つの取得、および度数表示切り替えを行う */}
-                    <select id="cordSelector" name="cordSelector" title="コードを選択" className={`${analyzerStyles.cordSelector} ${analyzerStyles.select}`} onChange={e =>  setCordTone(handleChange(e.target.value))}>
-                        <option>C</option>
-                        <option>C#</option>
-                        <option>D</option>
-                        <option>D#</option>
-                        <option>E</option>
-                        <option>F</option>
-                        <option>F#</option>
-                        <option>G</option>
-                        <option>G#</option>
-                        <option>A</option>
-                        <option>A#</option>
-                        <option>B</option>
-                    </select>
-                    <CordTone cordTones={cordTones}/>
-                </div>
-                {/* 以下は、指板とフレット番号 */}
-                <div className={`${analyzerStyles.scroll}`}>
-                    <FingerBoard>
-                        {/* <String>をmap() による繰り返しで6つ生成する。 */}
-                        {stringsSubscripts.map((string, index) => {
-                            const eachClassName = "string" + (index + 1);
-                            return <String className={` ${"string"}`}>{degreesSubscripts.map((degree) => {
-                            // map() による繰り返しで6つ生成した<String>の中に、同じくmap() による繰り返しで16の<Fret>を表示していく処理の開始地点。
-                            if ( degree === 0 ) {
-                                // このブロックはdegree === 0 だが、この場合、一番左の表示に関わる処理なので、そこに1Eや4Dなどと表示されるようにする。
-                                // 各弦の番号と開放弦の音名を結合したものを生成する。
-                                return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.outside}`}><div className={analyzerStyles.degrees}>{index + 1 + openTones[index] + ":"}</div></Fret>
-                                } else if ( degree === 1 ) {
-                                    {// degree === 1 の場合は開放弦部分の表示となるので、ここも他とは別にスタイリングができるよう、処理を分けてある
-                                    //* スタイリングの違いをつけるために少しだけ違う仕方で処理しているので、下にある「開放弦ではない」部分を表示するためのコードと幾らか重複が生じている。コンポーネントに抽出すると良いかもしれない。propsを与えてclassNameだけが異なるものとなるようにするだろうか。名前はDisplayDegreeコンポーネントか何かかも。
-                                    }
-                                    if ( stringsDegrees[string][degree-1] === "R" ) {
-                                        {// 以下は、「開放弦」かつ「ルート」のものを表示するコード。
-                                        // 開放弦部分のスタイル適用のため、analyzerStyles.open も記述している
-                                        // 表示するものが"R"すなわちルートであれば、赤で色付けするための処理を行い、設定するクラスにanalyzerStyles.root を含める。
-                                        }
-                                        return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.root} ${analyzerStyles.open}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
-                                    } else if ( stringsDegrees[string][degree-1] === "M3" || stringsDegrees[string][degree-1] === "P5" ) {
-                                        {// 以下は、「開放弦」かつ「ルート以外の構成音」のものを表示するコード。
-                                        // "M3"や"P5"は「ルート以外の構成音」なので、青で色付けするために処理を分け、analyzerStyles.cordTone を適用している。
-                                        }
-                                        return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.cordTone} ${analyzerStyles.open}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
-                                    }
-                                    {/* 以下は、「開放弦」かつ「構成音ではない」ものを表示するコード。 */}
-                                    return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.open}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
-                                    
-                                    {/* 以下は、ほぼ上にあるコードと同じだが、「開放弦ではない」部分を表示するためのもの。DRY原則適用の余地があるかもしれない。 */}
-                                } else if ( stringsDegrees[string][degree-1] === "R" ) {
-                                    return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.root}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
-                                } else if ( stringsDegrees[string][degree-1] === "M3" || stringsDegrees[string][degree-1] === "P5" ) {
-                                    return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.cordTone}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
-                                }
-                                return <Fret className={`${analyzerStyles.fret}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
-                            })}</String>
-                        })}
-                    </FingerBoard>
-
-                    {// 以下はフレット番号を表示するためのコード。
-                    // </FingerBoard>の下、しかしそれを包む<div className={`${analyzerStyles.scroll}`}> の中に入れることで、指板のスタイルを保ちつつ、横スクロール時にフレット番号も共に動くようにしている。
-                    }
-                    <div className={`${analyzerStyles.fretNumbersWrapper}`}>
-                    {fretNumbers.map((value, fret) => {
-                        return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.borderless}`}><div className={`${analyzerStyles.fretNumber}`}>{fretNumbers[fret]}</div></Fret>
-                    })}
+                <div className={`${analyzerStyles.wrapper}`}>
+                    <span className={analyzerStyles.heading}>Cord Analyzer</span>
+                    <br/>
+                    <div className={analyzerStyles.cordSelector}>コード：
+                    {/* コードを変更するごとにonChangeでコードトーン3つの取得、および度数表示切り替えを行う */}
+                        <select id="cordSelector" name="cordSelector" title="コードを選択" className={`${analyzerStyles.cordSelector} ${analyzerStyles.select}`} onChange={e =>  setCordTone(handleChange(e.target.value))}>
+                            <option>C</option>
+                            <option>C#</option>
+                            <option>D</option>
+                            <option>D#</option>
+                            <option>E</option>
+                            <option>F</option>
+                            <option>F#</option>
+                            <option>G</option>
+                            <option>G#</option>
+                            <option>A</option>
+                            <option>A#</option>
+                            <option>B</option>
+                        </select>
+                        <CordTone cordTones={cordTones}/>
                     </div>
+                    {/* 以下は、指板とフレット番号 */}
+                    <div className={`${analyzerStyles.scroll}`}>
+                        <FingerBoard>
+                            {/* <String>をmap() による繰り返しで6つ生成する。 */}
+                            {stringsSubscripts.map((string, index) => {
+                                const eachClassName = "string" + (index + 1);
+                                return <String className={` ${"string"}`}>{degreesSubscripts.map((degree) => {
+                                // map() による繰り返しで6つ生成した<String>の中に、同じくmap() による繰り返しで16の<Fret>を表示していく処理の開始地点。
+                                if ( degree === 0 ) {
+                                    // このブロックはdegree === 0 だが、この場合、一番左の表示に関わる処理なので、そこに1Eや4Dなどと表示されるようにする。
+                                    // 各弦の番号と開放弦の音名を結合したものを生成する。
+                                    return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.outside}`}><div className={analyzerStyles.degrees}>{index + 1 + openTones[index] + ":"}</div></Fret>
+                                    } else if ( degree === 1 ) {
+                                        {// degree === 1 の場合は開放弦部分の表示となるので、ここも他とは別にスタイリングができるよう、処理を分けてある
+                                        //* スタイリングの違いをつけるために少しだけ違う仕方で処理しているので、下にある「開放弦ではない」部分を表示するためのコードと幾らか重複が生じている。コンポーネントに抽出すると良いかもしれない。propsを与えてclassNameだけが異なるものとなるようにするだろうか。名前はDisplayDegreeコンポーネントか何かかも。
+                                        }
+                                        if ( stringsDegrees[string][degree-1] === "R" ) {
+                                            {// 以下は、「開放弦」かつ「ルート」のものを表示するコード。
+                                            // 開放弦部分のスタイル適用のため、analyzerStyles.open も記述している
+                                            // 表示するものが"R"すなわちルートであれば、赤で色付けするための処理を行い、設定するクラスにanalyzerStyles.root を含める。
+                                            }
+                                            return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.root} ${analyzerStyles.open}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
+                                        } else if ( stringsDegrees[string][degree-1] === "M3" || stringsDegrees[string][degree-1] === "P5" ) {
+                                            {// 以下は、「開放弦」かつ「ルート以外の構成音」のものを表示するコード。
+                                            // "M3"や"P5"は「ルート以外の構成音」なので、青で色付けするために処理を分け、analyzerStyles.cordTone を適用している。
+                                            }
+                                            return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.cordTone} ${analyzerStyles.open}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
+                                        }
+                                        {/* 以下は、「開放弦」かつ「構成音ではない」ものを表示するコード。 */}
+                                        return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.open}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
+                    
+                                        {/* 以下は、ほぼ上にあるコードと同じだが、「開放弦ではない」部分を表示するためのもの。DRY原則適用の余地があるかもしれない。 */}
+                                    } else if ( stringsDegrees[string][degree-1] === "R" ) {
+                                        return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.root}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}</div></Fret>
+                                    } else if ( stringsDegrees[string][degree-1] === "M3" || stringsDegrees[string][degree-1] === "P5" ) {
+                                        return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.cordTone}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
+                                    }
+                                    return <Fret className={`${analyzerStyles.fret}`}><div className={analyzerStyles.degrees}>{stringsDegrees[string][degree-1]}<div></div></div></Fret>
+                                })}</String>
+                            })}
+                        </FingerBoard>
+                        {// 以下はフレット番号を表示するためのコード。
+                        // </FingerBoard>の下、しかしそれを包む<div className={`${analyzerStyles.scroll}`}> の中に入れることで、指板のスタイルを保ちつつ、横スクロール時にフレット番号も共に動くようにしている。
+                        }
+                        <div className={`${analyzerStyles.fretNumbersWrapper}`}>
+                        {fretNumbers.map((value, fret) => {
+                            return <Fret className={`${analyzerStyles.fret} ${analyzerStyles.borderless}`}><div className={`${analyzerStyles.fretNumber}`}>{fretNumbers[fret]}</div></Fret>
+                        })}
+                        </div>
+                    </div>
+                    <br />
+                    <section className={`${analyzerStyles.description}`}>
+                        <h3>説明：</h3>
+                        <p>左上のセレクトボックスから（音楽の）コードを選ぶと、上の構成音、および指板上の各フレットの度数が、自動でコードに応じたものに変更されます。</p>
+                        <p>配列や条件分岐によって表示し、ハードコーディングを避けるようにしました。</p>
+                        <Link href="../../posts/description">
+                            <a className={`${analyzerStyles.lightLink}`}>CordAnalyzerの開発時に実践したこと</a>
+                        </Link>
+                        <Link href="/">
+                        <a className={analyzerStyles.lightBackToHome}>← Back to home</a>
+                        </Link>
+                    </section>
                 </div>
             </div>
         </div>
+        
     )
 }
 
