@@ -24,6 +24,12 @@
     height: 100%;
     color: white;
     font-family: 'El Messiri', sans-serif;
+    overflow: auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 767px;
 }
 
 .cordSelector {
@@ -57,7 +63,7 @@
     box-sizing: content-box;
     max-width: 750px;
     margin-top: 8px;
-    height: 262px;
+    height: 267px;
     overflow-x: auto;
 }
 
@@ -128,4 +134,21 @@
     height: 1px;
 }
 
+.description {
+    margin-top: 3rem;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #DDD;
+}
 
+.lightLink {
+    color: #1D9BD1;
+    margin-left: 1rem;
+}
+
+.lightBackToHome {
+    display: block;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    color: #1D9BD1;
+}
