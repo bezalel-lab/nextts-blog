@@ -142,13 +142,12 @@
 }
 
 .lightLink {
-    color: #1D9BD1;
+    color: #1D8BDA;
     margin-left: 1rem;
 }
 
 .lightBackToHome {
-    display: block;
     margin-top: 3rem;
     padding-bottom: 1rem;
-    color: #1D9BD1;
+    color: #1D8BDA;
 }

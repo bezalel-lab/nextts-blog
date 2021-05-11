@@ -3,6 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
+import fetch from "node-fetch";
+import base64 from 'js-base64'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -36,8 +38,14 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory)
+export async function getAllPostIds() {
+//   const fileNames = fs.readdirSync(postsDirectory) //GitHub APIを使用するためにコメントアウトしてある。下の一ブロックがそのためのコード。return以降は元からあったもの。
+
+    const repoUrl = "https://api.github.com/repos/BBC-Radiance/nextts-blog/contents/posts";
+    const response = await fetch(repoUrl)
+    const files = await response.json()
+    const fileNames = files.map(file => file.name)
+
   return fileNames.map(fileName => {
     return {
       params: {
@@ -48,8 +56,13 @@ export function getAllPostIds() {
 }
 
 export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+//   const fullPath = path.join(postsDirectory, `${id}.md`)
+//   const fileContents = fs.readFileSync(fullPath, 'utf8') //GitHub APIを使用するためにコメントアウトしてある。下の一ブロックがそのためのコード。const matterResult...... 以降は元からあったもの。
+
+    const repoUrl = `https://api.github.com/repos/BBC-Radiance/nextts-blog/contents/posts/${id}.md`;
+    const response = await fetch(repoUrl);
+    const file = await response.json();
+    const fileContents = base64.decode(file.content)
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)

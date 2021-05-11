@@ -222,12 +222,12 @@ export const CordAnalyzer = () => {
                     <section className={`${analyzerStyles.description}`}>
                         <h3>説明：</h3>
                         <p>左上のセレクトボックスから（音楽の）コードを選ぶと、上の構成音、および指板上の各フレットの度数が、自動でコードに応じたものに変更されます。</p>
-                        <p>配列や条件分岐によって表示し、ハードコーディングを避けるようにしました。</p>
+                        <p>配列や条件分岐によってそれぞれを表示し、ハードコーディングを避けるようにしました。</p>
                         <Link href="../../posts/description">
                             <a className={`${analyzerStyles.lightLink}`}>CordAnalyzerの開発時に実践したこと</a>
                         </Link>
                         <Link href="/">
-                        <a className={analyzerStyles.lightBackToHome}>← Back to home</a>
+                        <p className={styles.backToHome}><a className={analyzerStyles.lightBackToHome}>← Back to home</a></p>
                         </Link>
                     </section>
                 </div>

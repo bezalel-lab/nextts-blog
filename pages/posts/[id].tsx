@@ -31,7 +31,7 @@ export default function Post({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
+  const paths = await getAllPostIds() //GitHub APIを使用するためにawaitを追加した。
   return {
     paths,
     fallback: false
