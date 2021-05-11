@@ -142,7 +142,7 @@ const stringsSubscripts = [0, 1, 2, 3, 4, 5, 6];
 const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 const openTones = ["E", "B", "G", "D", "A", "E"];
 
-export const CordAnalyzer = (props) => {
+export const CordAnalyzer = () => {
     const [cordTone, setCordTone] = useState("C");
     return (
         <div className={analyzerStyles.background}>
