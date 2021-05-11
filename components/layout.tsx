@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Tommy Marshall'
+const name = 'Portfolio Blog'
 export const siteTitle = 'Next.js & TypeScript Portfolio Blog'
 
 export default function Layout({
