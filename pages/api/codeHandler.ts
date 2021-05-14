@@ -1,6 +1,5 @@
-export default foo
+export default foo;
 
 function foo() {
-    console.log("hi!");
-} 
-
+  console.log('hi!');
+}

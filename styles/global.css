@@ -1,17 +1,17 @@
 html,
 body {
-    height: 100%;
-    
+  height: 100%;
+
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
 }
 
 #__next {
-    height: 100%;
+  height: 100%;
 }
 
 * {
@@ -33,32 +33,32 @@ img {
 }
 
 .string {
-    display: block;
-    position: relative;
-    bottom: 6px;
-    white-space: nowrap;
+  display: block;
+  position: relative;
+  bottom: 6px;
+  white-space: nowrap;
 }
 
 .string1 {
-    border-bottom: 1.75px solid #BBB;
+  border-bottom: 1.75px solid #bbb;
 }
 
 .string2 {
-    border-bottom: 2px solid #BBB;
+  border-bottom: 2px solid #bbb;
 }
 
 .string3 {
-    border-bottom: 2.5px solid #BBB;
+  border-bottom: 2.5px solid #bbb;
 }
 
 .string4 {
-    border-bottom: 3px solid #BBB;
+  border-bottom: 3px solid #bbb;
 }
 
 .string5 {
-    border-bottom: 3.5px solid #BBB;
+  border-bottom: 3.5px solid #bbb;
 }
 
 .string6 {
-    border-bottom: 3.75px solid #BBB;
+  border-bottom: 3.75px solid #bbb;
 }

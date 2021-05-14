@@ -1,89 +1,96 @@
 .heading2Xl {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .headingXl {
-    font-size: 2rem;
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .headingLg {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 1rem 0;
 }
 
 .headingLg2 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 1rem 0 1rem 2rem;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 1rem 0 1rem 2rem;
 }
 
 .headingMd {
-    font-size: 1.2rem;
-    line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .borderCircle {
-    border-radius: 9999px;
+  border-radius: 9999px;
 }
 
 .colorInherit {
-    color: inherit;
+  color: inherit;
 }
 
 .padding1px {
-    padding-top: 1px;
+  padding-top: 1px;
 }
 
 .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .listItem {
-    margin: 0 0 1.25rem;
+  margin: 0 0 1.25rem;
 }
 
 .lightText {
-    color: #666;
+  color: #666;
 }
 
 .width {
-    width: 100px;
+  width: 100px;
+}
+
+.sectionWidth {
+  margin: 0 auto;
+  max-width: 36rem;
 }
 
 .section {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .learnGrid {
-    display: grid;
-    display: -ms-grid;
-    grid-template-columns: auto auto;
-    -ms-grid-columns: auto auto;
-    grid-column-gap: 20px;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto;
+  grid-column-gap: 20px;
 }
 
 .nextjs {
-    grid-row: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .typexcript {
-    grid-column: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .center {
-    text-align: center;
-    margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* .lightLink {
@@ -91,67 +98,126 @@
 } */
 
 .headingM {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .flexContainer {
-    display: flex;
-    /* justify-content: space-between; */
-    max-width: 50rem;
+  display: flex;
+  max-width: 50rem;
 }
 
-.flexItem {
-    flex: 1;
-}
-
-
-.mobileImage {
-    width: 170px;
-    margin: 0 auto;
+.logoSize {
+  width: 170px;
+  margin: 0 auto;
 }
 
 .MDNLogo {
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.learnSectDescription {
-    max-width: 400px;
-    margin: 0 auto;
-    font-size: 1rem;
+.learnSectMDNDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1rem;
 }
 
+.learnSectDescription {
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.list {
+  list-style: disc;
+  margin-bottom: 4px;
+}
 
 .headingNextjs {
-    margin-top: 2rem;
-    /* margin-bottom: -0.5rem; */
+  margin-top: 2rem;
+  /* margin-bottom: -0.5rem; */
 }
 
-@media screen and (max-width: 768px) { /*ウィンドウ幅が最大600pxまでの場合に適用*/
-    .test {
-        /* font-size: 20px; */
-    }
+.tsLogo {
+  margin-bottom: 8px;
 }
 
-@media screen and (max-width: 600px) { /*ウィンドウ幅が最大600pxまでの場合に適用*/
-    .h4Small {
-        font-size: 1.13rem;
-    }
-    
-    .mobileImage {
-        width: 160px;
-        margin: 0 auto;
-    }
-    
-    .learnList {
-        display: inline-block;
-        max-width: 350px;
-        font-size: 1rem;
-    }
+.videoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .learnGrid {
-        display: block;
-    }
+.video {
+  min-width: 392px;
+  min-height: 220.5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  /*ウィンドウ幅が最大600pxまでの場合に適用*/
+  .sectionWidth {
+    margin: 0 auto;
+    max-width: 28.5rem;
+  }
+  
+  .flexContainer {
+    display: block;
+  }
+
+  .learnSectDescription {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .othersFlexContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .video {
+    margin: 1.3rem auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*ウィンドウ幅が最大600pxまでの場合に適用*/
+  .headingLg {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+  }
+  
+  .logoSize {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .tsLogo {
+    margin-bottom: 8px;
+  }
+
+  .learnSectDescription {
+    max-width: 435px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .learnGrid {
+    display: block;
+  }
+
+  .MDNLogo {
+    margin-top: -1.25rem;
+  }
 }
