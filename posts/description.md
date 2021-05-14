@@ -3,62 +3,63 @@ title: 'オリジナルWebアプリCordAnalyzerの開発時に実践したこと
 date: '2021-05-10'
 ---
 
-<link href="/styles/utils.module.css" rel="stylesheet"></link>
+<!-- <link href="/styles/utils.module.css" rel="stylesheet"></link> -->
 
 ## 1.DRY原則を適用するため、map()メソッドのループと多次元配列を使用
 
 最初は弦（＜String＞）とフレット（＜Fret＞）を次のように記述していました。
 
 
-    <String>
-        <Fret>
-            // ✍️↓多次元配列。左の添字で1弦に、
-            // 右の添字で0フレット（開放弦）に
-            //  アクセスしている（初期値は「M3」）
-            <div>{stringsDegrees[0][0]}</div>
-        </Fret>
-        <Fret>
-            // ✍️同じ弦の1フレット。ｒ
-            <div>{stringsDegrees[0][1]}</div>
-        </Fret>
-        ・
-        ・
-        ・
-        <Fret>
-            <div>{stringsDegrees[0][15]}</div>
-        </Fret>
-            // ✍️15フレットまで繰り返したが、下記の通り
-            // それを後5セット繰り返さなければならない。
-    </String>
-    <String>
-        <Fret>
-            <div>{stringsDegrees[1][0]}</div>
-        </Fret>
-        ・
-        ・
-        ・
-        <Fret>
-            <div>{stringsDegrees[1][15]}</div>
-        </Fret>
-    </String>
-        ・
-        ・
-        ・
-        ・
-        ・
-        ・
-    <String>
-        <Fret>
-            <div>{stringsDegrees[5][0]}</div>
-        </Fret>
-        ・
-        ・
-        ・
-        <Fret>
-            <div>{stringsDegrees[5][15]}</div>
-        </Fret>
-            // ✍️ようやく6弦の15フレットまで終了。
-    </String>
+```javascript
+<String>
+    <Fret>
+        // ✍️↓多次元配列。左の添字で1弦に、右の添字で
+        // 0フレット（開放弦）にアクセスしている（初期値は「M3」）
+        <div>{stringsDegrees[0][0]}</div>
+    </Fret>
+    <Fret>
+        // ✍️同じ弦の1フレット。
+        <div>{stringsDegrees[0][1]}</div>
+    </Fret>
+    ・
+    ・
+    ・
+    <Fret>
+        <div>{stringsDegrees[0][15]}</div>
+    </Fret>
+        // ✍️15フレットまで繰り返したが、下記の通り
+        // それを後5セット繰り返さなければならない。
+</String>
+<String>
+    <Fret>
+        <div>{stringsDegrees[1][0]}</div>
+    </Fret>
+    ・
+    ・
+    ・
+    <Fret>
+        <div>{stringsDegrees[1][15]}</div>
+    </Fret>
+</String>
+    ・
+    ・
+    ・
+    ・
+    ・
+    ・
+<String>
+    <Fret>
+        <div>{stringsDegrees[5][0]}</div>
+    </Fret>
+    ・
+    ・
+    ・
+    <Fret>
+        <div>{stringsDegrees[5][15]}</div>
+    </Fret>
+        // ✍️ようやく6弦の15フレットまで終了。
+</String>
+```
 <br>
 <br>
 これでも間はかなり省略していますが、16 * 6 = 96回 も＜Fret＞を記述しています。全体で300行もありました。

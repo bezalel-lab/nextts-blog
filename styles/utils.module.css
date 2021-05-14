@@ -65,6 +65,22 @@
     margin: 1rem 0;
 }
 
+.learnGrid {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: auto auto;
+    -ms-grid-columns: auto auto;
+    grid-column-gap: 20px;
+}
+
+.nextjs {
+    grid-row: 1 / 2;
+}
+
+.typexcript {
+    grid-column: 2 / 3;
+}
+
 .center {
     text-align: center;
     margin: 0 auto;
@@ -74,19 +90,49 @@
     color: #1D8BDA;
 } */
 
+.headingM {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.flexContainer {
+    display: flex;
+    /* justify-content: space-between; */
+    max-width: 50rem;
+}
+
+.flexItem {
+    flex: 1;
+}
+
+
 .mobileImage {
     width: 170px;
     margin: 0 auto;
 }
 
-.mdnDescription {
+.MDNLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learnSectDescription {
     max-width: 400px;
     margin: 0 auto;
     font-size: 1rem;
 }
 
-.headingM {
-    margin-bottom: 1rem;
+
+.headingNextjs {
+    margin-top: 2rem;
+    /* margin-bottom: -0.5rem; */
+}
+
+@media screen and (max-width: 768px) { /*ウィンドウ幅が最大600pxまでの場合に適用*/
+    .test {
+        /* font-size: 20px; */
+    }
 }
 
 @media screen and (max-width: 600px) { /*ウィンドウ幅が最大600pxまでの場合に適用*/
@@ -103,5 +149,9 @@
         display: inline-block;
         max-width: 350px;
         font-size: 1rem;
+    }
+
+    .learnGrid {
+        display: block;
     }
 }
