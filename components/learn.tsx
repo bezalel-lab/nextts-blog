@@ -70,7 +70,7 @@ const Learn = () => {
                     <li>YouTube（「しまぶーのIT大学」や「シリコンバレーエンジニア酒井潤チャンネル - シリエン戦隊JUN TV」）</li>
                     <li>Web API（下の「Blog」の記事データは、あえてファイルシステムではなくGitHub APIを使用して取得しています）　など</li>
                 </ul>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zoaIv5ifoPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/zoaIv5ifoPI" title="YouTube video player"></iframe>
                 {/* <p>公式ドキュメントが他より難しく感じたため、Udemyの<Link href="https://www.udemy.com/course/typescript-complete/"><a>「超TypeScript入門 完全パック(2021)」</a></Link>（14時間）で学びました。<br />動画の詳細なノートを取り、参照しながら開発できるようにしました。</p> */}
             </section>
             {/* <div className={`${utilStyles.center}`}><iframe width="373.5" height="210" src="https://www.youtube.com/embed/1PczgGb6SV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> */}
