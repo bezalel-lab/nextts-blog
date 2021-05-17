@@ -1,5 +1,5 @@
 import hello from "../api/hello";
-interface Scoreable {
+export interface Scoreable {
   readonly totalScore: number;
   render(): void;
 }
@@ -77,3 +77,5 @@ class Foods implements Foodsable {
   }
 }
 const foods = Foods.getInstance();
+
+export default Foodable
