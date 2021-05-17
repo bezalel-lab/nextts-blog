@@ -244,4 +244,4 @@ loop();
     //エラーの表示はされていない
 //あとは、〜
 
-export {};
+export default para;
