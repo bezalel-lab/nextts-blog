@@ -18,7 +18,7 @@ const Learn = () => {
           <div className={`${utilStyles.logoSize} ${utilStyles.MDNLogo}`}>
             
             <Image
-              src="/images/mdn.svg"
+              src="/images/mdnn.svg" //ToDo 許可の有無を確認してから、よければファイル名のnを一つ取り除く
               height={180}
               width={180}
               alt="MDN logo"
