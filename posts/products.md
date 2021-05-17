@@ -4,7 +4,7 @@ date: '2021-05-14'
 ---
 
 - [◯✖︎ゲーム（React）](/ticTacToe/public/index)
--	[ToDoリスト（React）](/ToDo/public/index.html)
+-	[ToDoリスト（React）](/ToDo/build/index.html)
 -	[健康管理アプリ（TypeScript）](/foodApp/index.html)
 - [バウンスボール（JavaScript）](/bounceBall/bounceBall.html)
 
