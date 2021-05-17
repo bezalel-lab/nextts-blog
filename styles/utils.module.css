@@ -97,6 +97,10 @@
     color: #1D8BDA;
 } */
 
+.inlineBlock {
+  display: inline-block;
+}
+
 .headingM {
   margin-top: 2rem;
   margin-bottom: 1rem;

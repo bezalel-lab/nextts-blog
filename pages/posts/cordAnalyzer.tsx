@@ -6,6 +6,7 @@ import analyzerStyles from '../../styles/analyzer.module.css';
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../../components/layout.module.css';
+import { nanoid } from "nanoid";
 
 // cordTonesをCordAnalyzer コンポーネントでも使用できるようにするため、ここでグローバル変数として初期化している。
 // 最初にこれらの値を入れておくことで、一番初めに読み込んだ時に、初期値のコードCに対応する構成音が表示される。
@@ -230,14 +231,14 @@ export const CordAnalyzer = () => {
               {stringsSubscripts.map((string, index) => {
                 const eachClassName = 'string' + (index + 1);
                 return (
-                  <String className={` ${'string'}`}>
+                  <String key={nanoid()} className={` ${'string'}`}>
                     {degreesSubscripts.map((degree) => {
                       // map() による繰り返しで6つ生成した<String>の中に、同じくmap() による繰り返しで16の<Fret>を表示していく処理の開始地点。
                       if (degree === 0) {
                         // このブロックはdegree === 0 だが、この場合、一番左の表示に関わる処理なので、そこに1Eや4Dなどと表示されるようにする。
                         // 各弦の番号と開放弦の音名を結合したものを生成する。
                         return (
-                          <Fret
+                          <Fret key={nanoid()}
                             className={`${analyzerStyles.fret} ${analyzerStyles.outside}`}
                           >
                             <div className={analyzerStyles.degrees}>
@@ -257,7 +258,7 @@ export const CordAnalyzer = () => {
                             // 表示するものが"R"すなわちルートであれば、赤で色付けするための処理を行い、設定するクラスにanalyzerStyles.root を含める。
                           }
                           return (
-                            <Fret
+                            <Fret key={nanoid()}
                               className={`${analyzerStyles.fret} ${analyzerStyles.root} ${analyzerStyles.open}`}
                             >
                               <div className={analyzerStyles.degrees}>
@@ -274,7 +275,7 @@ export const CordAnalyzer = () => {
                             // "M3"や"P5"は「ルート以外の構成音」なので、青で色付けするために処理を分け、analyzerStyles.cordTone を適用している。
                           }
                           return (
-                            <Fret
+                            <Fret key={nanoid()}
                               className={`${analyzerStyles.fret} ${analyzerStyles.cordTone} ${analyzerStyles.open}`}
                             >
                               <div className={analyzerStyles.degrees}>
@@ -288,7 +289,7 @@ export const CordAnalyzer = () => {
                           /* 以下は、「開放弦」かつ「構成音ではない」ものを表示するコード。 */
                         }
                         return (
-                          <Fret
+                          <Fret key={nanoid()}
                             className={`${analyzerStyles.fret} ${analyzerStyles.open}`}
                           >
                             <div className={analyzerStyles.degrees}>
@@ -303,7 +304,7 @@ export const CordAnalyzer = () => {
                         }
                       } else if (stringsDegrees[string][degree - 1] === 'R') {
                         return (
-                          <Fret
+                          <Fret key={nanoid()}
                             className={`${analyzerStyles.fret} ${analyzerStyles.root}`}
                           >
                             <div className={analyzerStyles.degrees}>
@@ -316,7 +317,7 @@ export const CordAnalyzer = () => {
                         stringsDegrees[string][degree - 1] === 'P5'
                       ) {
                         return (
-                          <Fret
+                          <Fret key={nanoid()}
                             className={`${analyzerStyles.fret} ${analyzerStyles.cordTone}`}
                           >
                             <div className={analyzerStyles.degrees}>
@@ -327,7 +328,7 @@ export const CordAnalyzer = () => {
                         );
                       }
                       return (
-                        <Fret className={`${analyzerStyles.fret}`}>
+                        <Fret key={nanoid()} className={`${analyzerStyles.fret}`}>
                           <div className={analyzerStyles.degrees}>
                             {stringsDegrees[string][degree - 1]}
                             <div></div>
@@ -346,7 +347,7 @@ export const CordAnalyzer = () => {
             <div className={`${analyzerStyles.fretNumbersWrapper}`}>
               {fretNumbers.map((value, fret) => {
                 return (
-                  <Fret
+                  <Fret key={nanoid()}
                     className={`${analyzerStyles.fret} ${analyzerStyles.borderless}`}
                   >
                     <div className={`${analyzerStyles.fretNumber}`}>
@@ -367,13 +368,15 @@ export const CordAnalyzer = () => {
               配列や条件分岐によってそれぞれを表示し、ハードコーディングを避けるようにしました。
             </p>
             <Link href="../../posts/description">
-              <a className={`${analyzerStyles.lightLink}`}>
-                CordAnalyzerの開発時に実践したこと
-              </a>
+              <p>
+                <a className={`${analyzerStyles.lightLink}`}>
+                  CordAnalyzerの開発時に実践したこと
+                </a>
+              </p>
             </Link>
             <Link href="/">
-              <p className={styles.backToHome}>
-                <a className={analyzerStyles.lightBackToHome}>← Back to home</a>
+              <p className={`${styles.backToHome} ${styles.inlineBlock}`}>
+                <a className={styles.lightBackToHome}>← Back to home</a>
               </p>
             </Link>
           </section>
