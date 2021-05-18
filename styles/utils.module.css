@@ -63,12 +63,38 @@
   width: 100px;
 }
 
+.sectionWrapper {
+  margin: 0 1rem;
+}
+
+.lineMargin {
+  margin: 1rem 0;
+}
+
+.above {
+  display: block;
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 75%, 0.9);
+  border-width: 0 0 1px 0;
+  border-radius: 15px;
+}
+
+.under {
+  height: 30px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 75%, 0.9);
+  border-width: 1px 0 0 0;
+  border-radius: 15px;
+}
+
 .sectionWidth {
   margin: 0 auto;
   max-width: 36rem;
 }
 
-.section {
+.learnContents {
   margin: 1rem 0;
 }
 
@@ -143,7 +169,11 @@
 
 .learnList {
   list-style: disc;
-  margin-bottom: 5px;
+  margin: 0 auto 5px;
+}
+
+.othersList {
+  margin-right: -70px;
 }
 
 .toRight {
@@ -158,6 +188,10 @@
 
 .tsLogo {
   margin-bottom: 8px;
+}
+
+.otherSection {
+  margin: 3rem 0;
 }
 
 .videoWrapper {
@@ -178,8 +212,19 @@
   padding-bottom: 0.1rem;
 }
 
+@media screen and (max-width: 1050px) {
+  /*ウィンドウ幅が最大1050pxまでの場合に適用*/
+  .learnGrid {
+    grid-column-gap: 30px;
+  }
+  
+  .othersList {
+    margin-right: -30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  /*ウィンドウ幅が最大600pxまでの場合に適用*/
+  /*ウィンドウ幅が最大768pxまでの場合に適用*/  
   .sectionWidth {
     margin: 0 auto;
     max-width: 28.5rem;
@@ -249,8 +294,8 @@
   .video {
     padding: 0 0.5rem;
     /* max-width: 200px; */
-    min-height: 201px;
-    min-width: 100vw;
-    height: auto;
+    /* min-height: 201px; */
+    /* min-width: 100vw; */
+    /* height: auto; */
   }
 }

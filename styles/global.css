@@ -8,6 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background: #fff;
 }
 
 #__next {
@@ -61,4 +62,12 @@ img {
 
 .string6 {
   border-bottom: 3.75px solid #bbb;
+}
+
+@media screen and (max-width: 1075px) {
+  /*ウィンドウ幅が最大pxまでの場合に適用*/
+  html,
+  body {
+    background: #F8F8F8;
+  }
 }

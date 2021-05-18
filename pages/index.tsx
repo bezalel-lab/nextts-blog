@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
+import Line from '../components/Line';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
+// import Image from 'next/link';
 import Learn from '../components/learn';
 import Date from '../components/date';
 import { GetStaticProps } from 'next';
@@ -21,7 +23,7 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={`{utilStyles.headingMd}`}>
+      <section className={`${utilStyles.headingMd}`}>
         <div className={`${utilStyles.sectionWidth}`}>
           <p>
             こんにちは、
@@ -48,9 +50,14 @@ export default function Home({
                     <li>他の人と協調する</li>
                 </ol>
                 <p>ことができます。<br />これらを生かして、プロジェクトの成功に貢献できるものと思います。</p> */}
+        {/* <Line /> */}
+        <Line />
         <Learn />
+        <Line />
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blog}`}>
+      <section
+        className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blog}`}
+      >
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
