@@ -229,6 +229,12 @@
   padding-bottom: 0.1rem;
 }
 
+.EnglishHeading {
+  font-size: 2.1rem;/*⭕️*/
+  margin-top: 0;
+  margin-bottom: 1.3rem;
+}
+
 .article {
   max-width: 36rem;
   margin: 0 auto;
@@ -241,12 +247,6 @@
 
   .othersList {
     margin-right: -30px;
-  }
-
-  .EnglishHeading {
-    font-size: 2.1rem;
-    margin-top: 0;
-    margin-bottom: 1.3rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -286,7 +286,7 @@
 
     @media screen and (max-width: 600px) {
       .headingLg {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         line-height: 1.4;
         margin: 1rem 0;
       }
@@ -296,7 +296,7 @@
       }
 
       .check {
-        bottom: 0;
+        bottom: 1px;
         font-size: 1.6rem;
         color: blue;
       }

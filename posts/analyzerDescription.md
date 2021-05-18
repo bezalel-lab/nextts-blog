@@ -11,8 +11,8 @@ date: '2021-05-10'
 <String>
   <Fret>
 ```
-　// ✍️↓ 多次元配列。左の添字で 1 弦に、右の添字で<br>
-　//その0 フレット（開放弦）にアクセスしている（初期値は「M3」）
+　// ✍️↓ 多次元配列。左の添字で 1 弦を表す配列に、右の添字で1弦の配列の<br>
+　//0 フレット（開放弦）にアクセスしている（初期値は長3度を意味する「M3」）
 ```javascript
     <div>
       {stringsDegrees[0][0]}
@@ -92,10 +92,10 @@ const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 ……
 
-{stringsSubscripts.map((string) => {
-return <String>{degreesSubscripts.map((degree) => {
-return <Fret>{stringsDegrees[string][degree]}</Fret>
-})}</String>
+{stringsSubscripts.map((string) => {<br>
+　return ＜String＞{degreesSubscripts.map((degree) => {<br>
+　　return ＜Fret＞{stringsDegrees[string][degree]}＜/Fret＞<br>
+　})}＜/String＞<br>
 })}
 
 <br>
@@ -103,7 +103,7 @@ return <Fret>{stringsDegrees[string][degree]}</Fret>
 <u>300 行から 293 行減って 7 行となり</u>、随分すっきりとしました。
 
 <br>
-（ちなみにオブジェクトを使用せず配列を用いたのは、プロパティ名に”C”と”C#”をそれぞれ入力すると、”#”の記号があっても区別がつかないのか、エラーが表示されてしまったためです）
+（今回オブジェクトではなく配列を用いました。オブジェクトのプロパティ名に”C”と”C#”をそれぞれ入力すると、”#”の記号があっても区別がつかないのか、エラーが表示されてしまったためです）
 
 <br>
 <br>
@@ -115,7 +115,7 @@ iPad の幅である 768px までは、横スクロールなしで指板全体�
 
 また、スマートフォンなどで横スクロールする際は、全体ではなく、指板だけがスクロールされるようにしました。
 
-そうすると、スクロールに伴って、コードを入力するためのセレクトボックスや構成音の表示まで画面外に出てしまうことはないため、UX が向上すると思ったからです。
+そうすると、スクロールに伴ってコード入力用のセレクトボックスや構成音の表示まで画面外に出てしまうことはないため、UX が向上すると思ったからです。
 
 <br>
 
