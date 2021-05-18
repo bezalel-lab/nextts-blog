@@ -50,7 +50,7 @@ export default function Home({
                 <p>ことができます。<br />これらを生かして、プロジェクトの成功に貢献できるものと思います。</p> */}
         <Learn />
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blog}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (

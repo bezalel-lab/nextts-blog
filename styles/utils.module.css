@@ -19,7 +19,7 @@
 .headingLg {
   font-size: 1.5rem;
   line-height: 1.4;
-  margin: 1rem 1rem 0;
+  margin: 1rem 1rem 1rem 0;
 }
 
 .headingLg2 {
@@ -116,11 +116,14 @@
   margin: 0 auto;
 }
 
-.MDNLogo {
-  width: 300px;
+.MDNAlternativeImg {
+  position: relative;
+  left: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 340px;
+  opacity: 0.85;
 }
 
 .learnSectMDNDescription {
@@ -138,9 +141,14 @@
   font-size: 1rem;
 }
 
-.list {
+.learnList {
   list-style: disc;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
+}
+
+.toRight {
+  position: relative;
+  left: 20px;
 }
 
 .headingNextjs {
@@ -161,10 +169,13 @@
 .video {
   min-width: 392px;
   min-height: 220.5px;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.blog {
+  padding-bottom: 0.1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -173,7 +184,17 @@
     margin: 0 auto;
     max-width: 28.5rem;
   }
-  
+
+  .MDNAlternativeImg {
+    position: relative;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    opacity: 0.85;
+  }
+
   .flexContainer {
     display: block;
   }
@@ -201,7 +222,7 @@
     line-height: 1.4;
     margin: 1rem 0;
   }
-  
+
   .logoSize {
     width: 160px;
     margin: 0 auto;
@@ -221,7 +242,15 @@
     display: block;
   }
 
-  .MDNLogo {
-    margin-top: -1.25rem;
+  .MDNAlternativeImg {
+    min-width: 280px;
+  }
+
+  .video {
+    padding: 0 0.5rem;
+    /* max-width: 200px; */
+    min-height: 201px;
+    min-width: 100vw;
+    height: auto;
   }
 }

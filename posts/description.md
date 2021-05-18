@@ -3,18 +3,19 @@ title: 'オリジナルWebアプリCordAnalyzerの開発時に実践したこと
 date: '2021-05-10'
 ---
 
-<!-- <link href="/styles/utils.module.css" rel="stylesheet"></link> -->
-
 ## 1.DRY 原則を適用するため、map()メソッドのループと多次元配列を使用
 
 最初は弦（＜ String ＞）とフレット（＜ Fret ＞）を次のように記述していました。
 
-```javascript
+```javascript
 <String>
   <Fret>
-    // ✍️↓多次元配列。左の添字で1弦に、
-    // 右の添字で0フレット（開放弦）に
-    // アクセスしている（初期値は「M3」）
+```
+
+// ✍️↓ 多次 元配列。左の添字で 1 弦に、右の添字で<br>
+　//0 フレット（開放弦）にアクセスしている（初期値は「M3」）
+
+```javascript
     <div>{stringsDegrees[0][0]}</div>
   </Fret>
   <Fret>
@@ -27,9 +28,13 @@ date: '2021-05-10'
   <Fret>
     <div>{stringsDegrees[0][15]}</div>
   </Fret>
-    // ✍️15フレットまで繰り返したが、
-    // 下記の通りそれを後5セット
-    // 繰り返さなければならない。
+```
+
+// ✍️15 フレットまで繰り返したが、下記の通り
+<br>
+　//それを後 5 セット繰り返す必要がある。
+
+```javascript
 </String>
 <String>
   <Fret>
@@ -69,9 +74,10 @@ date: '2021-05-10'
 <br>
 <br>
 <br>
-// ✍️各弦の繰り返し処理に使用。<br>
+
+// ✍️ 各弦の繰り返し処理に使用。<br>
 const stringsSubscripts = [0, 1, 2, 3, 4, 5];<br>
-// ✍️各フレットの繰り返し処理に使用。<br>
+// ✍️ 各フレットの繰り返し処理に使用。<br>
 const degreesSubscripts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 ……
