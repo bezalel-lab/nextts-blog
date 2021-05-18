@@ -6,6 +6,7 @@ import analyzerStyles from '../../styles/analyzer.module.css';
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../../components/layout.module.css';
+import utilStyles from "../../styles/utils.module.css";
 import { nanoid } from "nanoid";
 
 // cordTonesをCordAnalyzer コンポーネントでも使用できるようにするため、ここでグローバル変数として初期化している。
@@ -367,8 +368,8 @@ export const CordAnalyzer = () => {
             <p>
               配列や条件分岐によってそれぞれを表示し、ハードコーディングを避けるようにしました。
             </p>
-            <Link href="../../posts/description">
-              <p>
+            <Link href="../../posts/analyzerDescription">
+              <p className={`${utilStyles.linkCursor}`}>
                 <a className={`${analyzerStyles.lightLink}`}>
                   CordAnalyzerの開発時に実践したこと
                 </a>

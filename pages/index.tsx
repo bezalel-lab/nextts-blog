@@ -36,7 +36,7 @@ export default function Home({
             Next.jsとTypeScriptを用いて、ギタリスト向けのコードを分析するアプリを作成しました。
           </p>
           <Link href="/posts/cordAnalyzer">
-            <p className={`${utilStyles.headingLg2} ${utilStyles.inlineBlock}`}>
+            <p className={`${utilStyles.headingLg2} ${utilStyles.inlineBlock} ${utilStyles.linkCursor}`}>
               <a>🎸Cord Analyzer</a>
             </p>
           </Link>

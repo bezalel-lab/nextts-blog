@@ -140,6 +140,10 @@
     color: #1D8BDA;
 } */
 
+.linkCursor {
+  cursor: pointer;
+}
+
 .inlineBlock {
   display: inline-block;
 }

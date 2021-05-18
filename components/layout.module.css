@@ -21,6 +21,7 @@
   /* margin: 3rem 0 0; */
   margin-top: 3rem;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 .lightBackToHome {
