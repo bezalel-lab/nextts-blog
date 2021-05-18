@@ -103,7 +103,7 @@ const Learn = () => {
       </div>
       <section className={`${utilStyles.learnSection} ${utilStyles.otherSection}`}>
         <h3
-          className={`${utilStyles.center} ${utilStyles.h4Small} ${utilStyles.headingM}`}
+          className={`${utilStyles.center} ${utilStyles.headingM}`}
         >
           その他
         </h3>
