@@ -56,7 +56,7 @@ export default function Home({
         <Line />
       </section>
       <section
-        className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blog}`}
+        className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blog} ${utilStyles.sectionWrapper}`}
       >
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
