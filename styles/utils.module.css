@@ -212,6 +212,10 @@
   padding-bottom: 0.1rem;
 }
 
+.headingEnglish {
+  font-size: 1.9rem;
+}
+
 .article {
   max-width: 36rem;
   margin: 0 auto;
