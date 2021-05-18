@@ -243,6 +243,10 @@
   margin: 0 auto;
 }
 
+.blog {
+  padding-bottom: 1rem;
+}
+
 @media screen and (max-width: 1050px) {
   .lineMargin {
     margin: 1rem 0;
