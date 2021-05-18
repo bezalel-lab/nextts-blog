@@ -222,11 +222,13 @@
 }
 
 .video {
+  position: relative;
+  bottom: 5px;
   min-width: 392px;
   min-height: 220.5px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .blog {
@@ -234,7 +236,7 @@
 }
 
 .EnglishHeading {
-  font-size: 2.1rem;/*⭕️*/
+  font-size: 2.1rem; /*⭕️*/
   margin-top: 0;
   margin-bottom: 1.3rem;
 }
@@ -245,6 +247,10 @@
 }
 
 @media screen and (max-width: 1050px) {
+  .lineMargin {
+    margin: 1rem 0;
+  }
+
   .learnGrid {
     grid-column-gap: 30px;
   }
@@ -257,6 +263,11 @@
     .sectionWidth {
       margin: 0 auto;
       max-width: 28.5rem;
+    }
+
+    .blog {
+      padding-top: 0;
+      /* margin-top: 0; */
     }
 
     .MDNAlternativeImg {
@@ -276,7 +287,7 @@
     .learnSectDescription {
       max-width: 500px;
       margin: 0 auto;
-      font-size: 1rem;
+      font-size: 1rem;  
     }
 
     .othersFlexContainer {
@@ -285,6 +296,7 @@
     }
 
     .video {
+      bottom: 0;
       margin: 1.3rem auto 0 auto;
     }
 
@@ -300,7 +312,7 @@
       }
 
       .check {
-        bottom: 1px;
+        bottom: 0;
         font-size: 1.6rem;
         color: blue;
       }
@@ -334,9 +346,11 @@
       .MDNAlternativeImg {
         min-width: 280px;
       }
-
-      .video {
-        padding: 0 0.5rem;
+      @media screen and (max-width: 600px) {
+        .video {
+          min-width: 330px;
+          min-height: 185px;
+        }
       }
     }
   }
