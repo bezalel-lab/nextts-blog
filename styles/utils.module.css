@@ -214,10 +214,7 @@
 
 .article {
   max-width: 36rem;
-  padding: 0 1rem;
-  margin: 0 auto 6rem;
-  padding-top: 3rem;
-  background-color: #F8F8F8;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1050px) {

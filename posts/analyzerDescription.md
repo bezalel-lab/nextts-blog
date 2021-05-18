@@ -14,39 +14,42 @@ date: '2021-05-10'
 　// ✍️↓ 多次元配列。左の添字で 1 弦に、右の添字で<br>
 　//0 フレット（開放弦）にアクセスしている（初期値は「M3」）
 ```javascript
-    <div>{stringsDegrees[0][0]}
+    <div>
+      {stringsDegrees[0][0]}
     </div>
   </Fret>
   <Fret>
     // ✍️同じ弦の1フレット。
-    <div>{stringsDegrees[0][1]}
+    <div>
+      {stringsDegrees[0][1]}
     </div>
   </Fret>
   ・
   ・
   ・
   <Fret>
-    <div>{stringsDegrees[0][15]}
+    <div>
+      {stringsDegrees[0][15]}
     </div>
   </Fret>
 ```
 
-　// ✍️15 フレットまで繰り返したが、
-　//下記の通りそれを後 5 セット
-　//繰り返さなければならない。
+　// ✍️15 フレットまで繰り返したが、下記の通りそれを後 5 セット繰り返さなければならない。
 
 ```javascript
 </String>
 <String>
   <Fret>
-    <div>{stringsDegrees[1][0]}
+    <div>
+      {stringsDegrees[1][0]}
     </div>
   </Fret>
   ・
   ・
   ・
   <Fret>
-    <div>{stringsDegrees[1][15]}
+    <div>
+      {stringsDegrees[1][15]}
     </div>
   </Fret>
 </String>
@@ -58,14 +61,16 @@ date: '2021-05-10'
   ・
 <String>
   <Fret>
-    <div>{stringsDegrees[5][0]}
+    <div>
+      {stringsDegrees[5][0]}
     </div>
   </Fret>
   ・
   ・
   ・
   <Fret>
-    <div>{stringsDegrees[5][15]}
+    <div>
+      {stringsDegrees[5][15]}
     </div>
   </Fret>
   // ✍️ようやく6弦の15フレットまで終了
