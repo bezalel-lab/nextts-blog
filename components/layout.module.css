@@ -34,7 +34,6 @@
 }
 
 @media screen and (max-width: 1100px) {
-  /*ウィンドウ幅が最大980pxまでの場合に適用*/
   .wrapper {
     margin: 0;
   }

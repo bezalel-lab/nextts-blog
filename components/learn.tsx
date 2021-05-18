@@ -6,7 +6,7 @@ const Learn = () => {
   return (
     <section className={`${utilStyles.sectionWrapper}`}>
       <section className={`${utilStyles.learnContents}`}>
-        <h2 className={utilStyles.headingLg}>主な学習内容</h2>
+        <h2 className={utilStyles.headingLg}><span className={`${utilStyles.check}`}>☑</span>主な学習内容</h2>
         <h3
           className={`${utilStyles.center} ${utilStyles.h4Small} ${utilStyles.headingM}`}
         >
@@ -70,7 +70,7 @@ const Learn = () => {
             <Link href="https://nextjs.org/">
               <a>公式ドキュメント</a>
             </Link>
-            全体を学びました。Reactのフレームワークであるため、Reactの公式ドキュメントも全て読み、チュートリアルはどちらも二週しました。
+            全体を学習しました。Reactのフレームワークであるため、Reactの公式ドキュメントも全て読み、チュートリアルはどちらも二週しました。
           </p>
         </section>
         <section className={`${utilStyles.learnSection}  ${utilStyles.typescript}`}>

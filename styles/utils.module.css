@@ -1,11 +1,15 @@
 .heading2Xl {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
   text-align: center;
 }
+
+/* .headingTop {
+  font-size: 3rem;
+} */
 
 .headingXl {
   font-size: 2rem;
@@ -17,7 +21,7 @@
 }
 
 .headingLg {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 1.4;
   margin: 1rem 1rem 1rem 0;
 }
@@ -67,8 +71,13 @@
   margin: 0 1rem;
 }
 
+.sectionWidth {
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
 .lineMargin {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .above {
@@ -89,9 +98,17 @@
   border-radius: 15px;
 }
 
-.sectionWidth {
-  margin: 0 auto;
-  max-width: 36rem;
+.check {
+  position: relative;
+  bottom: 1px;
+  color: blue;
+}
+
+.EnglishCheck {
+  position: relative;
+  bottom: 1px;
+  font-size: 1.85rem;
+  color: blue;
 }
 
 .learnContents {
@@ -212,99 +229,111 @@
   padding-bottom: 0.1rem;
 }
 
-.headingEnglish {
-  font-size: 1.9rem;
-}
-
 .article {
   max-width: 36rem;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1050px) {
-  /*ウィンドウ幅が最大1050pxまでの場合に適用*/
   .learnGrid {
     grid-column-gap: 30px;
   }
-  
+
   .othersList {
     margin-right: -30px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  /*ウィンドウ幅が最大768pxまでの場合に適用*/  
-  .sectionWidth {
-    margin: 0 auto;
-    max-width: 28.5rem;
+  .EnglishHeading {
+    font-size: 2.1rem;
+    margin-top: 0;
+    margin-bottom: 1.3rem;
   }
 
-  .MDNAlternativeImg {
-    position: relative;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 340px;
-    opacity: 0.85;
-  }
+  @media screen and (max-width: 768px) {
+    .sectionWidth {
+      margin: 0 auto;
+      max-width: 28.5rem;
+    }
 
-  .flexContainer {
-    display: block;
-  }
+    .MDNAlternativeImg {
+      position: relative;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 340px;
+      opacity: 0.85;
+    }
 
-  .learnSectDescription {
-    max-width: 500px;
-    margin: 0 auto;
-    font-size: 1rem;
-  }
+    .flexContainer {
+      display: block;
+    }
 
-  .othersFlexContainer {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+    .learnSectDescription {
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
 
-  .video {
-    margin: 1.3rem auto 0 auto;
-  }
-}
+    .othersFlexContainer {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
-@media screen and (max-width: 600px) {
-  /*ウィンドウ幅が最大600pxまでの場合に適用*/
-  .headingLg {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 1rem 0;
-  }
+    .video {
+      margin: 1.3rem auto 0 auto;
+    }
 
-  .logoSize {
-    width: 160px;
-    margin: 0 auto;
-  }
+    @media screen and (max-width: 600px) {
+      .headingLg {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin: 1rem 0;
+      }
 
-  .tsLogo {
-    margin-bottom: 8px;
-  }
+      .EnglishHeading {
+        font-size: 1.9rem;
+      }
 
-  .learnSectDescription {
-    max-width: 435px;
-    margin: 0 auto;
-    font-size: 1rem;
-  }
+      .check {
+        bottom: 0;
+        font-size: 1.6rem;
+        color: blue;
+      }
 
-  .learnGrid {
-    display: block;
-  }
+      .EnglishCheck {
+        position: relative;
+        bottom: 2px;
+        font-size: 1.6rem;
+        color: blue;
+      }
 
-  .MDNAlternativeImg {
-    min-width: 280px;
-  }
+      .logoSize {
+        width: 160px;
+        margin: 0 auto;
+      }
 
-  .video {
-    padding: 0 0.5rem;
-    /* max-width: 200px; */
-    /* min-height: 201px; */
-    /* min-width: 100vw; */
-    /* height: auto; */
+      .tsLogo {
+        margin-bottom: 8px;
+      }
+
+      .learnSectDescription {
+        max-width: 435px;
+        margin: 0 auto;
+        font-size: 1rem;
+      }
+
+      .learnGrid {
+        display: block;
+      }
+
+      .MDNAlternativeImg {
+        min-width: 280px;
+      }
+
+      .video {
+        padding: 0 0.5rem;
+      }
+    }
   }
 }
