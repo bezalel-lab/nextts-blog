@@ -233,7 +233,7 @@
 }
 
 .EnglishHeading {
-  font-size: 2.1rem; /*⭕️*/
+  font-size: 2.1rem;
   margin-top: 0;
   margin-bottom: 1.3rem;
 }
@@ -341,11 +341,16 @@
       .learnGrid {
         display: block;
       }
-
+      
       .MDNAlternativeImg {
         min-width: 280px;
       }
-      @media screen and (max-width: 600px) {
+      
+      .othersList {
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: 460px) {
         .video {
           min-width: 330px;
           min-height: 185px;
