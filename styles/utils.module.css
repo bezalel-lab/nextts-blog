@@ -212,6 +212,14 @@
   padding-bottom: 0.1rem;
 }
 
+.article {
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 0 auto 6rem;
+  padding-top: 3rem;
+  background-color: #F8F8F8;
+}
+
 @media screen and (max-width: 1050px) {
   /*ウィンドウ幅が最大1050pxまでの場合に適用*/
   .learnGrid {
