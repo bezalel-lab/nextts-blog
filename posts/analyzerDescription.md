@@ -129,4 +129,6 @@ iPad の幅である 768px までは、横スクロールなしで指板全体�
 
   - Jest と React-Testing-Library の基本は学んでいたので試みましたが、Next.js だからか TypeScript だからか、なかなか思うようにいかず......時間も限られていたため結局ここでは手を引きました。
 
+  - とはいえクロスブラウザのE2Eテストは、WindowsとMacとモバイル端末のChrome、FireFox、WindowsのEdge、MacとモバイルのSafari、そしてモバイルのOperaでも実施しました。
+
 - ソースコードにコメントをつける（​​​​​​​​​​​​​​​[GitHub でソースコードを見る](https://github.com/BBC-Radiance/nextts-blog/blob/main/pages/posts/cordAnalyzer.tsx)）
