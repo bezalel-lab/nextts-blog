@@ -98,10 +98,10 @@
   border-radius: 15px;
 }
 
-.check {
+/* .check {
   position: relative;
   bottom: 1px;
-}
+} */
 
 .EnglishCheck {
   position: relative;
@@ -310,11 +310,6 @@
 
       .EnglishHeading {
         font-size: 1.9rem;
-      }
-
-      .check {
-        bottom: 0;
-        font-size: 1.6rem;
       }
 
       .EnglishCheck {
