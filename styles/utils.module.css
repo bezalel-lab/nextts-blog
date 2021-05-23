@@ -101,14 +101,12 @@
 .check {
   position: relative;
   bottom: 1px;
-  color: blue;
 }
 
 .EnglishCheck {
   position: relative;
   bottom: 1px;
   font-size: 1.85rem;
-  color: blue;
 }
 
 .learnContents {
