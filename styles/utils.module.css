@@ -317,14 +317,12 @@
       .check {
         bottom: 0;
         font-size: 1.6rem;
-        color: blue;
       }
 
       .EnglishCheck {
         position: relative;
         bottom: 2px;
         font-size: 1.6rem;
-        color: blue;
       }
 
       .logoSize {
