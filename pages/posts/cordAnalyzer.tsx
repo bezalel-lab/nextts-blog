@@ -281,7 +281,6 @@ export const CordAnalyzer = () => {
                             >
                               <div className={analyzerStyles.degrees}>
                                 {stringsDegrees[string][degree - 1]}
-                                <div></div>
                               </div>
                             </Fret>
                           );
@@ -295,7 +294,6 @@ export const CordAnalyzer = () => {
                           >
                             <div className={analyzerStyles.degrees}>
                               {stringsDegrees[string][degree - 1]}
-                              <div></div>
                             </div>
                           </Fret>
                         );
@@ -323,7 +321,6 @@ export const CordAnalyzer = () => {
                           >
                             <div className={analyzerStyles.degrees}>
                               {stringsDegrees[string][degree - 1]}
-                              <div></div>
                             </div>
                           </Fret>
                         );
@@ -332,7 +329,6 @@ export const CordAnalyzer = () => {
                         <Fret key={nanoid()} className={`${analyzerStyles.fret}`}>
                           <div className={analyzerStyles.degrees}>
                             {stringsDegrees[string][degree - 1]}
-                            <div></div>
                           </div>
                         </Fret>
                       );
