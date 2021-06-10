@@ -30,7 +30,7 @@ export default function Home({
             <ruby>
               本橋友輝<rt className={`${utilStyles.ruby}`}>もとはしともき</rt>
             </ruby>
-            （25歳）です。ウェブ系エンジニアを目指しており、ウェブ開発の基礎、Next.js、TypeScript、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学習しました。PWAやFireBaseも気になっています。
+            （25歳）です。フロントエンドエンジニアを目指しており、ウェブ開発の基礎、Next.js、TypeScript、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学習しました。PWAやFireBaseも気になっています。
           </p>
           <p>
             Next.jsとTypeScriptを用いて、ギタリスト向けのコードを分析するアプリを作成しました。
