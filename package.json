@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "date-fns": "^2.20.3",
+    "firebase": "^8.9.0",
     "gray-matter": "^4.0.2",
     "nanoid": "^3.1.23",
     "next": "^10.2.0",
@@ -18,7 +19,7 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "sass": "^1.32.8",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
