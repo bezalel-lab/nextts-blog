@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=New+Tegomin&family=Newsreader:ital,wght@1,300&display=swap');
+
+.root {
+    color: red;
+    font-weight: bold;
+}
+
+.cordTone {
+    color: skyblue;
+    font-weight: bold;
+}
+
+.background {
+    background-image: url(../public/images/背景.png);
+    z-index: -1;
+    background-size: cover;
+    height: 100%;
+}
+
+.analyzer {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.75);
+    background-size: cover;
+    height: 100%;
+    color: white;
+    font-family: 'El Messiri', sans-serif;
+    overflow: auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 767px;
+}
+
+.cordSelector {
+    font-size: 1.13rem;
+    padding-left: 15px;
+    font-family: serif;
+}
+
+.select {
+    position: relative;
+    bottom: 1px;
+    font-size: 0.95rem;
+    opacity: 1;
+}
+
+.heading {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 1.9rem;
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+}
+
+.cordToneDisplay {
+    display: inline;
+    margin-left: 30px;
+    font-family: serif;
+}
+
+.scroll {
+    box-sizing: content-box;
+    max-width: 750px;
+    margin-top: 8px;
+    height: 267px;
+    overflow-x: auto;
+}
+
+.fingerBoard {
+    width: 750px;
+    height: 224px;
+    overflow: hidden;
+    background: #892f1b;
+    border: 1px solid #555;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.fret {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 3px solid #aaa;
+    border-right: 3.5px solid white;
+    width: 44px;
+}
+
+.fretNumbersWrapper {
+    position: relative;
+    top: 2.5px;
+    white-space: nowrap;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.borderless {
+    border: none;
+}
+
+.fretNumber {
+    box-sizing: border-box;
+    position: relative;
+    top: 2px;
+    height: 0;
+    left: 20px;
+    width: 41px;
+    text-align: right;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.outside {
+    width: 30px;
+    color: #aaa;
+    background-color: black;
+    border: none;
+    border-bottom: 3px solid #aaa;
+}
+
+.open {
+    width: 34px;
+    text-align: left;
+    background-color: black;
+    border-right: 7px solid white;
+}
+
+.degree {
+    box-sizing: border-box;
+    position: relative;
+    top: 17px;
+    text-align: right;
+    font-size: 15px;
+    height: 1px;
+}
+
+.description {
+    margin-top: 3rem;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.lightLink {
+    color: #1d8bda;
+    margin-left: 1rem;
+}

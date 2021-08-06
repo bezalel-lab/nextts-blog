@@ -1,0 +1,356 @@
+.heading2Xl {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* .headingTop {
+  font-size: 3rem;
+} */
+
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.headingLg {
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.headingLg2 {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 1rem 0 0 2rem;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.colorInherit {
+  color: inherit;
+}
+
+.padding1px {
+  padding-top: 1px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.lightText {
+  color: #666;
+}
+
+.width {
+  width: 100px;
+}
+
+.sectionWrapper {
+  margin: 0 1rem;
+}
+
+.sectionWidth {
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+.lineMargin {
+  margin: 2.5rem 0;
+}
+
+.above {
+  display: block;
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 75%, 0.9);
+  border-width: 0 0 1px 0;
+  border-radius: 15px;
+}
+
+.under {
+  height: 30px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 75%, 0.9);
+  border-width: 1px 0 0 0;
+  border-radius: 15px;
+}
+
+/* .check {
+  position: relative;
+  bottom: 1px;
+} */
+
+.EnglishCheck {
+  position: relative;
+  bottom: 1px;
+  font-size: 1.85rem;
+}
+
+.learnContents {
+  margin: 1rem 0;
+}
+
+.learnGrid {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto;
+  grid-column-gap: 20px;
+}
+
+.nextjs {
+  grid-row: 1 / 2;
+}
+
+.typexcript {
+  grid-column: 2 / 3;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* .lightLink {
+    color: #1D8BDA;
+} */
+
+.linkCursor {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.headingM {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.flexContainer {
+  display: flex;
+  max-width: 50rem;
+}
+
+.logoSize {
+  width: 170px;
+  margin: 0 auto;
+}
+
+.MDNAlternativeImg {
+  position: relative;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  opacity: 0.85;
+}
+
+.learnSectMDNDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.learnSectDescription {
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.learnList {
+  list-style: disc;
+  margin: 0 auto 5px;
+}
+
+.othersList {
+  margin-right: -70px;
+}
+
+.toRight {
+  position: relative;
+  left: 20px;
+}
+
+.headingNextjs {
+  margin-top: 2rem;
+  /* margin-bottom: -0.5rem; */
+}
+
+.tsLogo {
+  margin-bottom: 8px;
+}
+
+.otherSection {
+  margin: 3rem 0 4.8rem 0;
+}
+
+.videoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  position: relative;
+  bottom: 5px;
+  /* margin-bottom: 5rem; */
+  min-width: 392px;
+  min-height: 220.5px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.EnglishHeading {
+  font-size: 2.1rem;
+  margin-top: 0;
+  margin-bottom: 1.3rem;
+}
+
+.article {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.blog {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .lineMargin {
+    margin: 1rem 0;
+  }
+
+  .learnGrid {
+    grid-column-gap: 30px;
+  }
+
+  .othersList {
+    margin-right: -30px;
+  }
+
+  .otherSection {
+    margin-bottom: 3rem;
+  }
+  @media screen and (max-width: 768px) {
+    .sectionWidth {
+      margin: 0 auto;
+      max-width: 28.5rem;
+    }
+
+    .blog {
+      padding-top: 0;
+    }
+
+    .MDNAlternativeImg {
+      position: relative;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 340px;
+      opacity: 0.85;
+    }
+
+    .flexContainer {
+      display: block;
+    }
+
+    .learnSectDescription {
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1rem;  
+    }
+
+    .othersFlexContainer {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .video {
+      bottom: 0;
+      margin: 1.3rem auto 0 auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      .headingLg {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin: 1rem 0;
+      }
+
+      .EnglishHeading {
+        font-size: 1.9rem;
+      }
+
+      .EnglishCheck {
+        position: relative;
+        bottom: 2px;
+        font-size: 1.6rem;
+      }
+
+      .logoSize {
+        width: 160px;
+        margin: 0 auto;
+      }
+
+      .tsLogo {
+        margin-bottom: 8px;
+      }
+
+      .learnSectDescription {
+        max-width: 435px;
+        margin: 0 auto;
+        font-size: 1rem;
+      }
+
+      .learnGrid {
+        display: block;
+      }
+      
+      .MDNAlternativeImg {
+        min-width: 280px;
+      }
+      
+      .othersList {
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: 460px) {
+        .video {
+          min-width: 330px;
+          min-height: 185px;
+        }
+      }
+    }
+  }
+}
