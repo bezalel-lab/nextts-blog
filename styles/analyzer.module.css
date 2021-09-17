@@ -11,7 +11,7 @@
 }
 
 .background {
-  background-image: url(../public/images/背景.png);
+  background-image: url(../public/images/polygon.svg);
   z-index: -1;
   background-size: cover;
   height: 100%;
