@@ -343,5 +343,11 @@ inner
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-top: 40px;
-  padding-bottom: 30px;
+}
+
+.text__content {
+  display: none;
+}
+.text__content.is-show {
+  display: block;
 }
