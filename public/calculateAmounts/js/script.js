@@ -40,10 +40,12 @@ function displayResults() {
   jQuery(".calculate__total").text(total);
 
   jQuery(".calculate__text-month").text(localStorage.getItem("yearMonth"));
-
-for (let i = 1; i < 5; i++) {
-  jQuery(".calculate__text-date" + i).text(localStorage.getItem("date" + i));
-  jQuery(".calculate__text-amount" + i).text(localStorage.getItem("amount" + i));
-  jQuery(".calculate__text-remark" + i).text("（" +localStorage.getItem("remark" + i) + "）");
+  
+  for (let i = 1; i < 5; i++) {
+    jQuery(".calculate__text-date" + i).text(localStorage.getItem("date" + i));
+    jQuery(".calculate__text-amount" + i).text(localStorage.getItem("amount" + i));
+    if (localStorage.getItem("remark")) {
+      jQuery(".calculate__text-remark" + i).text("（" +localStorage.getItem("remark" + i) + "）");
+    }
   }
 }
