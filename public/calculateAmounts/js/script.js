@@ -46,6 +46,8 @@ function displayResults() {
       console.log(localStorage.getItem("remark" + i));
       if (localStorage.getItem("remark" + i)) {
         jQuery(".calculate__text-remark" + i).text("（" + localStorage.getItem("remark" + i) + "）");
+      } else {
+        jQuery(".calculate__text-remark" + i).text("");
       }
       toggleShowAndHide()
     }
