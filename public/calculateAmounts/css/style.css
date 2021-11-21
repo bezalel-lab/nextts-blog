@@ -354,23 +354,9 @@ inner
 }
 
 .calculate__text {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   margin-top: 40px;
   padding-bottom: 40px;
 }
-@media (max-width: 767px) {
-  .calculate__text {
-    position: static;
-    left: auto;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    min-width: 75%;
-  }
-}
-
 .text__content {
   display: none;
 }
