@@ -33,8 +33,6 @@ jQuery("input").on("change", function() {
   displayResults();
 })
 
-
-
 function displayResults() {
   let total = parseInt(Number(localStorage.getItem("amount1")) + Number(localStorage.getItem("amount2")) + Number(localStorage.getItem("amount3")) + Number(localStorage.getItem("amount4")));
   
@@ -45,14 +43,13 @@ function displayResults() {
   for (let i = 1; i < 5; i++) {
       jQuery(".calculate__text-date" + i).text(localStorage.getItem("date" + i));
       jQuery(".calculate__text-amount" + i).text(localStorage.getItem("amount" + i));
-      
-    if (localStorage.getItem("remark")) {
-      jQuery(".calculate__text-remark" + i).text("（" +localStoage.gretItem("remark" + i) + "）");
+      console.log(localStorage.getItem("remark" + i));
+      if (localStorage.getItem("remark" + i)) {
+        jQuery(".calculate__text-remark" + i).text("（" + localStorage.getItem("remark" + i) + "）");
+      }
+      toggleShowAndHide()
     }
   }
-
-  toggleShowAndHide()
-}
 
 function toggleShowAndHide() {
   for (let i = 1; i < 5; i++) {
