@@ -131,4 +131,4 @@ iPad の幅である 768px までは、横スクロールなしで指板全体�
 
   - とはいえクロスブラウザのE2Eテストは、WindowsとMacとモバイル端末のChrome、FireFox、WindowsのEdge、MacとモバイルのSafari、そしてモバイルのOperaでも実施しました。
 
-- ソースコードにコメントをつける（​​​​​​​​​​​​​​​[GitHub でソースコードを見る](https://github.com/BBC-Radiance/nextts-blog/blob/main/pages/posts/cordAnalyzer.tsx)）
+- ソースコードにコメントをつける
