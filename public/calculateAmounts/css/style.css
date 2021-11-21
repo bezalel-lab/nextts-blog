@@ -342,6 +342,17 @@ inner
 /* ==================
 ✍️ Text to send
 ===================*/
+.calculate__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 20px;
+}
+
 .calculate__text {
   position: absolute;
   left: 50%;
@@ -349,6 +360,14 @@ inner
           transform: translateX(-50%);
   margin-top: 40px;
   padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .calculate__text {
+    position: static;
+    left: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .text__content {
