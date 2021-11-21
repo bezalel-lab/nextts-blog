@@ -216,6 +216,11 @@ inner
           justify-content: center;
   margin-top: 40px;
 }
+@media (max-width: 767px) {
+  .calculate__year-month-wrapper {
+    margin-top: 6px;
+  }
+}
 
 .calculate__year-month {
   position: relative;
@@ -343,6 +348,7 @@ inner
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-top: 40px;
+  padding-bottom: 40px;
 }
 
 .text__content {
