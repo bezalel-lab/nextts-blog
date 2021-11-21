@@ -350,7 +350,7 @@ inner
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  left: 20px;
+  left: 10px;
 }
 
 .calculate__text {
