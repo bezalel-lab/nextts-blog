@@ -235,6 +235,12 @@ inner
   margin-top: 46px;
   padding: 0 80px;
 }
+@media (max-width: 767px) {
+  .calculate__table {
+    position: relative;
+    right: 16px;
+  }
+}
 
 .calculate__headings {
   display: -webkit-box;
@@ -266,15 +272,37 @@ inner
 .form__item-wrapper {
   width: 100px;
 }
+@media (max-width: 767px) {
+  .calculate__amounts {
+    position: relative;
+    right: 7.5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .calculate__remarks {
+    position: relative;
+    right: 15px;
+  }
+}
 
 .form__item-wrapper-remark {
   width: 300px;
 }
+@media (max-width: 767px) {
+  .form__item-wrapper-remark {
+    width: 120px;
+  }
+}
 .form__item-wrapper-remark .form__input {
   margin-left: 30px;
   width: 300px;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark .form__input {
+    width: 120px;
+  }
 }
 
 .calculate__label-heading-date::before {
@@ -299,6 +327,11 @@ inner
   top: -45px;
   left: 59px;
   width: 36px;
+}
+@media (max-width: 767px) {
+  .calculate__label-heading-remark::before {
+    left: 0;
+  }
 }
 
 /* ==================
