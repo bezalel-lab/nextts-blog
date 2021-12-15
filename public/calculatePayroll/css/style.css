@@ -1,92 +1,434 @@
-// ページを開くたびに、ローカルストレージからデータを取得して各inputに復元する。
-let input = jQuery(".form__input");
-
-input[0].value = localStorage.getItem("yearMonth")
-
-for (let i = 1; i < 16; i++) {
-input[i].value = localStorage.getItem("date" + i);
-
-input[i + 15].value = localStorage.getItem("amount" + i);
-
-input[i + 30].value = localStorage.getItem("remark" + i);
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-// 給与計算結果表示
-displayResults();
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
-// inputの入力値が変化するたびに
-jQuery("input").on("change", function() {
-  // 全てのinputの配列を取得して、変数inputに代入する。
-  let input = jQuery(".form__input");
+body {
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  background: #fff;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
 
-  // inputの最初の値であるinput[0].valueは年と月のinputの値。
-  // ローカルストレージのキーとしてyearMonthを追加。その値を年と月のinputの値にする。
-  localStorage.setItem("yearMonth", input[0].value);
-
-  for (let i = 1; i < 16; i++) {
-    // 上と同様の処理をループで実行。
-    // date、amount、remarkはそれぞれ4まであるため、"date" + i などでキーを命名する。
-    // 配列の該当箇所からデータを取得するために、input[i + 4] などとしている
-    localStorage.setItem("date" + i, input[i].value);
-    localStorage.setItem("amount" + i, input[i + 15].value);
-    localStorage.setItem("remark" + i, input[i + 30].value);
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: silver;
   }
-  displayResults();
-})
+}
+image {
+  width: 100%;
+  height: auto;
+}
 
-function displayResults() {
-  let total = parseInt(Number(localStorage.getItem("amount1")) + Number(localStorage.getItem("amount2")) + Number(localStorage.getItem("amount3")) + Number(localStorage.getItem("amount4"))).toLocaleString();
-  
-  jQuery(".calculate__total").text(total);
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  jQuery(".calculate__text-month").text(localStorage.getItem("yearMonth"));
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
 
-  for (let i = 1; i < 16; i++) {
-      jQuery(".calculate__text-date" + i).text(localStorage.getItem("date" + i));
-      jQuery(".calculate__text-amount" + i).text(localStorage.getItem("amount" + i));
-      console.log(localStorage.getItem("remark" + i));
-      if (localStorage.getItem("remark" + i)) {
-        jQuery(".calculate__text-remark" + i).text("（" + localStorage.getItem("remark" + i) + "）");
-      } else {
-        jQuery(".calculate__text-remark" + i).text("");
-      }
-      toggleShowAndHide()
-    }
+a {
+  color: inherit;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #3f51b5;
+  color: #888;
+  margin-top: 50px;
+  width: 70px;
+  height: 34px;
+  font-size: 14px;
+  background-color: #3f51b5;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.br::before {
+  content: "\a";
+  white-space: pre;
+}
+
+/* =====================
+inner
+======================*/
+.inner {
+  max-width: 1200px;
+  margin: auto;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .inner {
+    padding: 0 24px;
   }
-
-function toggleShowAndHide() {
-  for (let i = 1; i < 16; i++) {
-    if (localStorage.getItem("date" + i)) {
-      jQuery(".text__content" + i).addClass("is-show");
-    } else {
-      jQuery(".text__content" + i).removeClass("is-show");
-    }
+}
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 16px;
   }
 }
 
-// コピーボタンを押した時
-jQuery(".btn__copy").on("click", function() {
-  const btn = this;
-  
-  // 該当要素内のテキスト + 繋げるためのスラッシュ + 入力した日付 + 改行 + 給与額 + ......といった具合。日付の数だけ用意してある。
-  let days = [];
-
-  for (let i = 0; i < 15; i++) {
-    if (jQuery(".calculate__text-date" + (i + 1)).text()) {
-      days[i] = "    " + input[0].value + "/" + jQuery(".calculate__text-date" + (i + 1)).text() + "\n" + "        " + jQuery(".calculate__text-amount" + (i + 1)).text() + "円" + jQuery(".calculate__text-remark" + (i + 1)).text() + "\n";
-    } else {
-      days[i] = "";
-    }
+.section {
+  padding: 91px 0 120px;
+}
+@media (max-width: 767px) {
+  .section {
+    padding: 50px 0 120px;
   }
-  
-  const text = jQuery(".calculate__text1").text() + "\n" + jQuery(".calculate__text2").text() + "\n\n" + jQuery(".calculate__text3").text() + "\n\n" + jQuery(".calculate__text4").text() + "\n" + days[0] + days[1] + days[2] + days[3] + days[4] + days[5] + days[6] + days[7] + days[8] + days[9] + days[10] + days[11] + days[12] + days[13] + days[14] + "\n" + jQuery(".calculate__text20").text();
+}
 
-  navigator.clipboard.writeText(text);
-  jQuery(btn).removeClass("with-transition");
-  jQuery(btn).addClass("is-show");
-  window.setTimeout(function() {
-    jQuery(btn).addClass("with-transition");
-    jQuery(btn).removeClass("is-show");
-  }, 1400)
-})
+.section__heading {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 13px;
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+@media (max-width: 767px) {
+  .section__heading {
+    font-size: 36px;
+    margin-bottom: 70px;
+  }
+}
+.section__heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #3f51b5;
+}
+@media (max-width: 767px) {
+  .section__heading::after {
+    width: 42px;
+    height: 3px;
+  }
+}
 
+.form__item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+}
+.form__item-wrapper:first-child {
+  margin-top: 16px;
+}
+
+.form__label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  left: 66px;
+}
+.form__label .is-required {
+  position: relative;
+  display: inline-block;
+}
+.form__input[type=text],
+.form__input[type=email] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #333;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  width: 50px;
+  text-align: right;
+  vertical-align: middle;
+}
+.form__input[type=text]:focus,
+.form__input[type=email]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+/* ==================
+✍️ additional style
+===================*/
+.calculate__title {
+  margin-top: 36px;
+}
+
+.calculate__year-month-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .calculate__year-month-wrapper {
+    margin-top: 6px;
+  }
+}
+
+.calculate__year-month {
+  position: relative;
+  right: 24px;
+  font-size: 28px;
+}
+.calculate__year-month label {
+  font-size: 28px;
+  left: 87px;
+}
+.calculate__table {
+  margin: auto;
+  margin-top: 46px;
+  padding: 0 80px;
+}
+@media (max-width: 767px) {
+  .calculate__table {
+    position: relative;
+    right: 16px;
+  }
+}
+
+.calculate__headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 30px;
+}
+
+.calculate__heading {
+  margin-left: 80px;
+}
+
+.calculate__contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__item-wrapper {
+  width: 86px;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper {
+    width: 92px;
+  }
+}
+
+@media (max-width: 767px) {
+  .calculate__amounts {
+    position: relative;
+    right: 15.5px;
+  }
+}
+
+.form__input__date[type=text] {
+  width: 40px;
+}
+
+.form__input__amount[type=text] {
+  width: 60px;
+}
+
+.form__amount__label {
+  left: 86px;
+}
+
+@media (max-width: 767px) {
+  .calculate__remarks {
+    position: relative;
+    right: 15px;
+  }
+}
+
+.form__item-wrapper-remark {
+  width: 300px;
+  margin-top: 32.8px;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark {
+    width: 120px;
+  }
+}
+.form__item-wrapper-remark .form__input {
+  margin-left: 40px;
+  width: 300px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark .form__input {
+    margin-left: 24px;
+    width: 126px;
+  }
+}
+
+.calculate__label-heading-date::before {
+  position: absolute;
+  content: "日付";
+  top: -45px;
+  right: 17.5px;
+  width: 36px;
+}
+
+.calculate__label-heading-amount::before {
+  position: absolute;
+  content: "額";
+  top: -45px;
+  right: 18px;
+  width: 36px;
+}
+
+.calculate__label-heading-remark::before {
+  position: absolute;
+  content: "備考";
+  top: -45px;
+  left: 59px;
+  width: 36px;
+}
+@media (max-width: 767px) {
+  .calculate__label-heading-remark::before {
+    left: 0;
+  }
+}
+
+/* ==================
+✍️ Text to send
+===================*/
+.calculate__text-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 10px;
+  padding-top: 20px;
+}
+
+.btn__copy {
+  position: absolute;
+  top: -10px;
+  left: calc(50% + 85px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #eee;
+}
+.btn__copy::after {
+  position: absolute;
+  content: "コピーしました！";
+  top: -25px;
+  left: 0;
+  display: inline-block;
+  color: #eee;
+  width: 120px;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.btn__copy.with-transition::after {
+  -webkit-transition: opacity 1.9s, visibility 1.9s;
+  transition: opacity 1.9s, visibility 1.9s;
+}
+.btn__copy.is-show::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn__copy__top {
+  position: absolute;
+  width: 180px;
+  top: -75px;
+  left: 250px;
+}
+@media (max-width: 767px) {
+  .btn__copy__top {
+    top: -110px;
+    position: absolute;
+    left: calc(50% + 25px);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media (max-width: 767px) {
+  .btn__copy__top::after {
+    top: -22px;
+    left: -15px;
+  }
+}
+
+.calculate__text {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.text__content {
+  display: none;
+}
+.text__content.is-show {
+  display: block;
+}
