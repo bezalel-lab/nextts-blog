@@ -170,7 +170,7 @@ inner
   font-size: 18px;
   color: #fff;
   font-weight: 600;
-  left: 80px;
+  left: 66px;
 }
 .form__label .is-required {
   position: relative;
@@ -275,12 +275,18 @@ inner
 }
 
 .form__item-wrapper {
-  width: 100px;
+  width: 86px;
 }
+@media (max-width: 767px) {
+  .form__item-wrapper {
+    width: 92px;
+  }
+}
+
 @media (max-width: 767px) {
   .calculate__amounts {
     position: relative;
-    right: 7.5px;
+    right: 15.5px;
   }
 }
 
@@ -312,13 +318,14 @@ inner
   }
 }
 .form__item-wrapper-remark .form__input {
-  margin-left: 30px;
+  margin-left: 40px;
   width: 300px;
   text-align: left;
 }
 @media (max-width: 767px) {
   .form__item-wrapper-remark .form__input {
-    width: 120px;
+    margin-left: 24px;
+    width: 126px;
   }
 }
 
@@ -326,7 +333,7 @@ inner
   position: absolute;
   content: "日付";
   top: -45px;
-  right: 20px;
+  right: 19px;
   width: 36px;
 }
 
@@ -334,7 +341,7 @@ inner
   position: absolute;
   content: "額";
   top: -45px;
-  right: 17.5px;
+  right: 18px;
   width: 36px;
 }
 
