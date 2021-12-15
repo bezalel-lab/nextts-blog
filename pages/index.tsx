@@ -4,12 +4,12 @@ import Line from '../components/Line';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-//import Image from 'next/link';
+// import Image from 'next/link';
 import Learn from '../components/learn';
 import Date from '../components/date';
 import { GetStaticProps } from 'next';
 import firebase from '../firebase/clientApp';
-//Import the useAuthStateHook
+// Import the useAuthStateHook
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import Auth from '../components/Auth';
@@ -54,7 +54,7 @@ export default function Home({
             </Head>
             <section className={`${utilStyles.headingMd}`}>
                 <div className={`${utilStyles.sectionWidth}`}>
-                    {/* <p>
+                    <p>
                         こんにちは、
                         <ruby>
                             本橋友輝
@@ -63,7 +63,7 @@ export default function Home({
                             </rt>
                         </ruby>
                         （25歳）です。フロントエンドエンジニアを目指しており、ウェブ開発の基礎、Next.js、TypeScript、コンピュータ・サイエンスその他の独学に1000時間ほどを用いました。ほとんどは公式ドキュメントを読んで学習しました。PWAやFireBaseも気になっています。
-                    </p> */}
+                    </p>
                     <p>
                         Next.jsとTypeScriptを用いて、ギタリスト向けのコードを分析するアプリを作成しました。
                     </p>
@@ -171,11 +171,11 @@ export default function Home({
     );
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//     const allPostsData = getSortedPostsData();
-//     return {
-//         props: {
-//             allPostsData,
-//         },
-//     };
-// };
+export const getStaticProps: GetStaticProps = async () => {
+    const allPostsData = getSortedPostsData();
+    return {
+        props: {
+            allPostsData,
+        },
+    };
+};
