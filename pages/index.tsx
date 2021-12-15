@@ -10,10 +10,10 @@ import Date from '../components/date';
 import { GetStaticProps } from 'next';
 // import firebase from '../firebase/clientApp';
 // Import the useAuthStateHook
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import Auth from '../components/Auth';
-import VoterList from '../components/VoterList';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useCollection } from 'react-firebase-hooks/firestore';
+// import Auth from '../components/Auth';
+// import VoterList from '../components/VoterList';
 
 export default function Home({
     allPostsData,
