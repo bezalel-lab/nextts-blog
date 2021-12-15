@@ -124,6 +124,7 @@ inner
 @media (max-width: 767px) {
   .section__heading {
     font-size: 36px;
+    margin-bottom: 70px;
   }
 }
 .section__heading::after {
@@ -304,6 +305,7 @@ inner
 
 .form__item-wrapper-remark {
   width: 300px;
+  margin-top: 32.8px;
 }
 @media (max-width: 767px) {
   .form__item-wrapper-remark {
@@ -372,6 +374,7 @@ inner
   left: calc(50% + 85px);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  color: #eee;
 }
 .btn__copy::after {
   position: absolute;
@@ -379,7 +382,7 @@ inner
   top: -25px;
   left: 0;
   display: inline-block;
-  color: #fff;
+  color: #eee;
   width: 120px;
   font-size: 14px;
   text-align: center;
@@ -395,6 +398,28 @@ inner
 .btn__copy.is-show::after {
   opacity: 1;
   visibility: visible;
+}
+
+.btn__copy__top {
+  position: absolute;
+  width: 180px;
+  top: -75px;
+  left: 250px;
+}
+@media (max-width: 767px) {
+  .btn__copy__top {
+    top: -110px;
+    position: absolute;
+    left: calc(50% + 25px);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media (max-width: 767px) {
+  .btn__copy__top::after {
+    top: -22px;
+    left: -15px;
+  }
 }
 
 .calculate__text {
