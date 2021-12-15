@@ -39,44 +39,84 @@
       <div class="calculate__contents-wrapper">
         <div class="calculate__dates">
           <div class="calculate__date form__item-wrapper">
-            <label for="date1" class="form__label form__name-label calculate__label-heading-date"
+            <label for="date1" class="form__label form__date__label calculate__label-heading-date"
               >日
             </label>
-            <input type="text" id="date1" name="date1" class="form__input date1" />
+            <input
+              type="text"
+              id="date1"
+              name="date1"
+              class="form__input form__input__date date1"
+            />
           </div>
           <div class="calculate__date form__item-wrapper">
-            <label for="date2" class="form__label form__name-label">日 </label>
-            <input type="text" id="date2" name="date2" class="form__input date2" />
+            <label for="date2" class="form__label form__date__label">日 </label>
+            <input
+              type="text"
+              id="date2"
+              name="date2"
+              class="form__input form__input__date date2"
+            />
           </div>
           <div class="calculate__date form__item-wrapper">
-            <label for="date3" class="form__label form__name-label">日 </label>
-            <input type="text" id="date3" name="date3" class="form__input date3" />
+            <label for="date3" class="form__label form__date__label">日 </label>
+            <input
+              type="text"
+              id="date3"
+              name="date3"
+              class="form__input form__input__date date3"
+            />
           </div>
           <div class="calculate__date form__item-wrapper">
-            <label for="date4" class="form__label form__name-label">日 </label>
-            <input type="text" id="date4" name="date4" class="form__input date4" />
+            <label for="date4" class="form__label form__date__label">日 </label>
+            <input
+              type="text"
+              id="date4"
+              name="date4"
+              class="form__input form__input__date date4"
+            />
           </div>
         </div>
         <div class="calculate__amounts">
           <div class="calculate__amount form__item-wrapper">
             <label
               for="amount1"
-              class="form__label form__name-label calculate__label-heading-amount"
+              class="form__label form__amount__label calculate__label-heading-amount"
               >円
             </label>
-            <input type="text" id="amount1" name="amount1" class="form__input amount1" />
+            <input
+              type="text"
+              id="amount1"
+              name="amount1"
+              class="form__input form__input__amount amount1"
+            />
           </div>
           <div class="calculate__amount form__item-wrapper">
-            <label for="amount2" class="form__label form__name-label">円 </label>
-            <input type="text" id="amount2" name="amount2" class="form__input amount2" />
+            <label for="amount2" class="form__label form__amount__label">円 </label>
+            <input
+              type="text"
+              id="amount2"
+              name="amount2"
+              class="form__input form__input__amount amount2"
+            />
           </div>
           <div class="calculate__amount form__item-wrapper">
-            <label for="amount3" class="form__label form__name-label">円 </label>
-            <input type="text" id="amount3" name="amount3" class="form__input amount3" />
+            <label for="amount3" class="form__label form__amount__label">円 </label>
+            <input
+              type="text"
+              id="amount3"
+              name="amount3"
+              class="form__input form__input__amount amount3"
+            />
           </div>
           <div class="calculate__amount form__item-wrapper">
-            <label for="amount4" class="form__label form__name-label">円 </label>
-            <input type="text" id="amount4" name="amount4" class="form__input amount4" />
+            <label for="amount4" class="form__label form__amount__label">円 </label>
+            <input
+              type="text"
+              id="amount4"
+              name="amount4"
+              class="form__input form__input__amount amount4"
+            />
           </div>
         </div>
         <div class="calculate__remarks">
@@ -110,17 +150,18 @@
       </div>
 
       <div class="calculate__text-wrapper">
+        <span class="btn btn__copy">コピー</span>
         <div class="calculate__text">
-          こんにちは。<br />
-          <span class="calculate__text-month"></span>月の給与計算をお送りします。
-          <p><br />合計：<span class="calculate__total"></span>円</p>
+          <span class="calculate__text1">こんにちは。</span><br />
+          <span class="calculate__text2"><span class="calculate__text-month"></span>月の給与計算をお送りします。</span>
+            <p class="calculate__text3"><br />合計：<span class="calculate__total"></span>円</p>
           <p>
             <br />
-            <span>詳細：</span>
+            <span class="calculate__text4">詳細：</span>
           </p>
           <div class="text__content text__content1">
             <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month"></span>/<span
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month calculate__text5"></span>/<span
                 class="calculate__text-date1"
               ></span>
               <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
@@ -131,7 +172,7 @@
           </div>
           <div class="text__content text__content2">
             <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month"></span>/<span
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month  calculate__text6"></span>/<span
                 class="calculate__text-date2"
               ></span>
               <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
@@ -142,7 +183,7 @@
           </div>
           <div class="text__content text__content3">
             <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month"></span>/<span
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month  calculate__text7"></span>/<span
                 class="calculate__text-date3"
               ></span>
               <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
@@ -153,7 +194,7 @@
           </div>
           <div class="text__content text__content4">
             <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month"></span>/<span
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="calculate__text-month  calculate__text8"></span>/<span
                 class="calculate__text-date4"
               ></span>
               <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
@@ -162,7 +203,7 @@
               >円 <span class="calculate__text-remark4"></span>
             </p>
           </div>
-          <p><br />よろしくお願いいたします。</p>
+          <p class="calculate__text9"><br />よろしくお願いいたします。</p>
         </div>
       </div>
     </div>
