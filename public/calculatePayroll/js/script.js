@@ -35,7 +35,7 @@ jQuery("input").on("change", function() {
 })
 
 function displayResults() {
-  let total = parseInt(Number(localStorage.getItem("amount1")) + Number(localStorage.getItem("amount2")) + Number(localStorage.getItem("amount3")) + Number(localStorage.getItem("amount4")));
+  let total = parseInt(Number(localStorage.getItem("amount1")) + Number(localStorage.getItem("amount2")) + Number(localStorage.getItem("amount3")) + Number(localStorage.getItem("amount4"))).toLocaleString();
   
   jQuery(".calculate__total").text(total);
 
@@ -63,3 +63,24 @@ function toggleShowAndHide() {
     }
   }
 }
+
+// コピーボタンを押した時
+jQuery(".btn__copy").on("click", function() {
+  const btn = this;
+  
+  const day1 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date1").text() + "\n" + "        " + jQuery(".calculate__text-amount1").text() + "円" + jQuery(".calculate__text-remark1").text() ;
+  const day2 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date2").text() + "\n" + "        " + jQuery(".calculate__text-amount2").text() + "円" + jQuery(".calculate__text-remark2").text() ;
+  const day3 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date3").text() + "\n" + "        " + jQuery(".calculate__text-amount3").text() + "円" + jQuery(".calculate__text-remark3").text() ;
+  const day4 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date4").text() + "\n" + "        " + jQuery(".calculate__text-amount4").text() + "円" + jQuery(".calculate__text-remark4").text() ;
+
+  const text = jQuery(".calculate__text1").text() + "\n" + jQuery(".calculate__text2").text() + "\n\n" + jQuery(".calculate__text3").text() + "\n\n" + jQuery(".calculate__text4").text() + "\n" + day1 + "\n" + day2 + "\n" + day3 + "\n" + day4 + "\n" + "\n" + jQuery(".calculate__text9").text();
+
+  navigator.clipboard.writeText(text);
+  jQuery(btn).removeClass("with-transition");
+  jQuery(btn).addClass("is-show");
+  window.setTimeout(function() {
+    jQuery(btn).addClass("with-transition");
+    jQuery(btn).removeClass("is-show");
+  }, 1400)
+})
+
