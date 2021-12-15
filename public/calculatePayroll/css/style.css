@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  background: #fff;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: silver;
+  }
+}
+image {
+  width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
+  margin: auto;
+  margin-top: 50px;
+  width: 157px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+.br::before {
+  content: "\a";
+  white-space: pre;
+}
+
+/* =====================
+inner
+======================*/
+.inner {
+  max-width: 1200px;
+  margin: auto;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .inner {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 16px;
+  }
+}
+
+.section {
+  padding: 91px 0 120px;
+}
+@media (max-width: 767px) {
+  .section {
+    padding: 50px 0 120px;
+  }
+}
+
+.section__heading {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 13px;
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+@media (max-width: 767px) {
+  .section__heading {
+    font-size: 36px;
+  }
+}
+.section__heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #3f51b5;
+}
+@media (max-width: 767px) {
+  .section__heading::after {
+    width: 42px;
+    height: 3px;
+  }
+}
+
+.form__item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+}
+.form__item-wrapper:first-child {
+  margin-top: 16px;
+}
+
+.form__label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  left: 80px;
+}
+.form__label .is-required {
+  position: relative;
+  display: inline-block;
+}
+.form__input[type=text],
+.form__input[type=email] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #333;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  width: 50px;
+  text-align: right;
+  vertical-align: middle;
+}
+.form__input[type=text]:focus,
+.form__input[type=email]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+/* ==================
+✍️ additional style
+===================*/
+.calculate__title {
+  margin-top: 36px;
+}
+
+.calculate__year-month-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .calculate__year-month-wrapper {
+    margin-top: 6px;
+  }
+}
+
+.calculate__year-month {
+  position: relative;
+  right: 70px;
+  font-size: 28px;
+}
+.calculate__year-month label {
+  font-size: 28px;
+  left: 185px;
+}
+.calculate__year-month input {
+  min-width: 150px;
+}
+
+.calculate__table {
+  margin: auto;
+  margin-top: 46px;
+  padding: 0 80px;
+}
+@media (max-width: 767px) {
+  .calculate__table {
+    position: relative;
+    right: 16px;
+  }
+}
+
+.calculate__headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 30px;
+}
+
+.calculate__heading {
+  margin-left: 80px;
+}
+
+.calculate__contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__item-wrapper {
+  width: 100px;
+}
+@media (max-width: 767px) {
+  .calculate__amounts {
+    position: relative;
+    right: 7.5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .calculate__remarks {
+    position: relative;
+    right: 15px;
+  }
+}
+
+.form__item-wrapper-remark {
+  width: 300px;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark {
+    width: 120px;
+  }
+}
+.form__item-wrapper-remark .form__input {
+  margin-left: 30px;
+  width: 300px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark .form__input {
+    width: 120px;
+  }
+}
+
+.calculate__label-heading-date::before {
+  position: absolute;
+  content: "日付";
+  top: -45px;
+  right: 20px;
+  width: 36px;
+}
+
+.calculate__label-heading-amount::before {
+  position: absolute;
+  content: "額";
+  top: -45px;
+  right: 17.5px;
+  width: 36px;
+}
+
+.calculate__label-heading-remark::before {
+  position: absolute;
+  content: "備考";
+  top: -45px;
+  left: 59px;
+  width: 36px;
+}
+@media (max-width: 767px) {
+  .calculate__label-heading-remark::before {
+    left: 0;
+  }
+}
+
+/* ==================
+✍️ Text to send
+===================*/
+.calculate__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 20px;
+}
+
+.calculate__text {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.text__content {
+  display: none;
+}
+.text__content.is-show {
+  display: block;
+}
