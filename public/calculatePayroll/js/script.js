@@ -68,12 +68,22 @@ function toggleShowAndHide() {
 jQuery(".btn__copy").on("click", function() {
   const btn = this;
   
-  const day1 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date1").text() + "\n" + "        " + jQuery(".calculate__text-amount1").text() + "円" + jQuery(".calculate__text-remark1").text() ;
-  const day2 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date2").text() + "\n" + "        " + jQuery(".calculate__text-amount2").text() + "円" + jQuery(".calculate__text-remark2").text() ;
-  const day3 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date3").text() + "\n" + "        " + jQuery(".calculate__text-amount3").text() + "円" + jQuery(".calculate__text-remark3").text() ;
-  const day4 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date4").text() + "\n" + "        " + jQuery(".calculate__text-amount4").text() + "円" + jQuery(".calculate__text-remark4").text() ;
+  // 該当要素内のテキスト + 繋げるためのスラッシュ + 入力した日付 + 改行 + 給与額 + ......といった具合。日付の数だけ用意してある。
+  let days = [];
 
-  const text = jQuery(".calculate__text1").text() + "\n" + jQuery(".calculate__text2").text() + "\n\n" + jQuery(".calculate__text3").text() + "\n\n" + jQuery(".calculate__text4").text() + "\n" + day1 + "\n" + day2 + "\n" + day3 + "\n" + day4 + "\n" + "\n" + jQuery(".calculate__text9").text();
+  for (let i = 0; i < 4; i++) {
+    if (jQuery(".calculate__text-date" + (i + 1)).text()) {
+      days[i] = "    " + input[0].value + "/" + jQuery(".calculate__text-date" + (i + 1)).text() + "\n" + "        " + jQuery(".calculate__text-amount" + (i + 1)).text() + "円" + jQuery(".calculate__text-remark" + (i + 1)).text() + "\n";
+    } else {
+      days[i] = "";
+    }
+  }
+  
+  // day2 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date2").text() + "\n" + "        " + jQuery(".calculate__text-amount2").text() + "円" + jQuery(".calculate__text-remark2").text() ;
+  // day3 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date3").text() + "\n" + "        " + jQuery(".calculate__text-amount3").text() + "円" + jQuery(".calculate__text-remark3").text() ;
+  // day4 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date4").text() + "\n" + "        " + jQuery(".calculate__text-amount4").text() + "円" + jQuery(".calculate__text-remark4").text() ;
+
+  const text = jQuery(".calculate__text1").text() + "\n" + jQuery(".calculate__text2").text() + "\n\n" + jQuery(".calculate__text3").text() + "\n\n" + jQuery(".calculate__text4").text() + "\n" + days[0] + days[1] + days[2] + days[3] + "\n" + jQuery(".calculate__text9").text();
 
   navigator.clipboard.writeText(text);
   jQuery(btn).removeClass("with-transition");
