@@ -1,34 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
-$font-family-english: "Lato", sans-serif;
-$font-family-japanese: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium",
-  "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-
-$btn-color: #3f51b5;
-$color-main: #3f51b5;
-$color-accent: #e81919;
-$color-text: #333333;
-$top-pc: 70px;
-$top-sp: 60px;
-
-$layout-width-inner: 1200px;
-
-$breakpoints: (
-  //キー : 値
-  "sp": "(max-width: 767px)",
-  "tab": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
-  "pc": "(min-width: #{$layout-width-inner})"
-) !default;
-
-@mixin mq($bp) {
-  @media #{map-get($breakpoints, $bp)} {
-    @content;
-  }
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -38,13 +14,12 @@ body {
 }
 
 body {
-  font-family: $font-family-japanese, "游ゴシック体", YuGothic, "游ゴシック Medium",
-    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   background: #fff;
-  color: $color-text;
+  color: #333333;
   font-size: 16px;
   line-height: 1.6;
-  font-family: $font-family-japanese;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,7 +28,6 @@ body {
     color: silver;
   }
 }
-
 image {
   width: 100%;
   height: auto;
@@ -74,39 +48,43 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  // font-weight: 400;
 }
 
 a {
   color: inherit;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-
-  &:hover {
-    opacity: 0.7;
-  }
+}
+a:hover {
+  opacity: 0.7;
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $color-main;
-  color: $color-main;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
   margin: auto;
   margin-top: 50px;
   width: 157px;
   height: 46px;
   font-size: 14px;
   font-weight: 600;
-
-  &:hover {
-    background-color: $color-main;
-    color: #fff;
-  }
+}
+.btn:hover {
+  background-color: #3f51b5;
+  color: #fff;
 }
 
 .br::before {
-  content: "\A";
+  content: "\a";
   white-space: pre;
 }
 
@@ -114,23 +92,25 @@ a {
 inner
 ======================*/
 .inner {
-  max-width: $layout-width-inner;
-  // width: 100%;
+  max-width: 1200px;
   margin: auto;
-
-  @include mq(tab) {
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .inner {
     padding: 0 24px;
   }
-
-  @include mq(sp) {
+}
+@media (max-width: 767px) {
+  .inner {
     padding: 0 16px;
   }
 }
 
 .section {
   padding: 91px 0 120px;
-
-  @include mq(sp) {
+}
+@media (max-width: 767px) {
+  .section {
     padding: 50px 0 120px;
   }
 }
@@ -141,85 +121,63 @@ inner
   font-weight: 700;
   padding-bottom: 13px;
   position: relative;
-  font-family: $font-family-english;
-
-  @include mq(sp) {
+  font-family: "Lato", sans-serif;
+}
+@media (max-width: 767px) {
+  .section__heading {
     font-size: 36px;
-    // font-size: 48px;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 60px;
-    height: 4px;
-    background-color: $color-main;
-
-    @include mq(sp) {
-      width: 42px;
-      height: 3px;
-    }
+}
+.section__heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #3f51b5;
+}
+@media (max-width: 767px) {
+  .section__heading::after {
+    width: 42px;
+    height: 3px;
   }
 }
 
 .form__item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 32px;
-
-  &:first-child {
-    margin-top: 16px;
-  }
+}
+.form__item-wrapper:first-child {
+  margin-top: 16px;
 }
 
 .form__label {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 18px;
-  // background-color: $color-main;
   color: #fff;
-  // width: 170px;
-  // height: 40px;
   font-weight: 600;
   left: 80px;
-
-  .is-required {
-    position: relative;
-    display: inline-block;
-
-    &::before {
-      // position: absolute;
-      // content: "*";
-      // top: -3px;
-      // right: -14px;
-      // color: #e7728e;
-      // width: 12px;
-      // height: 12px;
-      // font-weight: 300;
-    }
-  }
-
-  &::after {
-    // position: absolute;
-    // content: "";
-    // top: 0;
-    // right: -10px;
-
-    //三角形（ラベルの右側）
-    // width: 0;
-    // height: 0;
-    // border-style: solid;
-    // border-width: 20px 0 20px 10px;
-    // border-color: transparent transparent transparent $color-main;
-  }
 }
-
-.form__input[type="text"],
-.form__input[type="email"] {
+.form__label .is-required {
+  position: relative;
+  display: inline-block;
+}
+.form__input[type=text],
+.form__input[type=email] {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -230,18 +188,16 @@ inner
   color: inherit;
   font-family: inherit;
   font-size: 1em;
-  // padding: 0.4em 0.8em;
-  // margin-left: 20.5px;
   width: 50px;
-  // height: 40px;
   text-align: right;
   vertical-align: middle;
-  //
-  &:focus {
-    border: 1px solid rgba(0, 0, 0, 0.32);
-    box-shadow: none;
-    outline: none;
-  }
+}
+.form__input[type=text]:focus,
+.form__input[type=email]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
 }
 
 /* ==================
@@ -252,11 +208,16 @@ inner
 }
 
 .calculate__year-month-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 40px;
-
-  @include mq(sp) {
+}
+@media (max-width: 767px) {
+  .calculate__year-month-wrapper {
     margin-top: 6px;
   }
 }
@@ -265,37 +226,38 @@ inner
   position: relative;
   right: 70px;
   font-size: 28px;
-
-  label {
-    font-size: 28px;
-    left: 185px;
-  }
-
-  input {
-    min-width: 150px;
-  }
+}
+.calculate__year-month label {
+  font-size: 28px;
+  left: 185px;
+}
+.calculate__year-month input {
+  min-width: 150px;
 }
 
 .calculate__table {
-  // display: flex;
   margin: auto;
   margin-top: 46px;
   padding: 0 80px;
-  // width: 600px;
-
-  @include mq(sp) {
-    // padding: 0 10px;
+}
+@media (max-width: 767px) {
+  .calculate__table {
     position: relative;
     right: 16px;
   }
 }
 
 .calculate__headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 30px;
 }
 
@@ -304,20 +266,19 @@ inner
 }
 
 .calculate__contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form__item-wrapper {
   width: 100px;
-
-  @include mq(sp) {
-    // width: 85px;
-  }
 }
-
-.calculate__amounts {
-  @include mq(sp) {
+@media (max-width: 767px) {
+  .calculate__amounts {
     position: relative;
     right: 7.5px;
   }
@@ -328,11 +289,15 @@ inner
 }
 
 .form__input__amount[type=text] {
-  width: 60px !important;
+  width: 60px;
 }
 
-.calculate__remarks {
-  @include mq(sp) {
+.form__amount__label {
+  left: 86px;
+}
+
+@media (max-width: 767px) {
+  .calculate__remarks {
     position: relative;
     right: 15px;
   }
@@ -340,91 +305,73 @@ inner
 
 .form__item-wrapper-remark {
   width: 300px;
-
-  @include mq(sp) {
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark {
     width: 120px;
   }
-
-  .form__input {
-    margin-left: 30px;
-    width: 300px;
-    text-align: left;
-
-    @include mq(sp) {
-      width: 120px;
-    }
+}
+.form__item-wrapper-remark .form__input {
+  margin-left: 30px;
+  width: 300px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .form__item-wrapper-remark .form__input {
+    width: 120px;
   }
 }
 
-.calculate__label-heading-date {
-  &::before {
-    position: absolute;
-    content: "日付";
-    top: -45px;
-    // left: 0;
-    right: 20px;
-    width: 36px;
-  }
+.calculate__label-heading-date::before {
+  position: absolute;
+  content: "日付";
+  top: -45px;
+  right: 20px;
+  width: 36px;
 }
 
-.calculate__label-heading-amount {
-  &::before {
-    position: absolute;
-    content: "額";
-    top: -45px;
-    // left: 0;
-    right: 17.5px;
-    width: 36px;
-  }
+.calculate__label-heading-amount::before {
+  position: absolute;
+  content: "額";
+  top: -45px;
+  right: 17.5px;
+  width: 36px;
 }
 
-.calculate__label-heading-remark {
-  &::before {
-    position: absolute;
-    content: "備考";
-    top: -45px;
-    left: 59px;
-    width: 36px;
-
-    @include mq(sp) {
-      left: 0;
-    }
-  }
+.calculate__label-heading-remark::before {
+  position: absolute;
+  content: "備考";
+  top: -45px;
+  left: 59px;
+  width: 36px;
 }
-
-.calculate__remark-label {
-  // display: none;
-  // visibility: hidden;
+@media (max-width: 767px) {
+  .calculate__label-heading-remark::before {
+    left: 0;
+  }
 }
 
 /* ==================
 ✍️ Text to send
 ===================*/
 .calculate__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   left: 10px;
 }
 
 .calculate__text {
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
   margin-top: 40px;
   padding-bottom: 40px;
-
-  @include mq(sp) {
-    // position: static;
-    // left: auto;
-    // transform: translateX(0);
-    // min-width: 75%;
-  }
 }
-
 .text__content {
   display: none;
-  &.is-show {
-    display: block;
-  }
+}
+.text__content.is-show {
+  display: block;
 }
