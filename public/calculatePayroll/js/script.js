@@ -3,12 +3,12 @@ let input = jQuery(".form__input");
 
 input[0].value = localStorage.getItem("yearMonth")
 
-for (let i = 1; i < 5; i++) {
+for (let i = 1; i < 16; i++) {
 input[i].value = localStorage.getItem("date" + i);
 
-input[i + 4].value = localStorage.getItem("amount" + i);
+input[i + 15].value = localStorage.getItem("amount" + i);
 
-input[i + 8].value = localStorage.getItem("remark" + i);
+input[i + 30].value = localStorage.getItem("remark" + i);
 }
 
 // 給与計算結果表示
@@ -23,13 +23,13 @@ jQuery("input").on("change", function() {
   // ローカルストレージのキーとしてyearMonthを追加。その値を年と月のinputの値にする。
   localStorage.setItem("yearMonth", input[0].value);
 
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < 16; i++) {
     // 上と同様の処理をループで実行。
     // date、amount、remarkはそれぞれ4まであるため、"date" + i などでキーを命名する。
     // 配列の該当箇所からデータを取得するために、input[i + 4] などとしている
     localStorage.setItem("date" + i, input[i].value);
-    localStorage.setItem("amount" + i, input[i + 4].value);
-    localStorage.setItem("remark" + i, input[i + 8].value);
+    localStorage.setItem("amount" + i, input[i + 15].value);
+    localStorage.setItem("remark" + i, input[i + 30].value);
   }
   displayResults();
 })
@@ -41,7 +41,7 @@ function displayResults() {
 
   jQuery(".calculate__text-month").text(localStorage.getItem("yearMonth"));
 
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < 16; i++) {
       jQuery(".calculate__text-date" + i).text(localStorage.getItem("date" + i));
       jQuery(".calculate__text-amount" + i).text(localStorage.getItem("amount" + i));
       console.log(localStorage.getItem("remark" + i));
@@ -55,7 +55,7 @@ function displayResults() {
   }
 
 function toggleShowAndHide() {
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < 16; i++) {
     if (localStorage.getItem("date" + i)) {
       jQuery(".text__content" + i).addClass("is-show");
     } else {
@@ -71,7 +71,7 @@ jQuery(".btn__copy").on("click", function() {
   // 該当要素内のテキスト + 繋げるためのスラッシュ + 入力した日付 + 改行 + 給与額 + ......といった具合。日付の数だけ用意してある。
   let days = [];
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 15; i++) {
     if (jQuery(".calculate__text-date" + (i + 1)).text()) {
       days[i] = "    " + input[0].value + "/" + jQuery(".calculate__text-date" + (i + 1)).text() + "\n" + "        " + jQuery(".calculate__text-amount" + (i + 1)).text() + "円" + jQuery(".calculate__text-remark" + (i + 1)).text() + "\n";
     } else {
@@ -79,11 +79,7 @@ jQuery(".btn__copy").on("click", function() {
     }
   }
   
-  // day2 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date2").text() + "\n" + "        " + jQuery(".calculate__text-amount2").text() + "円" + jQuery(".calculate__text-remark2").text() ;
-  // day3 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date3").text() + "\n" + "        " + jQuery(".calculate__text-amount3").text() + "円" + jQuery(".calculate__text-remark3").text() ;
-  // day4 = "    " + jQuery(".calculate__text5").text() + "/" + jQuery(".calculate__text-date4").text() + "\n" + "        " + jQuery(".calculate__text-amount4").text() + "円" + jQuery(".calculate__text-remark4").text() ;
-
-  const text = jQuery(".calculate__text1").text() + "\n" + jQuery(".calculate__text2").text() + "\n\n" + jQuery(".calculate__text3").text() + "\n\n" + jQuery(".calculate__text4").text() + "\n" + days[0] + days[1] + days[2] + days[3] + "\n" + jQuery(".calculate__text9").text();
+  const text = jQuery(".calculate__text1").text() + "\n" + jQuery(".calculate__text2").text() + "\n\n" + jQuery(".calculate__text3").text() + "\n\n" + jQuery(".calculate__text4").text() + "\n" + days[0] + days[1] + days[2] + days[3] + days[4] + days[5] + days[6] + days[7] + days[8] + days[9] + days[10] + days[11] + days[12] + days[13] + days[14] + "\n" + jQuery(".calculate__text20").text();
 
   navigator.clipboard.writeText(text);
   jQuery(btn).removeClass("with-transition");
