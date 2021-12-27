@@ -564,8 +564,8 @@ common - 共通スタイル
 }
 @media (max-width: 767px) {
   .news__meta {
-    margin-top: 12px;
     padding: 0 16px;
+    padding-top: 12px;
   }
 }
 
