@@ -8,12 +8,12 @@ import Link from 'next/link';
 import Learn from '../components/learn';
 import Date from '../components/date';
 import { GetStaticProps } from 'next';
-import firebase from '../firebase/clientApp';
+// import firebase from '../firebase/clientApp';
 // Import the useAuthStateHook
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import Auth from '../components/Auth';
-import VoterList from '../components/VoterList';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useCollection } from 'react-firebase-hooks/firestore';
+// import Auth from '../components/Auth';
+// import VoterList from '../components/VoterList';
 
 export default function Home({
     allPostsData,
@@ -24,45 +24,9 @@ export default function Home({
         id: string;
     }[];
 }) {
-    // Firestore
-    const db = firebase.firestore();
-
-    // Destructure user, loading, and error out of the hook.
-    const [user, loading, error] = useAuthState(firebase.auth());
-    console.log('Loading: ', loading, '|', 'Current user: ', user);
-
-    const [votes, votesLoading, votesError] = useCollection(
-        firebase.firestore().collection('votes'),
-        {}
-    );
-
-    if (!votesLoading && votes) {
-        votes.docs.map((doc) => console.log(doc.data()));
-    }
-
-    // Create document function.
-    const addVoteDocument = async (vote: string) => {
-        await db.collection('votes').doc(user.uid).set({
-            vote,
-        });
-    };
 
     return (
         <Layout home>
-            <Head>
-                <title>{siteTitle}</title>
-            </Head>
-            <section className={`${utilStyles.headingMd}`}>
-                <div className={`${utilStyles.sectionWidth}`}>
-                    <Link href="/posts/cordAnalyzer">
-                        <p
-                            className={`${utilStyles.headingLg2} ${utilStyles.inlineBlock} ${utilStyles.linkCursor}`}
-                        >
-                            <a>🎸Cord Analyzer</a>
-                        </p>
-                    </Link>
-                </div>
-            </section>
         </Layout>
     );
 }
@@ -75,3 +39,4 @@ export const getStaticProps: GetStaticProps = async () => {
         },
     };
 };
+
