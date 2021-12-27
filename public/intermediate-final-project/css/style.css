@@ -2254,11 +2254,15 @@ label:hover input[type=checkbox]:not(:checked):not(:disabled) + .check-icon:afte
   font-size: 18px;
   -webkit-box-shadow: 0px 3px 5px rgba(62, 62, 62, 0.2);
           box-shadow: 0px 3px 5px rgba(62, 62, 62, 0.2);
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .form__submit {
     margin: auto;
   }
+}
+.form__submit:hover {
+  opacity: 0.7;
 }
 .form__submit.is-active {
   background-color: #3e3e3e;
