@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <title>Sample Corp. トップページ</title>
+    <meta name="description" content="（検索結果に表示される説明文）" />
+    <link rel="icon" href="/favicon.ico" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/swiper-bundle.min.css" /> <!--💎💎💎結局こちらをつけたので、スタータースニペットも変えるかも。--><!--❌最新のバージョンだとうまくいかない部分があったため、↓のバージョン4を使用している → この文章は途中時点では適合しなくなった。 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+      integrity="sha512-nSomje7hTV0g6A5X/lEZq8koYb5XZtrWD7GU2+aIJD35CePx89oxSM+S7k3hqNSpHajFbtmrjavZFxSEfl6pQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <link rel="stylesheet" href="/css/animate.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/hiraku.css"
+      media="screen and (max-width:767px)"
+    />
+    <script src="/js/hiraku.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#" class="header__logo is-sp">Sample Corp.</a>
+        </div>
+        <ul class="header__nav">
+          <li class="header__nav-item"><a href="#news">News</a></li>
+          <li class="header__nav-item"><a href="#service">Service</a></li>
+          <li class="header__nav-item"><a href="#results">Results</a></li>
+          <li class="header__nav-item"><a href="#price">Price</a></li>
+          <li class="header__nav-item"><a href="#comments">Comments</a></li>
+          <li class="header__nav-item"><a href="#qanda">FAQs</a></li>
+          <li class="header__nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="header__drawer">
+          <div class="header__drawer__background"></div>
+          <div class="header__drawer-icon">
+            <div class="header__drawer-first"></div>
+            <div class="header__drawer-second"></div>
+            <div class="header__drawer-third"></div>
+          </div>
+          <div class="header__drawer-items-wrapper">
+            <ul class="header__drawer-items">
+              <li class="header__drawer-item"><a href="#news">News</a></li>
+              <li class="header__drawer-item"><a href="#service">Service</a></li>
+              <li class="header__drawer-item"><a href="#results">Results</a></li>
+              <li class="header__drawer-item"><a href="#price">Price</a></li>
+              <li class="header__drawer-item"><a href="#comments">Comments</a></li>
+              <li class="header__drawer-item"><a href="#qanda">FAQs</a></li>
+              <li class="header__drawer-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="mainvisual wow fadeIn" data-wow-delay=".1s">
+        <div class="mainvisual__background"></div>
+        <div class="mainvisual__contents">
+          <h2 class="mainvisual__title">
+            詩が生れて、画が出来る。<br />とかくに人の世は住みにくい。
+          </h2>
+          <p class="mainvisual__lead">
+            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+          </p>
+          <a class="btn btn-orange mainvisual__btn">お問い合わせしてみる</a>
+        </div>
+      </section>
+      <!-- /.mainvisual -->
+
+      <section class="section news" id="news">
+        <div class="inner news__inner">
+          <h2 class="section__title news__title wow fadeInUp" data-wow-delay=".1s">News</h2>
+          <div class="news__articles">
+            <article class="news__article wow fadeInUp" data-wow-delay=".1s">
+              <a href="#" class="news__article__link">
+                <div class="news__meta">
+                  <time datetime="2019-02-01" class="news__date">2019-02-01</time>
+                  <p class="news__tag">テキスト</p>
+                </div>
+                <h3 class="news__heading">
+                  ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース
+                </h3>
+              </a>
+            </article>
+            <article class="news__article wow fadeInUp" data-wow-delay=".1s">
+              <a href="#" class="news__article__link">
+                <div class="news__meta">
+                  <time datetime="2019-02-01" class="news__date">2019-02-01</time>
+                  <p class="news__tag">テキスト</p>
+                </div>
+                <h3 class="news__heading">
+                  ニュースニュースニュースニュースニュースニュースニュース
+                </h3>
+              </a>
+            </article>
+            <article class="news__article wow fadeInUp" data-wow-delay=".1s">
+              <a href="#" class="news__article__link">
+                <div class="news__meta">
+                  <time datetime="2019-02-01" class="news__date">2019-02-01</time>
+                  <p class="news__tag">テキスト</p>
+                </div>
+                <h3 class="news__heading">
+                  ニュースニュースニュースニュースニュースニュースニュース
+                </h3>
+              </a>
+            </article>
+          </div>
+          <div class="news__btn-wrapper wow fadeInUp" data-wow-delay=".1s"><a href="#" class="btn btn-light news__btn">MORE</a></div>
+        </div>
+      </section>
+      <!-- /.news -->
+
+      <section class="section service" id="service">
+        <div class="inner">
+          <div class="background__dark service__background__dark"></div>
+          <h2 class="section__title service__title wow fadeInUp" data-wow-delay=".1s">Service</h2>
+          <ol class="service__contents">
+            <li class="service__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="service__img">
+                <img src="img/service1.png" alt="screen" />
+              </div>
+              <h3 class="service__heading">WEB<br />DESIGN</h3>
+              <p class="service__text">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+              </p>
+            </li>
+            <li class="service__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="service__img">
+                <img src="img/service2.png" alt="screen" />
+              </div>
+              <h3 class="service__heading">WEB<br />CODING</h3>
+              <p class="service__text">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+              </p>
+            </li>
+            <li class="service__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="service__img">
+                <img src="img/service3.png" alt="screen" />
+              </div>
+              <h3 class="service__heading">CMS<br />CUSTOMIZE</h3>
+              <p class="service__text">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <!-- /.service -->
+
+      <section class="section results" id="results">
+        <div class="inner results__inner">
+          <h2 class="section__title results__title wow fadeInUp" data-wow-delay=".1s">Results</h2>
+          <!-- Slider main container -->
+          <div class="swiper wow fadeInUp" data-wow-delay=".1s">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <a class="swiper-slide">
+                <img src="/img/slide1.png" alt="foo" />
+                <div class="results__texts">
+                  <h4 class="results__heading">1とかくに人の世は住みにくい。</h4>
+                  <p class="results__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて
+                    、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </a>
+              <a class="swiper-slide">
+                <img src="/img/slide1.png" alt="foo" />
+                <div class="results__texts">
+                  <h4 class="results__heading">2とかくに人の世は住みにくい。</h4>
+                  <p class="results__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて
+                    、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </a>
+              <a class="swiper-slide">
+                <img src="/img/slide1.png" alt="foo" />
+                <div class="results__texts">
+                  <h4 class="results__heading">3とかくに人の世は住みにくい。</h4>
+                  <p class="results__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて
+                    、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </a>
+              <a class="swiper-slide">
+                <img src="/img/slide1.png" alt="foo" />
+                <div class="results__texts">
+                  <h4 class="results__heading">4とかくに人の世は住みにくい。</h4>
+                  <p class="results__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて
+                    、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </a>
+              <a class="swiper-slide">
+                <img src="/img/slide1.png" alt="foo" />
+                <div class="results__texts">
+                  <h4 class="results__heading">5とかくに人の世は住みにくい。</h4>
+                  <p class="results__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて
+                    、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </a>
+              <a class="swiper-slide">
+                <img src="/img/slide1.png" alt="foo" />
+                <div class="results__texts">
+                  <h4 class="results__heading">6とかくに人の世は住みにくい。</h4>
+                  <p class="results__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて
+                    、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="results__btn__wrapper"><a href="" class="btn btn-dark btn__results wow fadeInUp" data-wow-delay=".1s">VIEW ALL</a></div>
+        </div>
+      </section>
+      <!-- /.result -->
+
+      <section class="section price" id="price">
+        <div class="inner">
+          <h2 class="section__title price__title wow fadeInUp" data-wow-delay=".1s">Price</h2>
+          <div class="price__table__wrapper wow fadeInUp" data-wow-delay=".1s">
+            <table class="price__table">
+              <tbody>
+                <tr class="price__tr">
+                  <th class="price__heading">row 1</th>
+                  <td class="price__data">Price ¥10,000</td>
+                </tr>
+                <tr class="price__tr">
+                  <th class="price__heading">row 2</th>
+                  <td class="price__data">Price ¥10,000</td>
+                </tr>
+                <tr class="price__tr">
+                  <th class="price__heading">row 3</th>
+                  <td class="price__data">Price ¥10,000</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="price__text">※ 上記料金はサンプルです。</p>
+          </div>
+        </div>
+      </section>
+      <!-- /.price -->
+
+      <section class="section comments" id="comments">
+        <div class="background__dark comments__background__dark"></div>
+        <div class="inner">
+          <div class="comments__wrapper">
+            <div class="comments__background__light">
+              <h2 class="section__title comments__title wow fadeInUp" data-wow-delay=".1s">
+                Comments
+              </h2>
+              <div class="comments__contents">
+                <div class="comments__content wow fadeInUp" data-wow-delay=".1s">
+                  <div class="comments__img"><img src="/img/comments1.png" alt="foo" /></div>
+                  <p class="comments__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+                <div class="comments__content wow fadeInUp" data-wow-delay=".1s">
+                  <div class="comments__img"><img src="/img/comments2.png" alt="bar" /></div>
+                  <p class="comments__text">
+                    どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="comments__background__img is-pc"></div>
+          </div>
+        </div>
+      </section>
+      <!-- /.comments -->
+
+      <section class="section qanda" id="qanda">
+        <div class="inner">
+          <h2 class="section__title qanda__title wow fadeInUp" data-wow-delay=".1s">Q&A</h2>
+          <div class="qanda__contents">
+            <div class="qanda__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="qanda__question__wrapper">
+                <p class="qanda__question">質問質問質問？</p>
+                <div class="qanda__icon">
+                  <div class="qanda__icon__horizontal"></div>
+                  <div class="qanda__icon__vertical"></div>
+                </div>
+              </div>
+              <p class="qanda__answer">
+                回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+              </p>
+            </div>
+            <div class="qanda__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="qanda__question__wrapper">
+                <p class="qanda__question">質問質問質問？<br />また、質問は質問質問？</p>
+                <div class="qanda__icon">
+                  <div class="qanda__icon__horizontal"></div>
+                  <div class="qanda__icon__vertical"></div>
+                </div>
+              </div>
+              <p class="qanda__answer">回答回答回答回答回答回答回答回答回答回答回答</p>
+            </div>
+            <div class="qanda__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="qanda__question__wrapper">
+                <p class="qanda__question">質問質問質問？</p>
+                <div class="qanda__icon">
+                  <div class="qanda__icon__horizontal"></div>
+                  <div class="qanda__icon__vertical"></div>
+                </div>
+              </div>
+              <p class="qanda__answer">
+                回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+              </p>
+            </div>
+            <div class="qanda__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="qanda__question__wrapper">
+                <p class="qanda__question">質問質問質問？</p>
+                <div class="qanda__icon">
+                  <div class="qanda__icon__horizontal"></div>
+                  <div class="qanda__icon__vertical"></div>
+                </div>
+              </div>
+              <p class="qanda__answer">
+                回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+              </p>
+            </div>
+            <div class="qanda__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="qanda__question__wrapper">
+                <p class="qanda__question">質問質問質問？</p>
+                <div class="qanda__icon">
+                  <div class="qanda__icon__horizontal"></div>
+                  <div class="qanda__icon__vertical"></div>
+                </div>
+              </div>
+              <p class="qanda__answer">
+                回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+              </p>
+            </div>
+            <div class="qanda__content wow fadeInUp" data-wow-delay=".1s">
+              <div class="qanda__question__wrapper">
+                <p class="qanda__question">質問質問質問？</p>
+                <div class="qanda__icon">
+                  <div class="qanda__icon__horizontal"></div>
+                  <div class="qanda__icon__vertical"></div>
+                </div>
+              </div>
+              <p class="qanda__answer">
+                回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.qanda -->
+
+      <section class="section access" id="access">
+        <div class="background__dark access__background__dark"></div>
+        <div class="inner access__inner">
+          <div class="access__texts  wow fadeInUp" data-wow-delay=".1s">
+            <h2 class="section__title access__title wow fadeInUp" data-wow-delay=".1s">Access</h2>
+            <p class="access__address">
+              〒106-6126<br />東京都港区六本木 6丁目 10-1<br />六本木ヒルズ森タワー
+            </p>
+            <a href="#" class="btn btn-dark btn__access btn-dark btn__access__left">Google Maps</a>
+          </div>
+          <div class="access__map__wrapper  wow fadeInUp" data-wow-delay=".1s">
+            <div class="access__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25935.951402868868!2d139.6896783!3d35.6525213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5334b810a5%3A0xf3ad7394ee54630d!2z44Kw44O844Kw44Or5ZCI5ZCM5Lya56S-!5e0!3m2!1sja!2sjp!4v1638252450966!5m2!1sja!2sjp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="btn__access__bottom__wrapper wow fadeInUp" data-wow-delay=".1s"><a href="#" class="btn btn-dark btn-dark btn__access__bottom btn__access">Google Maps</a></div>
+      </section>
+      <!-- /.access -->
+
+      <section class="section contact" id="contact">
+        <div class="inner inner__contact wow fadeInUp" data-wow-delay=".1s">
+          <div class="contact__head">
+            <h2 class="section__title contact__title">Contact Us</h2>
+            <p class="contact__text">
+              どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。
+            </p>
+          </div>
+          <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScfnrRrFj23Q4t-z99FlRPy_n_gzz-qf9OqHNKpR6Q8YdSUWw/formResponse"
+            class="contact__form"
+            id="form"
+          >
+            <div class="form__item-wrapper">
+              <label for="select" class="form__label">お問い合わせ種別</label>
+              <select name="select" class="form__select">
+                <option>選択してください</option>
+                <option>セレクトB</option>
+                <option>セレクトC</option>
+              </select>
+            </div>
+            <div class="form__item-wrapper">
+              <label for="name" class="form__label form__name-label"
+                ><span class="is-required">氏名</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="entry.608666879"
+                class="form__input required-field"
+                placeholder="氏名"
+                onchange="handleChange();"
+              />
+              <div class="form__input__shadow"></div>
+            </div>
+            <div class="form__item-wrapper">
+              <label for="name__furigana" class="form__label form__name-label"
+                ><span class="is-required">フリガナ</span>
+              </label>
+
+              <input
+                type="text"
+                id="name__furigana"
+                name="entry.608666879"
+                class="form__input required-field"
+                placeholder="フリガナ"
+                onchange="handleChange();"
+              />
+              <div class="form__input__shadow"></div>
+            </div>
+            <div class="form__item-wrapper">
+              <label for="email" class="form__label form__email-label">メールアドレス </label>
+
+              <input
+                type="email"
+                id="email"
+                name="entry.16068675"
+                class="form__input required-field"
+                placeholder="sample@gmail.com"
+                onchange="handleChange();"
+              />
+              <div class="form__input__shadow"></div>
+            </div>
+
+            <div class="form__item-wrapper form__item-radio-wrapper">
+              <div class="form__label">性別</div>
+              <label class="form__radio__label">
+                <input
+                  type="radio"
+                  id="radio"
+                  name="radio"
+                  class="form__input form__radio"
+                  checked
+                />
+                <span class="form__radio-icon">男性</span>
+              </label>
+              <label class="form__radio__label">
+                <input type="radio" id="radio2" name="radio" class="form__input form__radio" /><span
+                  class="form__radio-icon"
+                  >女性</span
+                >
+              </label>
+            </div>
+
+            <div class="form__item-wrapper form__content__wrapper">
+              <label for="content" class="form__label form__content-label">メッセージ </label>
+              <textarea
+                id="content"
+                name="entry.1064446932"
+                class="form__content"
+                onchange="handleChange();"
+              ></textarea>
+            </div>
+            <div class="form__agreement-wrapper">
+              <label
+                ><input
+                  id="agreement__checkbox"
+                  type="checkbox"
+                  name="check"
+                  value=""
+                  onchange="handleChange();"
+                /><span class="check-icon required-checkbox"></span
+                ><a href="#" class="form__agreement-policy js-open-btn" target="_blank"
+                  >個人情報保護方針</a
+                >に同意する</label
+              >
+            </div>
+            <input type="submit" value="送信する" class="form__submit" disabled />
+          </form>
+        </div>
+      </section>
+      <!-- /.contact -->
+    </main>
+    <!-- /.main -->
+
+    <footer class="footer">
+      <div class="footer__links">
+        <ol class="footer__sns">
+          <li class="footer__sns__icon footer__sns__icon__twitter">
+            <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="footer__sns__icon footer__sns__icon__facebook">
+            <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+          </li>
+        </ol>
+        <ol class="footer__texts">
+          <li class="footer__text footer__sitemap"><a href="#">サイトマップ</a></li>
+          <li class="footer__text footer__info__protection"><a href="#">個人情報保護方針</a></li>
+          <li class="footer__text footer__policy"><a href="#">プライバシーポリシー</a></li>
+        </ol>
+      </div>
+      <div class="footer__logos__wrapper">
+        <div class="footer__logo"><a href="#">Sample Corp.</a></div>
+        <p class="footer__copyright"><small>&copy; デイトラ Landing page Sample.</small></p>
+      </div>
+      <a href="#" class="totop"></a>
+    </footer>
+
+    <!-- ⭕️⭕️著作権、コピーライトのテキストは、pの下の<small>に入れていた。著作権や注釈の時に使うタグ。 -->
+
+    <!-- ✅✅✅XDのアートボード全体を画像として書き出したい（そしてPerfectPixelで使用したい）が、ネイティブアプリで開けない限り不可能？　サイズを100%にしてスクリーンショットすると、合うかも？　100%にして余白部分で画像をコピー、とする方法もあるが、これで重ねた時に不思議なほど合わなかった覚えがある -->
+
+    <!-- <script src="/js/swiper-bundle.min.js"></script> ✅最新のバージョンだとうまくいかない部分があったため、↓のバージョン4を使用している -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+      sjintegrity="sha512-ZHauUc/vByS6JUz/Hl1o8s2kd4QJVLAbkz8clgjtbKUJT+AG1c735aMtVLJftKQYo+LD62QryvoNa+uqy+rCHQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
