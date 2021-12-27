@@ -585,9 +585,10 @@ common - 共通スタイル
   width: 259px;
 
   @include mq("sp") {
-    margin-top: 12px;
+    // margin-top: 12px;
     // margin-left: 16px;
     padding: 0 16px;
+    padding-top: 12px;
   }
 }
 
