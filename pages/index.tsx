@@ -27,6 +27,13 @@ export default function Home({
 
     return (
         <Layout home>
+            <Link href="/posts/cordAnalyzer">
+                  <p
+                      className={`${utilStyles.headingLg2} ${utilStyles.inlineBlock} ${utilStyles.linkCursor}`}
+                  >
+                      <a>🎸Cord Analyzer</a>
+                  </p>
+            </Link>
         </Layout>
     );
 }
