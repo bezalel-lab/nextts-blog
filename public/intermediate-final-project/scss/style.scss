@@ -2411,6 +2411,10 @@ label:hover input[type="checkbox"] {
     @include mq("sp") {
       font-size: 32px;
     }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
