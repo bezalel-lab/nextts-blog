@@ -383,7 +383,7 @@ common - 共通スタイル
   padding: 8px 0;
 }
 .header__drawer-item:first-child {
-  margin-top: 26px;
+  margin-top: 20px;
 }
 
 /* ==================
