@@ -2418,6 +2418,9 @@ label:hover input[type=checkbox]:not(:checked):not(:disabled) + .check-icon:afte
     font-size: 32px;
   }
 }
+.footer__logo a:hover {
+  opacity: 1;
+}
 
 .footer__copyright {
   font-size: 12px;
