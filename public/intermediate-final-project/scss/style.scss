@@ -1,9 +1,3 @@
-//ドロワーアイコンが移動していない
-//♻️テキストであれば全て、ラインハイトとレタースペーシングも入力した方が良いかも？1行でも、ラインハイトが影響していたことがあったし、レタースペーシングに気づかない可能性もあるから、全て入力することにしてスニペットを使用しても良いかも
-//⭕️残るは、「PerfectPixel」を使用したりしながらの自己チェック（不要なコメントアウトされたコードも取り除くかも）と、回答例コードから学ぶことと、提出。
-//⭕️どこにどのフォントファミリーをかけるか、最後に確認が必要。
-//⭕️「パーフェクトピクセル」を使用して確認する
-
 @charset "utf-8";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
@@ -425,7 +419,7 @@ common - 共通スタイル
 }
 
 .mainvisual__background {
-  background: transparent url("/img/mv.png") no-repeat center center / cover;
+  background: transparent url("../img/mv.png") no-repeat center center / cover;
   height: 648px;
 
   // padding-top: 50.625%;
@@ -433,7 +427,7 @@ common - 共通スタイル
   @include mq("sp") {
     padding: 0;
     height: 667px;
-    background: transparent url("/img/mv.png") no-repeat 22% center / cover;
+    background: transparent url("../img/mv.png") no-repeat 22% center / cover;
     // z-index: -100;
   }
 }
@@ -558,7 +552,7 @@ common - 共通スタイル
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    background: transparent url("/img/news-arrow.png") no-repeat center center / contain;
+    background: transparent url("../img/news-arrow.png") no-repeat center center / contain;
     width: 10.75px;
     height: 21.5px;
     padding: 0 16.13px;
@@ -1285,7 +1279,7 @@ common - 共通スタイル
     left: 663 / 1200 * 100%;
     transform: translateY(-50%);
 
-    background: transparent url("/img/comments3.png") no-repeat center center / contain;
+    background: transparent url("../img/comments3.png") no-repeat center center / contain;
     display: inline-block;
     width: 534 / 1200 * 100%;
     padding-top: 37%;
@@ -1297,7 +1291,7 @@ common - 共通スタイル
 ✍️ Q&A
 ===================*/
 .qanda {
-  background: transparent url("/img/qa-bg.png") no-repeat center center / cover;
+  background: transparent url("../img/qa-bg.png") no-repeat center center / cover;
   // padding-top: 60px;
   // padding-bottom: 100px;
   margin-bottom: 0;
@@ -1630,7 +1624,7 @@ common - 共通スタイル
 ✍️ Contact
 ===================*/
 .contact {
-  background: transparent url("/img/contact-bg.png") no-repeat center center / cover;
+  background: transparent url("../img/contact-bg.png") no-repeat center center / cover;
   margin-bottom: 0;
   padding-bottom: 60px;
   z-index: -1000; //⭕️一時的
@@ -1646,7 +1640,7 @@ common - 共通スタイル
 }
 
 .contact__head {
-  background: transparent url("/img/contact1.png") no-repeat center center / cover;
+  background: transparent url("../img/contact1.png") no-repeat center center / cover;
   color: #fff;
   padding: 51px 16px 53px;
   border-radius: 12px 12px 0 0;
@@ -2441,7 +2435,7 @@ label:hover input[type="checkbox"] {
   bottom: 46px;
   width: 50px;
   height: 50px;
-  background: url("/img/totop.png") no-repeat center center / contain;
+  background: url("../img/totop.png") no-repeat center center / contain;
   border-color: $color-main;
   opacity: 0;
   visibility: hidden;
