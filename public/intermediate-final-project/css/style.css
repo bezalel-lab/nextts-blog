@@ -2194,6 +2194,12 @@ input[type=checkbox] + .check-icon:after {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
+@media (max-width: 767px) {
+  input[type=checkbox] + .check-icon:after {
+    width: 18px;
+    height: 18px;
+  }
+}
 input[type=checkbox]:checked + .check-icon:after {
   position: absolute;
   content: "";
