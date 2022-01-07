@@ -76,7 +76,6 @@ a:hover {
   }
 }
 .btn:hover {
-  background-color: #3e3e3e;
   color: #fff;
 }
 
@@ -91,9 +90,16 @@ a:hover {
   -webkit-box-shadow: 0px 3px 5px rgba(62, 62, 62, 0.2);
           box-shadow: 0px 3px 5px rgba(62, 62, 62, 0.2);
 }
+.btn-orange:hover {
+  background-color: #f18900;
+  opacity: 1;
+}
 
 .btn-light {
   border: 1px solid #707070;
+}
+.btn-light:hover {
+  color: #3e3e3e;
 }
 
 .btn-dark {
@@ -456,6 +462,9 @@ common - 共通スタイル
   }
 }
 
+.mainvisual__btn {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
 @media (max-width: 767px) {
   .mainvisual__btn {
     display: -webkit-box;
@@ -1893,27 +1902,6 @@ common - 共通スタイル
   color: #9e9e9e;
 }
 
-form__input[type=email]::-webkit-input-placeholder {
-  font-family: "Montserrat", sans-serif;
-}
-
-form__input[type=email]::-moz-placeholder {
-  font-family: "Montserrat", sans-serif;
-}
-
-form__input[type=email]:-ms-input-placeholder {
-  font-family: "Montserrat", sans-serif;
-}
-
-form__input[type=email]::-ms-input-placeholder {
-  font-family: "Montserrat", sans-serif;
-}
-
-.form__input[type=email],
-form__input[type=email]::placeholder {
-  font-family: "Montserrat", sans-serif;
-}
-
 .form__switch-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2268,7 +2256,8 @@ label:hover input[type=checkbox]:not(:checked):not(:disabled) + .check-icon:afte
   }
 }
 .form__submit:hover {
-  opacity: 0.7;
+  background-color: #f18900;
+  opacity: 1;
 }
 .form__submit.is-active {
   background-color: #3e3e3e;
