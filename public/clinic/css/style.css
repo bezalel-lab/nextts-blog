@@ -80,7 +80,7 @@ a {
 .btn::after {
   content: "";
   position: absolute;
-  background: transparent url("/img/icon-arrow-blue-btn.png") no-repeat center center/contain;
+  background: transparent url("../img/icon-arrow-blue-btn.png") no-repeat center center/contain;
   right: 12px;
   width: 14px;
   height: 14px;
@@ -91,7 +91,7 @@ a {
   color: #fff;
 }
 .btn:hover::after {
-  background: transparent url("/img/arrow-right-white.png") no-repeat center center/contain;
+  background: transparent url("../img/arrow-right-white.png") no-repeat center center/contain;
   right: 6px;
 }
 
@@ -127,7 +127,7 @@ inner
   left: -95.56px;
   width: 67.56px;
   height: 17.71px;
-  background: transparent url("/img/title-deco.png") no-repeat center center/contain;
+  background: transparent url("../img/title-deco.png") no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   .section__title::before {
@@ -144,7 +144,7 @@ inner
   right: -95.56px;
   width: 67.56px;
   height: 17.71px;
-  background: transparent url("/img/title-deco.png") no-repeat center center/contain;
+  background: transparent url("../img/title-deco.png") no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   .section__title::after {
@@ -459,7 +459,7 @@ inner
   height: 14px;
   position: absolute;
   right: 0;
-  background: transparent url("/img/sp/icon-right.png") no-repeat center center/contain;
+  background: transparent url("../img/sp/icon-right.png") no-repeat center center/contain;
 }
 .header__drawer__item a:hover {
   opacity: 0.7;
@@ -621,19 +621,19 @@ inner
 
 .mainvisual__01 {
   position: relative;
-  background: transparent url("/img/top-01.png") no-repeat center center/cover;
+  background: transparent url("../img/top-01.png") no-repeat center center/cover;
   border-radius: 20px;
 }
 @media (max-width: 767px) {
   .mainvisual__01 {
     height: 446.93px;
-    background: transparent url("/img/sp/top-01-sp.png") no-repeat center center/cover;
+    background: transparent url("../img/sp/top-01-sp.png") no-repeat center center/cover;
     border-radius: 0;
   }
 }
 
 .mainvisual__02 {
-  background: transparent url("/img/sp/top-02-sp.png") no-repeat center center/cover;
+  background: transparent url("../img/sp/top-02-sp.png") no-repeat center center/cover;
   border-radius: 20px;
   opacity: 0;
 }
@@ -645,7 +645,7 @@ inner
 }
 
 .mainvisual__03 {
-  background: transparent url("/img/sp/top-03-sp.png") no-repeat center center/cover;
+  background: transparent url("../img/sp/top-03-sp.png") no-repeat center center/cover;
   border-radius: 20px;
 }
 @media (max-width: 767px) {
@@ -887,7 +887,7 @@ inner
   right: 7px;
   width: 14px;
   height: 14px;
-  background: transparent url("/img/icon-arrow-black.png") no-repeat center center/cover;
+  background: transparent url("../img/icon-arrow-black.png") no-repeat center center/cover;
 }
 .mainvisual__news__date {
   display: flex;
@@ -971,7 +971,7 @@ inner
   left: 83.5%;
   transform: translate(-50%, -50%);
   content: "";
-  background: transparent url("/img/concept-bg.png") no-repeat 0 0/contain;
+  background: transparent url("../img/concept-bg.png") no-repeat 0 0/contain;
   width: 102%;
   height: 100%;
   height: 725.54px;
@@ -983,7 +983,7 @@ inner
     left: 10px;
     right: -190px;
     transform: none;
-    background: transparent url("/img/concept-bg_sp.png") no-repeat 0 59px/contain;
+    background: transparent url("../img/concept-bg_sp.png") no-repeat 0 59px/contain;
     width: 148.4%;
     height: auto;
     padding-top: 180.7287%;
@@ -1078,7 +1078,7 @@ inner
 }
 
 .concept__img {
-  background: transparent url("/img/concept-img1.png") no-repeat center center/cover;
+  background: transparent url("../img/concept-img1.png") no-repeat center center/cover;
   height: 438px;
   width: 100%;
 }
@@ -1209,7 +1209,7 @@ inner
   right: 20px;
   width: 125.75px;
   height: 137.76px;
-  background: transparent url("/img/deco-kirakira-w.png") no-repeat;
+  background: transparent url("../img/deco-kirakira-w.png") no-repeat;
   z-index: 1;
 }
 @media (max-width: 767px) {
@@ -1228,7 +1228,7 @@ inner
   left: 40px;
   width: 57.36px;
   height: 57.36px;
-  background: transparent url("/img/deco-kirakira2-w.png") no-repeat;
+  background: transparent url("../img/deco-kirakira2-w.png") no-repeat;
 }
 @media (max-width: 767px) {
   .medical::after {
@@ -1245,18 +1245,18 @@ inner
   position: absolute;
   bottom: calc(100% - 1px);
   width: 100%;
-  background: transparent url("/img/bg-top.png") no-repeat center center/cover;
+  background: transparent url("../img/bg-top.png") no-repeat center center/cover;
   padding-top: 15.7546875%;
 }
 @media screen and (min-width: 1500px) {
   .medical__inner::before {
-    background: transparent url("/img/bg-top.png") no-repeat bottom center/cover;
+    background: transparent url("../img/bg-top.png") no-repeat bottom center/cover;
     background-size: 100% 85%;
   }
 }
 @media (max-width: 767px) {
   .medical__inner::before {
-    background-image: url("/img/sp/bg-top-sp.png");
+    background-image: url("../img/sp/bg-top-sp.png");
     padding-top: 22.7573%;
   }
 }
@@ -1265,12 +1265,12 @@ inner
   position: absolute;
   top: calc(100% - 1px);
   width: 100%;
-  background: transparent url("/img/bg-bottom.png") no-repeat center center/cover;
+  background: transparent url("../img/bg-bottom.png") no-repeat center center/cover;
   padding-top: 7.578125%;
 }
 @media (max-width: 767px) {
   .medical__inner::after {
-    background-image: url("/img/sp/bottom-bg.png");
+    background-image: url("../img/sp/bottom-bg.png");
     padding-top: 7.5786%;
   }
 }
@@ -1352,6 +1352,11 @@ inner
   width: 40px;
   height: 2px;
   background: #fff;
+}
+@media (max-width: 767px) {
+  .medical__img::after {
+    width: 30px;
+  }
 }
 
 .medical__item__title {
@@ -1663,7 +1668,7 @@ access
   right: 0;
   width: 100%;
   height: 32px;
-  background: transparent url("/img/wave.png") no-repeat center center/cover;
+  background: transparent url("../img/wave.png") no-repeat center center/cover;
 }
 @media (min-width: 1280px) {
   .footer::before {
@@ -1948,7 +1953,7 @@ sitemap
   transform: translateY(-50%);
   width: 6px;
   height: 12px;
-  background: transparent url("/img/icon-arrow-blue.png") no-repeat center center/contain;
+  background: transparent url("../img/icon-arrow-blue.png") no-repeat center center/contain;
 }
 
 /* ==================
@@ -2002,7 +2007,7 @@ bottom
   bottom: 39px;
   width: 56px;
   height: 56px;
-  background: transparent url("/img/totop.png") no-repeat center center/contain;
+  background: transparent url("../img/totop.png") no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   .totop img {
