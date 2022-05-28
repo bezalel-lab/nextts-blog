@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap");
+@import url("..https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap");
 .common__inner {
   margin: auto;
   max-width: 1000px;
@@ -112,47 +112,47 @@
 }
 
 .mainvisual__about__background {
-  background: transparent url("/img/page-about_top.png") no-repeat center center/cover;
+  background: transparent url("../img/page-about_top.png") no-repeat center center/cover;
 }
 @media (max-width: 767px) {
   .mainvisual__about__background {
-    background-image: url("/img/sp/page-about_top-sp.png");
+    background-image: url("../img/sp/page-about_top-sp.png");
   }
 }
 
 .mainvisual__medical__background {
-  background: transparent url("/img/page-medical_top.png") no-repeat 0 0/cover;
+  background: transparent url("../img/page-medical_top.png") no-repeat 0 0/cover;
 }
 @media (max-width: 767px) {
   .mainvisual__medical__background {
-    background-image: url("/img/sp/page-medical_top-sp.png");
+    background-image: url("../img/sp/page-medical_top-sp.png");
   }
 }
 
 .mainvisual__staff__background {
-  background: transparent url("/img/page-staff_top.png") no-repeat 0 0/cover;
+  background: transparent url("../img/page-staff_top.png") no-repeat 0 0/cover;
 }
 @media (max-width: 767px) {
   .mainvisual__staff__background {
-    background-image: url("/img/sp/page-staff_top-sp.png");
+    background-image: url("../img/sp/page-staff_top-sp.png");
   }
 }
 
 .mainvisual__archive__background {
-  background: transparent url("/img/archive_top.png") no-repeat 0 0/cover;
+  background: transparent url("../img/archive_top.png") no-repeat 0 0/cover;
 }
 @media (max-width: 767px) {
   .mainvisual__archive__background {
-    background-image: url("/img/sp/archive_top-sp.png");
+    background-image: url("../img/sp/archive_top-sp.png");
   }
 }
 
 .mainvisual__contact__background {
-  background: transparent url("/img/page-contact_top.png") no-repeat 0 0/cover;
+  background: transparent url("../img/page-contact_top.png") no-repeat 0 0/cover;
 }
 @media (max-width: 767px) {
   .mainvisual__contact__background {
-    background-image: url("/img/sp/page-contact_top-sp.png");
+    background-image: url("../img/sp/page-contact_top-sp.png");
   }
 }
 
@@ -239,7 +239,7 @@
 }
 
 .concept__img {
-  background-image: url("/img/feature_1.png");
+  background-image: url("../img/feature_1.png");
   height: 438px;
   width: 100%;
   border-radius: 0 20px 20px 0;
@@ -320,7 +320,7 @@
   right: -13px;
   margin-right: 0;
   border-radius: 20px 0 0 20px;
-  background-image: url("/img/feature_2.png");
+  background-image: url("../img/feature_2.png");
   width: 100%;
 }
 
@@ -393,7 +393,7 @@
 .about__img {
   width: 31.7%;
   padding-top: 31.7%;
-  background: transparent url("/img/about_1.png") no-repeat center center/cover;
+  background: transparent url("../img/about_1.png") no-repeat center center/cover;
   border-radius: 20px;
 }
 @media (max-width: 767px) {
@@ -555,13 +555,13 @@
 }
 
 .medical__general .medical__department:nth-child(1) .medical__department__content__img {
-  background: transparent url("/img/medical_1.png") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_1.png") no-repeat 0 0/contain;
 }
 .medical__general .medical__department:nth-child(2) .medical__department__content__img {
-  background: transparent url("/img/medical_page_2.png") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_page_2.png") no-repeat 0 0/contain;
 }
 .medical__general .medical__department:nth-child(3) .medical__department__content__img {
-  background: transparent url("/img/medical_page_3.png") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_page_3.png") no-repeat 0 0/contain;
 }
 
 .medical__special {
@@ -575,19 +575,19 @@
   }
 }
 .medical__special .medical__department:nth-child(1) .medical__department__content__img {
-  background: transparent url("/img/medical_4.jpeg") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_4.jpeg") no-repeat 0 0/contain;
 }
 .medical__special .medical__department:nth-child(2) .medical__department__content__img {
-  background: transparent url("/img/medical_5.png") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_5.png") no-repeat 0 0/contain;
 }
 .medical__special .medical__department:nth-child(3) .medical__department__content__img {
-  background: transparent url("/img/medical_6.png") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_6.png") no-repeat 0 0/contain;
 }
 .medical__special .medical__department:nth-child(4) .medical__department__content__img {
-  background: transparent url("/img/medical_7.png") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_7.png") no-repeat 0 0/contain;
 }
 .medical__special .medical__department:nth-child(5) .medical__department__content__img {
-  background: transparent url("/img/medical_page_8.jpeg") no-repeat 0 0/contain;
+  background: transparent url("../img/medical_page_8.jpeg") no-repeat 0 0/contain;
 }
 
 .medical__title {
@@ -899,35 +899,35 @@
   border-radius: 20px;
 }
 .swiper-slide:nth-child(5) {
-  background: transparent url("/img/staff-slider1.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff-slider1.png") no-repeat 0 0/contain;
 }
 .swiper-slide:nth-child(6) {
-  background: transparent url("/img/staff-slider2.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider2.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(7) {
-  background: transparent url("/img/staff-slider3.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider3.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(8) {
-  background: transparent url("/img/staff-slider4.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider4.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(9) {
-  background: transparent url("/img/staff-slider5.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider5.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(10) {
-  background: transparent url("/img/staff-slider1.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider1.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(11) {
-  background: transparent url("/img/staff-slider2.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider2.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(12) {
-  background: transparent url("/img/staff-slider3.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider3.png") no-repeat 0 0/cover;
 }
 .swiper-slide:nth-child(13) {
-  background: transparent url("/img/staff-slider4.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider4.png") no-repeat 0 0/cover;
 }
 
 .swiper-slide-duplicate {
-  background: transparent url("/img/staff-slider5.png") no-repeat 0 0/cover;
+  background: transparent url("../img/staff-slider5.png") no-repeat 0 0/cover;
 }
 
 /* ==================
@@ -1009,26 +1009,26 @@
 }
 
 .staff__items__dental-hygienist .staff__item:nth-child(1) {
-  background: transparent url("/img/staff2.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff2.png") no-repeat 0 0/contain;
 }
 .staff__items__dental-hygienist .staff__item:nth-child(2) {
-  background: transparent url("/img/staff3.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff3.png") no-repeat 0 0/contain;
 }
 
 .staff__items__assistant .staff__item:nth-child(1) {
-  background: transparent url("/img/staff4.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff4.png") no-repeat 0 0/contain;
 }
 .staff__items__assistant .staff__item:nth-child(2) {
-  background: transparent url("/img/staff5.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff5.png") no-repeat 0 0/contain;
 }
 .staff__items__assistant .staff__item:nth-child(3) {
-  background: transparent url("/img/staff6.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff6.png") no-repeat 0 0/contain;
 }
 .staff__items__assistant .staff__item:nth-child(4) {
-  background: transparent url("/img/staff7.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff7.png") no-repeat 0 0/contain;
 }
 .staff__items__assistant .staff__item:nth-child(5) {
-  background: transparent url("/img/staff8.png") no-repeat 0 0/contain;
+  background: transparent url("../img/staff8.png") no-repeat 0 0/contain;
 }
 
 .staff__item__img {
@@ -1277,7 +1277,7 @@
   left: 0;
   width: 14px;
   height: 14px;
-  background: transparent url("/img/icon-time.png") no-repeat center center/contain;
+  background: transparent url("../img/icon-time.png") no-repeat center center/contain;
 }
 
 .blog__single__meta__category {
@@ -1516,7 +1516,7 @@
 }
 .pagination__prev::after {
   left: 16px;
-  background: transparent url("/img/arrow-circle-left.png") no-repeat center center/contain;
+  background: transparent url("../img/arrow-circle-left.png") no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   .pagination__prev::after {
@@ -1586,7 +1586,7 @@
 }
 .pagination__next::after {
   right: 14px;
-  background: transparent url("/img/arrow-circle-right.png") no-repeat center center/contain;
+  background: transparent url("../img/arrow-circle-right.png") no-repeat center center/contain;
 }
 
 .pagination__next__single {
@@ -1646,14 +1646,14 @@
   margin-top: 1px;
 }
 .blog__introduction__title::before {
-  background: transparent url("/img/sidebar-icon_1.png") no-repeat center center/contain;
+  background: transparent url("../img/sidebar-icon_1.png") no-repeat center center/contain;
 }
 
 .blog__introduction__img {
   margin-top: 20px;
   padding-top: 62.6666%;
   width: 100%;
-  background: transparent url("/img/sidebar-img_1.png") no-repeat 0 0/contain;
+  background: transparent url("../img/sidebar-img_1.png") no-repeat 0 0/contain;
 }
 
 .blog__introduction__heading {
@@ -1687,7 +1687,7 @@
   right: -18px;
   width: 18px;
   height: 18px;
-  background: transparent url("/img/arrow.png") no-repeat center center/contain;
+  background: transparent url("../img/arrow.png") no-repeat center center/contain;
 }
 
 /* ==================
@@ -1704,7 +1704,7 @@
   padding-bottom: 7px;
 }
 .blog__new__title::before {
-  background: transparent url("/img/sidebar-icon_2.png") no-repeat center center/contain;
+  background: transparent url("../img/sidebar-icon_2.png") no-repeat center center/contain;
 }
 
 .blog__new__articles {
@@ -1795,7 +1795,7 @@
   margin-top: 60px;
 }
 .blog__category__title::before {
-  background: transparent url("/img/sidebar-icon_3.png") no-repeat center center/contain;
+  background: transparent url("../img/sidebar-icon_3.png") no-repeat center center/contain;
 }
 
 .blog__category__items {
@@ -1826,7 +1826,7 @@
   left: -12px;
   width: 6px;
   height: 12px;
-  background: transparent url("/img/icon-arrow-blue.png") no-repeat center center/contain;
+  background: transparent url("../img/icon-arrow-blue.png") no-repeat center center/contain;
 }
 
 /* ==================
@@ -2434,7 +2434,7 @@ select::placeholder {
   right: 12px;
   width: 20px;
   height: 20px;
-  background: transparent url("/img/icon-calendar.png") no-repeat center center/contain;
+  background: transparent url("../img/icon-calendar.png") no-repeat center center/contain;
 }
 
 @media (max-width: 767px) {
@@ -2555,7 +2555,7 @@ select::placeholder {
   bottom: 39px;
   width: 56px;
   height: 56px;
-  background: transparent url("/img/totop.png") no-repeat center center/contain;
+  background: transparent url("../img/totop.png") no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   .totop img {
