@@ -403,19 +403,19 @@
   }
 }
 .about__img:nth-child(2) {
-  background-image: url(/img/about_2.png);
+  background-image: url("../img/about_2.png");
 }
 .about__img:nth-child(3) {
-  background-image: url(/img/about_3.png);
+  background-image: url("../img/about_3.png");
 }
 .about__img:nth-child(4) {
-  background-image: url(/img/about_4.png);
+  background-image: url("../img/about_4.png");
 }
 .about__img:nth-child(5) {
-  background-image: url(/img/about_5.png);
+  background-image: url("../img/about_5.png");
 }
 .about__img:nth-child(6) {
-  background-image: url(/img/about_6.png);
+  background-image: url("../img/about_6.png");
 }
 
 /* ==================
